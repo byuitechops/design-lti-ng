@@ -5,12 +5,12 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WebFeaturesComponent } from './features/web-features.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FeaturesModule } from './features/features.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WebFeaturesComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'web-features', component: WebFeaturesComponent },
       { path: '', redirectTo: 'web-features', pathMatch: 'full' },
       { path: '**', redirectTo: 'web-features', pathMatch: 'full' }
-    ])
+    ]),
+    FeaturesModule
   ],
   exports: [
   ],

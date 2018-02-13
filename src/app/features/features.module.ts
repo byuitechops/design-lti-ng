@@ -13,6 +13,12 @@ import { WebFeaturesComponent } from './web-features.component';
       { path: 'web-features', component: WebFeaturesComponent }
     ]) 
   ],
-  declarations: [PageTemplatesComponent]
+  exports: [
+    WebFeaturesComponent
+  ],
+  declarations: [
+    PageTemplatesComponent,
+    WebFeaturesComponent
+  ]
 })
 export class FeaturesModule { }
