@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { WebFeaturesComponent } from './features/web-features.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,8 +14,10 @@ import { HttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClient,
+    HttpClientModule,    
     RouterModule
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]
