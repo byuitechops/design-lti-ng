@@ -14,13 +14,13 @@ import { FeaturesModule } from './features/features.module';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,    
+    HttpClientModule,
+    FeaturesModule,    
     RouterModule.forRoot([
       { path: 'web-features', component: WebFeaturesComponent },
       { path: '', redirectTo: 'web-features', pathMatch: 'full' },
       { path: '**', redirectTo: 'web-features', pathMatch: 'full' }
     ]),
-    FeaturesModule
   ],
   exports: [
   ],
