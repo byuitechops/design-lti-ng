@@ -1,0 +1,163 @@
+.row {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.option,
+.row>div,
+.row>p {
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.option,
+.row>p {
+    min-width: 25%;
+    width: 25%;
+    max-width: 25%;
+}
+
+.preview {
+    flex-grow: 1;
+}
+
+#article {
+    padding: 20px;
+}
+
+input[type="text"],
+/* select, */
+textarea {
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#article #header {
+    display: block !important;
+}
+
+.page {
+    display: none;
+}
+
+.page.visible {
+    display: block;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 9999999;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+    background: #0076c6;
+    color: #fff;
+    height: 40px;
+}
+
+.tab:hover,
+.tab:active,
+.tab:visited {
+    color: white;
+}
+
+.embedded>#article {
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.margin {
+    margin: 5px 0;
+}
+
+
+/* Not Ben's CSS */
+
+.page nav {
+    background-color: #525252;
+    position: fixed;
+    margin-top: 0px;
+    padding: 5px;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 9999999;
+}
+
+.page nav a {
+    color: white;
+}
+
+.features {
+    margin-top: 15px;
+}
+
+#pageTwo {
+    margin-top: 30px;
+    margin-left:10px;
+}
+
+.features>div,
+#pageTwo>div {
+    border-bottom: #ccc solid 1px;
+}
+
+.features>div>h2,
+#pageTwo>div {
+    padding-top: 77px;
+    margin-top: -77px;
+}
+
+.features>div>div:last-child,
+#pageTwo .buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 12px;
+}
+
+#feedback {
+    margin-left:10px;
+}
+
+.option {
+    padding-right: 30px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.btn-primary {
+    background-color: #0075c5;
+}
+
+.lessons {
+    display: flex;
+    flex-grow: 1;
+}
+
+.lessons>div {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+}
+
+.shaded {
+    background-color: #D8D8D8;
+}
+
+.templateLabel {
+    margin-bottom: 0px;
+}
