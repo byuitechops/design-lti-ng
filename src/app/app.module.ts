@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { WebFeaturesComponent } from './web-features.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WebFeaturesComponent
   ],
   imports: [
     BrowserModule
