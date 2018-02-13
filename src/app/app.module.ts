@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { WebFeaturesComponent } from './web-features.component';
+import { WebFeaturesComponent } from './features/web-features.component';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { WebFeaturesComponent } from './web-features.component';
     WebFeaturesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClient,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
