@@ -1,8 +1,14 @@
-<nav>
-  <a class="tab" href='#' onclick="changeFocus('pageOne')">
-      <h4>Web Features</h4>
-  </a>
-  <a class="tab" href='#' onclick="changeFocus('pageTwo')">
-      <h4>Page Templates</h4>
-  </a>
-</nav>
+<div>
+  <nav>
+    <a class="tab" href='#' onclick="changeFocus('pageOne')">
+        <h4>Web Features</h4>
+    </a>
+    <a class="tab" href='#' onclick="changeFocus('pageTwo')">
+        <h4>Page Templates</h4>
+    </a>
+  </nav>
+  <div class="article">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

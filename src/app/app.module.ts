@@ -15,7 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,    
-    RouterModule
+    RouterModule.forRoot([
+      { path: 'web-features', component: WebFeaturesComponent },
+      { path: '', redirectTo: 'web-features', pathMatch: 'full' },
+      { path: '**', redirectTo: 'web-features', pathMatch: 'full' }
+    ])
   ],
   exports: [
   ],
