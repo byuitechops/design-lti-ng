@@ -33,9 +33,9 @@
             <div class="preview" id="accordionOut">
                 <h4>Preview:</h4>
                 <div class="accordion" id="this_page_1">
-                    <h3>{{accordionHeading}}</h3>
+                    <h3>{{ accordionHeading }}</h3>
                     <div>
-                        <p>{{accordionContent}}</p>
+                        <p>{{ accordionContent }}</p>
                     </div>
                 </div>
             </div>
@@ -135,15 +135,19 @@
         <div class="row">
             <div class="option">
                 <h4>Select options:</h4>
-                <input type="text" placeholder="Button Text" oninput="updateButton()">
+                <input type="text" placeholder="Button Text" [(ngModel)]='buttonText'>
                 <input type="text" placeholder="Button HTML" oninput="updateButton()">
-                <input type="checkbox" id="blue">
-                <label for="blue">Make Primary?</label>
+                <a class="Button" (click)='toggleButton()'>
+                  Make {{ makePrimary ? 'normal' : 'primary' }}
+                </a>
             </div>
             <div>
                 <div class="preview" id="buttonOut">
                 <h4>Preview:</h4>
-                    <a class="Button" href="#">Button Text</a>
+                    <a *ngIf="buttonText" class="Button"
+                        [ngClass]="{'Button--primary':makePrimary}">
+                        {{ buttonText }}
+                    </a>
                 </div>
             </div>
         </div>

@@ -9,21 +9,37 @@ import { ActivatedRoute } from '@angular/router';
 export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
+  makePrimary = false;
+
   _accordionHeading: string;
-  _accordionContent: string;
   get accordionHeading(): string {
     return this._accordionHeading;
   }
   set accordionHeading(value: string) {
     this._accordionHeading = value;
   }
+
+  _accordionContent: string;
   get accordionContent(): string {
     return this._accordionContent;
   }
   set accordionContent(value: string) {
     this._accordionContent = value;
   }
+
+  _buttonText: string;
+  get buttonText(): string {
+    return this._buttonText;
+  }
+  set buttonText(value: string) {
+    this._buttonText = value;
+  }
+
   constructor(private route: ActivatedRoute) {  }
+
+  toggleButton(): void {
+    this.makePrimary = !this.makePrimary;
+  }
 
   ngOnInit() {
     this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
