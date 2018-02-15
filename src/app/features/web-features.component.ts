@@ -9,16 +9,29 @@ import { ActivatedRoute } from '@angular/router';
 export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
-
-  constructor(private route: ActivatedRoute) { }
+  _accordionHeading: string;
+  _accordionContent: string;
+  get accordionHeading(): string {
+    return this._accordionHeading;
+  }
+  set accordionHeading(value: string) {
+    this._accordionHeading = value;
+  }
+  get accordionContent(): string {
+    return this._accordionContent;
+  }
+  set accordionContent(value: string) {
+    this._accordionContent = value;
+  }
+  constructor(private route: ActivatedRoute) {  }
 
   ngOnInit() {
     this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
   }
 
+  // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit(): void {
     try {
-      console.log('ohai');
       document.querySelector('#' + this.fragment).scrollIntoView();
     } catch (e) { }
   }

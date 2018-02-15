@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router'
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,10 +14,18 @@ export class AppComponent {
         if (s instanceof NavigationEnd) {
             const tree = router.parseUrl(router.url);
             if (tree.fragment) {
-                const element = document.querySelector("#" + tree.fragment);
+                const element = document.querySelector('#' + tree.fragment);
                 if (element) { element.scrollIntoView(true); }
             }
         }
     });
+  }
+
+  _headingText: string;
+  get headingText(): string {
+    return this._headingText;
+  }
+  set headingText(value: string) {
+    this._headingText = value;
   }
 }

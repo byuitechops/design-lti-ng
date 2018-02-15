@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WebFeaturesComponent } from './features/web-features.component';
@@ -15,7 +16,7 @@ import { FeaturesModule } from './features/features.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FeaturesModule,    
+    FeaturesModule,
     RouterModule.forRoot([
       { path: 'web-features', component: WebFeaturesComponent },
       { path: '', redirectTo: 'web-features', pathMatch: 'full' },
