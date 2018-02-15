@@ -33,9 +33,9 @@
             <div class="preview" id="accordionOut">
                 <h4>Preview:</h4>
                 <div class="accordion" id="this_page_1">
-                    <h3>{{ accordionHeading }}</h3>
+                    <h3>{{ accordionHeading ? accordionHeading : "Heading" }}</h3>
                     <div>
-                        <p>{{ accordionContent }}</p>
+                        <p>{{ accordionContent ? accordionContent : "Content" }}</p>
                     </div>
                 </div>
             </div>
@@ -144,9 +144,9 @@
             <div>
                 <div class="preview" id="buttonOut">
                 <h4>Preview:</h4>
-                    <a *ngIf="buttonText" class="Button"
+                    <a class="Button"
                         [ngClass]="{'Button--primary':makePrimary}">
-                        {{ buttonText }}
+                        {{ buttonText ? buttonText : "Button" }}
                     </a>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                     <input type="radio" name="calloutSize" value="half" id="calloutSizeQuarter" onchange="updateCallout()" checked>
                     <label for="calloutSizeQuarter">Quarter</label>
                 </div>
-                <textarea placeholder="Content Text" onkeyup="updateCallout()"></textarea>
+                <textarea placeholder="Content Text" [(ngModel)]='calloutText'></textarea>
                 <input type="checkbox" id="shaded">
                 <label for="shaded">Shaded</label>
             </div>
@@ -194,7 +194,9 @@
                     augue duis dolore te feugait nulla
                     <span id="calloutOut">
                         <span class="pad-box-mini border border-trbl border-round right quarter">
-                            <em>This is a callout box which can be used to emphasize text.</em>
+                            <em>{{ calloutText ? calloutText :
+                              "This is a callout box which can be used to emphasize text." }}
+                            </em>
                         </span>
                     </span>
                     facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo

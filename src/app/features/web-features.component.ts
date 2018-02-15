@@ -35,6 +35,14 @@ export class WebFeaturesComponent implements OnInit {
     this._buttonText = value;
   }
 
+  _calloutText: string;
+  get calloutText(): string {
+    return this._calloutText;
+  }
+  set calloutText(value: string) {
+    this._calloutText = value;
+  }
+
   constructor(private route: ActivatedRoute) {  }
 
   toggleButton(): void {
