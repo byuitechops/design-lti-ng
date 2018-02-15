@@ -18,6 +18,7 @@ export class WebFeaturesComponent implements OnInit {
 
   ngAfterViewInit(): void {
     try {
+      console.log('ohai');
       document.querySelector('#' + this.fragment).scrollIntoView();
     } catch (e) { }
   }
