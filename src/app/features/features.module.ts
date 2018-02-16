@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { PageTemplatesComponent } from './page-templates.component';
 import { WebFeaturesComponent } from './web-features.component';
+import { CapitalizePipe } from '../shared/capitalize.pipe';
+
 
 @NgModule({
   imports: [
@@ -20,7 +22,8 @@ import { WebFeaturesComponent } from './web-features.component';
   ],
   declarations: [
     PageTemplatesComponent,
-    WebFeaturesComponent
+    WebFeaturesComponent,
+    CapitalizePipe
   ]
 })
 export class FeaturesModule { }
