@@ -162,3 +162,12 @@ nav {
 .templateLabel {
     margin-bottom: 0px;
 }
+
+.radio-inline {
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-label {
+    padding-right: 10px;
+}
