@@ -51,10 +51,6 @@ export class WebFeaturesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {  }
 
-  toggleButton(): void {
-    this.makePrimary = !this.makePrimary;
-  }
-
   changePosition(value: string): void {
     this.calloutPosition = value;
   }
