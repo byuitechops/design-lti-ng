@@ -18,6 +18,9 @@ export class WebFeaturesComponent implements OnInit {
   calloutChecked = false;
   columnNumbers: number[] = [1, 2, 3];
   numberOfColumns = 1;
+  dialogPrompt: string;
+  dialogTitle: string;
+  dialogContent: string;
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -79,5 +82,4 @@ export class WebFeaturesComponent implements OnInit {
       document.querySelector('#' + this.fragment).scrollIntoView();
     } catch (e) { }
   }
-
 }

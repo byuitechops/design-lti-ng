@@ -309,15 +309,19 @@
         <div class="row">
             <div class="option">
                 <h4>Select options:</h4>
-                <input type="text" placeholder="Dialog Title" onkeyup="updateDialog()">
-                <input type="text" placeholder="Prompt Text" onkeyup="updateDialog()">
-                <textarea placeholder="Content" onkeyup="updateDialog()"></textarea>
+                <input type="text" placeholder="Dialog Title" [(ngModel)]="dialogTitle">
+                <input type="text" placeholder="Prompt Text" [(ngModel)]="dialogPrompt">
+                <textarea placeholder="Content" [(ngModel)]="dialogContent"></textarea>
             </div>
             <div class="preview" id="dialogOut">
                 <h4>Preview:</h4>
-                <div id="dialog_for_link_1" title="Title" class="enhanceable_content dialog">dialog</div>
+                <div id="dialog_for_link_1" title="dialogTitle ? dialogTitle : Title" class="enhanceable_content dialog">
+                  {{dialogContent ? dialogContent : "dialog"}}
+                </div>
                 <p>
-                    <a id="link_1" class="Button" href="#dialog_for_link_1">prompt</a>
+                    <a id="link_1" class="Button" href="#dialog_for_link_1">
+                      {{dialogPrompt ? dialogPrompt : "prompt"}}
+                    </a>
                 </p>
             </div>
         </div>
