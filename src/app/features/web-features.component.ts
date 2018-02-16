@@ -12,7 +12,7 @@ export class WebFeaturesComponent implements OnInit {
   private fragment: string;
   makePrimary = false;
   positions: string[] = ['left', 'center', 'right'];
-  sizes: string[] = ['quarter', 'half', 'full'];
+  sizes: string[] = ['full', 'half', 'quarter'];
   calloutPosition = 'right';
   calloutSize = 'quarter';
   calloutChecked = false;
