@@ -227,20 +227,22 @@
         </div>
         <div class="row">
             <div class="option">
-                <h4>Select options:</h4>
-                <input type="text" min="1" max="3" placeholder="Number of columns" onkeyup="updateColumn()">
+                <h4>Select number of columns:</h4>
+                <div class="size radio-inline">
+                    <div *ngFor="let column of columnNumbers">
+                        <input type="radio" name="numberOfColumns"
+                            [value]="column"
+                            [checked]="column===1"
+                            (change)="changeNumberOfColumns(column)">
+                        <label class="radio-label">{{ column }}</label>
+                    </div>
+                </div>
             </div>
             <div class="preview" id="columnsOut">
                 <h4>Preview:</h4>
                 <div class="content-box">
                     <div class="grid-row">
-                        <div class="col-xs-6">
-                            <ul>
-                                <li>Lorem ipsum dolor</li>
-                                <li>Lorem ipsum dolor</li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-6" *ngFor="let item of array(numberOfColumns)">
                             <ul>
                                 <li>Lorem ipsum dolor</li>
                                 <li>Lorem ipsum dolor</li>

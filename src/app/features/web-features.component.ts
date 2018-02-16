@@ -16,6 +16,8 @@ export class WebFeaturesComponent implements OnInit {
   calloutPosition = 'right';
   calloutSize = 'quarter';
   calloutChecked = false;
+  columnNumbers: number[] = [1, 2, 3];
+  numberOfColumns = 1;
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -57,6 +59,14 @@ export class WebFeaturesComponent implements OnInit {
 
   changeSize(value: string): void {
     this.calloutSize = value;
+  }
+
+  changeNumberOfColumns(value: number): void {
+    this.numberOfColumns = value;
+  }
+
+  array(value: number): any[] {
+    return Array(value);
   }
 
   ngOnInit() {
