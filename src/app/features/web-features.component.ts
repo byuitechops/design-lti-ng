@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CapitalizePipe } from '../shared/capitalize.pipe';
 
 @Component({
   selector: 'app-web-features',
   templateUrl: './web-features.component.html',
-  styleUrls: ['./web-features.component.css']
+  styleUrls: ['./web-features.component.css'],
 })
 export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
   makePrimary = false;
+  positions: string[] = ['left', 'center', 'right'];
+  sizes: string[] = ['quarter', 'half', 'full'];
+  calloutPosition = 'right';
+  calloutSize = 'quarter';
+  calloutChecked = false;
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -47,6 +53,14 @@ export class WebFeaturesComponent implements OnInit {
 
   toggleButton(): void {
     this.makePrimary = !this.makePrimary;
+  }
+
+  changePosition(value: string): void {
+    this.calloutPosition = value;
+  }
+
+  changeSize(value: string): void {
+    this.calloutSize = value;
   }
 
   ngOnInit() {
