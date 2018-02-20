@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-web-features',
@@ -25,6 +26,9 @@ export class WebFeaturesComponent implements OnInit {
   imagePosition = 'right';
   imageClearfix = false;
   imageSource: string;
+  slideCount = 0;
+  slideSource: string[] = [];
+  slideAlt: string[] = [];
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -100,8 +104,27 @@ export class WebFeaturesComponent implements OnInit {
     this.imageSource = value;
   }
 
-  array(value: number): any[] {
-    return Array(value);
+  updateSlideCount(value: number): void {
+    if (value <= 0) {
+      this.slideCount = 0;
+    } else {
+      this.slideCount = value;
+    }
+    this.slideSource.length = this.slideCount;
+    this.slideAlt.length = this.slideCount;
+  }
+
+  updateSlide(value: string, index: number): void {
+    this.slideSource[index] = value;
+  }
+
+  updateSlideAlt(value: string, index: number): void {
+    this.slideAlt[index] = value;
+  }
+
+  array(value: string): any[] {
+    const num = Number(value);
+    return Array.from(Array(num).keys());
   }
 
   ngOnInit() {
