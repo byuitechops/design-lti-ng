@@ -21,6 +21,10 @@ export class WebFeaturesComponent implements OnInit {
   dialogPrompt: string;
   dialogTitle: string;
   dialogContent: string;
+  imageSize = 'quarter';
+  imagePosition = 'right';
+  imageClearfix = false;
+  imageSource: string;
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -54,18 +58,46 @@ export class WebFeaturesComponent implements OnInit {
     this._calloutText = value;
   }
 
+  _imageCaption: string;
+  get imageCaption(): string {
+    return this._imageCaption;
+  }
+  set imageCaption(value: string) {
+    this._imageCaption = value;
+  }
+
+  _imageAlt: string;
+  get imageAlt(): string {
+    return this._imageAlt;
+  }
+  set imageAlt(value: string) {
+    this._imageAlt = value;
+  }
+
   constructor(private route: ActivatedRoute) {  }
 
-  changePosition(value: string): void {
+  changeCalloutPosition(value: string): void {
     this.calloutPosition = value;
   }
 
-  changeSize(value: string): void {
+  changeCalloutSize(value: string): void {
     this.calloutSize = value;
+  }
+
+  changeImagePosition(value: string): void {
+    this.imagePosition = value;
+  }
+
+  changeImageSize(value: string): void {
+    this.imageSize = value;
   }
 
   changeNumberOfColumns(value: number): void {
     this.numberOfColumns = value;
+  }
+
+  updateImageSource(value: string): void {
+    this.imageSource = value;
   }
 
   array(value: number): any[] {
