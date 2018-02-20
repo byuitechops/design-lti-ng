@@ -495,12 +495,14 @@
         <div class="row">
             <div class="option">
                 <h4>Select options:</h4>
-                <input type="checkbox" onchange="updateTable()" id="tableStriped">
+                <input type="checkbox" id="tableStriped"
+                       (change)="tableStriped = !tableStriped">
                 <label for="tableStriped">Striped</label>
             </div>
             <div class="preview" id="tableOut">
                 <h4>Preview:</h4>
-                <table class="ic-Table">
+                <table [ngClass]="{'table-striped':tableStriped,
+                                   'ic-Table':true}">
                     <tbody>
                         <tr>
                             <th>Heading</th>
