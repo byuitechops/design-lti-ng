@@ -170,7 +170,7 @@
                         <input type="radio" name="calloutPosition"
                             [value]="position"
                             [checked]="position==='right'"
-                            (change)="changePosition(position)">
+                            (change)="changeCalloutPosition(position)">
                         <label class="radio-label">{{position | capitalize}}</label>
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                         <input type="radio" name="calloutSize"
                             [value]="size"
                             [checked]="size==='quarter'"
-                            (change)="changeSize(size)">
+                            (change)="changeCalloutSize(size)">
                         <label class="radio-label">{{size | capitalize}}</label>
                     </div>
                 </div>
@@ -338,32 +338,46 @@
         <div class="row">
             <div class="option">
                 <h4>Select options:</h4>
-                <div class="position">
-                    <input type="radio" name="ImgPosition" value="left" onchange="updateImage()" id="imagePosLeft">
-                    <label for="imagePosLeft">Left</label>
-                    <input type="radio" name="ImgPosition" value="center" onchange="updateImage()" id="imagePosCenter">
-                    <label for="imagePosCenter">Center</label>
-                    <input type="radio" name="ImgPosition" value="right" onchange="updateImage()" id="imagePosRight" checked>
-                    <label for="imagePosRight">Right</label>
+                <div class="position radio-inline">
+                    <div *ngFor="let position of positions">
+                        <input type="radio" name="imagePosition"
+                            [value]="position"
+                            [checked]="position==='right'"
+                            (change)="changeImagePosition(position)">
+                        <label class="radio-label">{{position | capitalize}}</label>
+                    </div>
                 </div>
-                <div class="size">
-                    <input type="radio" name="ImgSize" value="full" id="imageSizeFull" onchange="updateImage()">
-                    <label for="imageSizeFull">Full</label>
-                    <input type="radio" name="ImgSize" value="half" id="imageSizeHalf" onchange="updateImage()">
-                    <label for="imageSizeHalf">Half</label>
-                    <input type="radio" name="ImgSize" value="quarter" id="imageSizeQuarter" onchange="updateImage()" checked>
-                    <label for="imageSizeQuarter">Quarter</label>
+                <div class="size radio-inline">
+                    <div *ngFor="let size of sizes">
+                        <input type="radio" name="imageSize"
+                            [value]="size"
+                            [checked]="size==='quarter'"
+                            (change)="changeImageSize(size)">
+                        <label class="radio-label">{{size | capitalize}}</label>
+                    </div>
                 </div>
-                <input type="checkbox" id="clearfix" onchange="updateImage()">
+                <input type="checkbox"
+                       [checked]="imageClearfix"
+                       (change)="imageClearfix = !imageClearfix">
                 <label for="imageClearfix">Clearfix</label>
-                <input type="text" placeholder="Source URL" oninput="updateImage()">
-                <input type="text" placeholder="Alt Text" oninput="updateImage()">
-                <input type="text" placeholder="Caption Text" oninput="updateImage()">
+                <input #src type="text" placeholder="Source URL"
+                       (keyup.enter)="updateImageSource(src.value)"
+                       (blur)="updateImageSource(src.value)">
+                <input type="text" placeholder="Alt Text" [(ngModel)]="imageAlt">
+                <input type="text" placeholder="Caption Text" [(ngModel)]="imageCaption">
             </div>
             <div class="preview" id="imageOut">
                 <h4>Preview:</h4>
-                <img class="left quarter" src="" alt="...">
-                <span class="caption">Insert Caption Text Here</span>
+                <img src="{{imageSource ? imageSource : 'http://1.bp.blogspot.com/-66D9avcPfZo/UO2VxdfheOI/AAAAAAAAAHw/4yf3mXCbzO4/s1600/050524TaylorBldg_6743.jpg'}}"
+                    alt="{{imageAlt ? imageAlt : '...'}}"
+                    [ngClass]="{'left':imagePosition==='left',
+                    'center':imagePosition==='center',
+                    'right':imagePosition==='right',
+                    'quarter':imageSize==='quarter',
+                    'half':imageSize==='half',
+                    'full':imageSize==='full',
+                    'clearfix':imageClearfix}">
+                <span class="caption">{{imageCaption ? imageCaption : "Image Caption"}}</span>
             </div>
         </div>
         <div>
