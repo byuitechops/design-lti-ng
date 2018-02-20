@@ -78,6 +78,22 @@ export class WebFeaturesComponent implements OnInit {
     this._imageAlt = value;
   }
 
+  _popoverBaseText: string;
+  get popOverBaseText(): string {
+    return this._popoverBaseText;
+  }
+  set popOverBaseText(value: string) {
+    this._popoverBaseText = value;
+  }
+
+  _popoverText: string;
+  get popOverText(): string {
+    return this._popoverText;
+  }
+  set popOverText(value: string) {
+    this._popoverText = value;
+  }
+
   constructor(private route: ActivatedRoute) {  }
 
   changeCalloutPosition(value: string): void {

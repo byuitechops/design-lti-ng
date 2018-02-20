@@ -470,14 +470,14 @@
         <div class="row">
             <div class="option">
                 <h4>Select options:</h4>
-                <input type="text" placeholder="Text" onkeyup="updatePopover()">
-                <textarea placeholder="Popover Text" onkeyup="updatePopover()"></textarea>
+                <input type="text" placeholder="Text" [(ngModel)]="popoverBaseText">
+                <textarea placeholder="Popover Text" [(ngModel)]="popoverText"></textarea>
             </div>
             <div>
                 <div class="preview" id="popoverOut">
                 <h4>Preview:</h4>
-                    <a data-tooltip='{"tooltipClass":"popover popover-padded", "position":"right"}' title="Oh hello!">
-                        Text with accessible popover
+                    <a data-tooltip='{"tooltipClass":"popover popover-padded", "position":"right"}' title="{{popoverText ? popoverText : 'Ohai'}}">
+                        {{popoverBaseText ? popoverBaseText : "Text with accessible popover"}}
                     </a>
                 </div>
             </div>
