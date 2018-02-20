@@ -29,6 +29,7 @@ export class WebFeaturesComponent implements OnInit {
   slideCount = 0;
   slideSource: string[] = [];
   slideAlt: string[] = [];
+  tableStriped = false;
 
   _accordionHeading: string;
   get accordionHeading(): string {
