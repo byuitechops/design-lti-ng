@@ -80,18 +80,18 @@ export class WebFeaturesComponent implements OnInit {
   }
 
   _popoverBaseText: string;
-  get popOverBaseText(): string {
+  get popoverBaseText(): string {
     return this._popoverBaseText;
   }
-  set popOverBaseText(value: string) {
+  set popoverBaseText(value: string) {
     this._popoverBaseText = value;
   }
 
   _popoverText: string;
-  get popOverText(): string {
+  get popoverText(): string {
     return this._popoverText;
   }
-  set popOverText(value: string) {
+  set popoverText(value: string) {
     this._popoverText = value;
   }
 
