@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
-import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-web-features',
@@ -30,6 +29,8 @@ export class WebFeaturesComponent implements OnInit {
   slideSource: string[] = [];
   slideAlt: string[] = [];
   tableStriped = false;
+  returnUrl: string;
+  contentItems: string;
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -143,6 +144,15 @@ export class WebFeaturesComponent implements OnInit {
     const num = Number(value);
     return Array.from(Array(num).keys());
   }
+
+  onSubmit() {
+    console.log('submitted');
+  }
+  // respond(featureName: string): void {
+  //   this.contentItems['@graph'][0].text = $('#' + featureName + "Out").html().toString().trim();
+  //   this.contentItems = JSON.stringify(this.contentItems);
+  //   document.getElementById('editor_button').submit();
+  // }
 
   ngOnInit() {
     this.route.fragment.subscribe(fragment => { this.fragment = fragment; });

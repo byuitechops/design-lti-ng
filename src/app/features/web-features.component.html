@@ -535,3 +535,10 @@
 
   </div>
 </div>
+
+<form (ngSubmit)="onSubmit()" method="post" action="{{returnUrl}}" id="editor_button">
+  <input type="hidden" name="lti_message_type" value="ContentItemSelection" />
+  <input type="hidden" name="lti_version" value="LTI-1p0" />
+  <input id="contentItems" type="hidden" name="content_items" value="{{contentItems}}" />
+  <button type="submit">Submit</button>
+</form>

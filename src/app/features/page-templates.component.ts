@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-templates.component.css']
 })
 export class PageTemplatesComponent implements OnInit {
+  activityTemplate = false;
 
   constructor() { }
 
