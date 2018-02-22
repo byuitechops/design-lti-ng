@@ -7,7 +7,7 @@
     <div id="orgTemplate">
         <div class="row">
             <div class="option">
-                    <h4>Select options:</h4>                    
+                    <h4>Select options:</h4>
                     <label for="avtivitySelected2" class="templateLabel">Banner:</label>
                     <select id="activitySelected2">
                     <optgroup label="Prepare">
@@ -48,7 +48,7 @@
                     </optgroup>
                 </select>
                 <br>
-                <label for="selectTemplate" class="templateLabel">Page Template:</label>                    
+                <label for="selectTemplate" class="templateLabel">Page Template:</label>
                 <select id="selectTemplate">
                     <option disabled selected value>Select a template</option>
                     <option value="1">Generic Activity Instructions</option>
@@ -94,17 +94,15 @@
                 <a target="_blank" href="https://docs.google.com/document/d/1ZoDam0yGbEkZX9i1o1ognWJFp6Jqh9IP6eeyOR23oj4/">View docs</a>
             </div>
             <div class="preview" id="customTemplateOut">
-                <h4>Preview:</h4>                    
+                <h4>Preview:</h4>
                 <div class="byui" id="bannerOut2">
-                    
+
                 </div>
                 <div id="orgTemplateOut">
-                    <p>Please select an option to the left</p>
+                    <!-- <p>Please select an option to the left</p> -->
+                    <app-generic-activity *ngIf='activityTemplate'></app-generic-activity>
                 </div>
             </div>
-        </div>
-        <div class="hidden">
-            <%- templates %>
         </div>
         <div class="buttonWrapper">
             <a class="Button btn btn-primary" href="#" onclick="respond('customTemplate')">Insert Activity Template</a>
@@ -116,7 +114,7 @@
             <div class="option">
             </div>
             <div class="preview" id="homeTemplateOut">
-                <h4>Preview:</h4>                    
+                <h4>Preview:</h4>
                 <div class="byui <%= courseClass %>">
                     <div class="welcome">
                         <img src="https://byui.instructure.com/courses/<%= courseId %>/file_contents/course%20files/Web%20Files/homeImage.jpg">
@@ -162,11 +160,11 @@
     </div>
     <!--<div class="row" id="templateSmall">
         <div class="option">
-                        <h4>Select options:</h4>                
+                        <h4>Select options:</h4>
             <a class="Button btn btn-primary" href="#" onclick="respond('templateSmall')">Insert Page Template</a>
         </div>
         <div class="preview" id="templateSmallOut">
-                        <h4>Preview:</h4>                
+                        <h4>Preview:</h4>
             <div class="byui <%= courseClass %>">
                 <div id="header">
                     <img src="https://byui.instructure.com/courses/773/files/129575/preview" alt="Banner" width="3000" height="272" data-api-endpoint="https://byui.instructure.com/api/v1/courses/773/files/129575" data-api-returntype="File" />

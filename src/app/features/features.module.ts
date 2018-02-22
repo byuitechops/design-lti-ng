@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { PageTemplatesComponent } from './page-templates.component';
 import { WebFeaturesComponent } from './web-features.component';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
+import { GenericActivityComponent } from './templates/generic-activity.component';
+import { GenericQuizComponent } from './templates/generic-quiz.component';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { CapitalizePipe } from '../shared/capitalize.pipe';
     ])
   ],
   exports: [
-    WebFeaturesComponent
+    // WebFeaturesComponent
   ],
   declarations: [
     PageTemplatesComponent,
     WebFeaturesComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    GenericActivityComponent,
+    GenericQuizComponent
   ]
 })
 export class FeaturesModule { }
