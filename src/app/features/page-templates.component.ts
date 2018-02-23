@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-page-templates',
@@ -6,11 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-templates.component.css']
 })
 export class PageTemplatesComponent implements OnInit {
-  activityTemplate = false;
+  selectedTemplate = 'genericActivity';
+  templates: string[] = ['genericActivity', 'genericQuiz'];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateTemplate(value: string) {
+    this.selectedTemplate = value;
+    console.log(this.selectedTemplate);
   }
 
 }
