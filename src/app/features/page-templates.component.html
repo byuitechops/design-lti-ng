@@ -49,10 +49,10 @@
                 </select>
                 <br>
                 <label for="selectTemplate" class="templateLabel">Page Template:</label>
-                <select id="selectTemplate">
-                    <option disabled selected value>Select a template</option>
-                    <option value="1">Generic Activity Instructions</option>
-                    <option value="37">Generic Quiz Instructions</option>
+                <select (change)="updateTemplate($event.target.value)" id="selectTemplate">
+                    <!-- <option disabled selected value>Select a template</option> -->
+                    <option *ngFor="let template of templates"
+                            [value]="template">{{template | capitalize}}</option>
                     <!-- <option value="2">Prepare - Read/Watch/Listen</option>
                     <option value="3">Prepare - Read/Watch/Listen (Instructions in another activity)</option>
                     <option value="4">Prepare - Pre-Assesment</option>
@@ -99,8 +99,9 @@
 
                 </div>
                 <div id="orgTemplateOut">
-                    <!-- <p>Please select an option to the left</p> -->
-                    <app-generic-activity *ngIf='activityTemplate'></app-generic-activity>
+                    <p *ngIf="!selectedTemplate">Please select an option to the left</p>
+                    <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'"></app-generic-activity>
+                    <app-generic-quiz *ngIf="selectedTemplate == 'genericQuiz'"></app-generic-quiz>
                 </div>
             </div>
         </div>
