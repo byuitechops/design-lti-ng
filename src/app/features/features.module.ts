@@ -8,7 +8,6 @@ import { WebFeaturesComponent } from './web-features.component';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { GenericActivityComponent } from './templates/generic-activity.component';
 import { GenericQuizComponent } from './templates/generic-quiz.component';
-import { OrgHostDirective } from './templates/org-host.directive';
 
 
 @NgModule({
@@ -28,8 +27,7 @@ import { OrgHostDirective } from './templates/org-host.directive';
     WebFeaturesComponent,
     CapitalizePipe,
     GenericActivityComponent,
-    GenericQuizComponent,
-    OrgHostDirective
+    GenericQuizComponent
   ]
 })
 export class FeaturesModule { }

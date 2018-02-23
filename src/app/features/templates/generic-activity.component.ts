@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-generic-activity',
   templateUrl: './generic-activity.component.html',
-  styleUrls: ['./generic-activity.component.css']
+  styleUrls: []
 })
 export class GenericActivityComponent implements OnInit {
 
