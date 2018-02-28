@@ -140,7 +140,7 @@ export class WebFeaturesComponent implements OnInit {
     this.slideAlt[index] = value;
   }
 
-  array(value: string): any[] {
+  array(value: number): any[] {
     const num = Number(value);
     return Array.from(Array(num).keys());
   }
