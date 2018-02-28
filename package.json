@@ -23,9 +23,11 @@
     "@angular/router": "^5.2.0",
     "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
+    "express-session": "^1.15.6",
     "morgan": "^1.9.0",
     "node-uuid": "^1.4.8",
     "rxjs": "^5.5.6",
+    "serve-favicon": "^2.4.5",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
