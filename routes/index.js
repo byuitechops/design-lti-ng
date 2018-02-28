@@ -38,21 +38,6 @@ router.route('*/api/course-number').get((req, res) => {
   res.send(courseNumber);
 })
 
-router.route('*/api/content-items').get((req, res) => {
-  var content_items = {
-    "@context": "http://purl.imsglobal.org/ctx/lti/v1/ContentItem",
-    "@graph": [{
-      "@type": "ContentItem",
-      "text": '',
-      "mediaType": "text/html",
-      "placementAdvice": {
-        "presentationDocumentTarget": "embed"
-        }
-      }]
-  }
-  res.send(content_items);
-})
-
 /* Handle LTI launch */
 /* This uses the Content Item service which is documented here:
    https://canvas.instructure.com/doc/api/file.content_item.html */
