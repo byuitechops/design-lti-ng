@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { Headers, RequestOptions } from '@angular/http';
 // const server = require('../../bin/www');
 
 @Injectable()
@@ -22,5 +23,9 @@ export class LtiParamsService {
   }
   getReturnUrl(): Observable<string> {
     return this.http.get<string>(this.address + 'return-url');
+  }
+  submitForm(url: string, body: string): void {
+    console.log(url, body);
+    this.http.post(url, body).subscribe(res => console.log(res));
   }
 }

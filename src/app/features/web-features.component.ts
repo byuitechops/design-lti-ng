@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
+import { LtiParamsService } from '../lti-params.service';
 
 @Component({
   selector: 'app-web-features',
@@ -29,8 +30,6 @@ export class WebFeaturesComponent implements OnInit {
   slideSource: string[] = [];
   slideAlt: string[] = [];
   tableStriped = false;
-  returnUrl: string;
-  contentItems: string;
   prepare: string[] = ['caseStudy', 'checkUnderstanding', 'preAssessment', 'readings', 'research', 'video'];
   teach: string[] = ['caseStudy', 'fieldExperience', 'groupPresentation', 'groupProblemSolving', 'groupProject',
   'iceBreaker', 'insightSharing', 'jigsawActivity', 'peerAccountability', 'peerFeedback',
@@ -38,6 +37,22 @@ export class WebFeaturesComponent implements OnInit {
   ponder: string[] = ['assessment', 'demonstrateProficiency', 'practiceApply', 'presentation', 'reflection'];
   bannerOutValue: string;
   bannerOutInner: string;
+  returnUrl: string;
+  /* This uses the Content Item service which is documented here:
+   https://canvas.instructure.com/doc/api/file.content_item.html */
+  contentItems = {
+    '@context': 'http://purl.imsglobal.org/ctx/lti/v1/ContentItem',
+    '@graph': [{
+      '@type': 'ContentItem',
+      'url': this.returnUrl,
+      'text': '<p>Whaaaa?</p>',
+      'mediaType': 'text/html',
+      'placementAdvice': {
+        'presentationDocumentTarget': 'embed'
+        }
+      }]
+  };
+  test: string = JSON.stringify(this.contentItems);
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -103,7 +118,7 @@ export class WebFeaturesComponent implements OnInit {
     this._popoverText = value;
   }
 
-  constructor(private route: ActivatedRoute) {  }
+  constructor(private _ltiParamsService: LtiParamsService) {  }
 
   changeCalloutPosition(value: string): void {
     this.calloutPosition = value;
@@ -159,23 +174,16 @@ export class WebFeaturesComponent implements OnInit {
     return Array.from(Array(num).keys());
   }
 
-  onSubmit() {
-    console.log('submitted');
+  submitFeature(featureName) {
+    // this.contentItems['@graph'][0].text = '<p>Whaaaa?</p>';
+    // this._ltiParamsService.submitForm(this.returnUrl, JSON.stringify(this.test));
+    // console.log('submitted');
   }
-  // respond(featureName: string): void {
-  //   this.contentItems['@graph'][0].text = $('#' + featureName + "Out").html().toString().trim();
-  //   this.contentItems = JSON.stringify(this.contentItems);
-  //   document.getElementById('editor_button').submit();
-  // }
 
   ngOnInit() {
-    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
-  }
-
-  // tslint:disable-next-line:use-life-cycle-interface
-  ngAfterViewInit(): void {
-    try {
-      document.querySelector('#' + this.fragment).scrollIntoView();
-    } catch (e) { }
+    this._ltiParamsService.getReturnUrl()
+    .subscribe(param => {
+      this.returnUrl = param;
+    });
   }
 }
