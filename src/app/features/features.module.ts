@@ -8,6 +8,7 @@ import { WebFeaturesComponent } from './web-features.component';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { GenericActivityComponent } from './templates/generic-activity.component';
 import { GenericQuizComponent } from './templates/generic-quiz.component';
+import { LtiParamsService } from '../lti-params.service';
 
 
 @NgModule({
@@ -28,6 +29,9 @@ import { GenericQuizComponent } from './templates/generic-quiz.component';
     CapitalizePipe,
     GenericActivityComponent,
     GenericQuizComponent
+  ],
+  providers: [
+    LtiParamsService
   ]
 })
 export class FeaturesModule { }
