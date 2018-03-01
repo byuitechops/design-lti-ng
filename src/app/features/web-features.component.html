@@ -53,17 +53,21 @@
         <div class="row">
             <div class="option">
                 <h4>Select options:</h4>
-                <select id="activitySelected">
+                <select (change)="updateBanner($event.target.value)">
                     <optgroup label="Prepare">
-                        <option value="prepare caseStudy">Case Study</option>
+                        <option *ngFor="let option of prepare"
+                                [value]="'prepare ' + option">{{option | capitalize}}</option>
+                        <!-- <option value="prepare caseStudy">Case Study</option>
                         <option value="prepare checkUnderstanding">Check-Your-Understanding</option>
                         <option value="prepare preAssessment">Pre-Assessment</option>
                         <option value="prepare readings">Readings</option>
                         <option value="prepare research">Research</option>
-                        <option value="prepare video">Video</option>
+                        <option value="prepare video">Video</option> -->
                     </optgroup>
                     <optgroup label="Teach One Another">
-                        <option value="teach caseStudy">Case Study</option>
+                        <option *ngFor="let option of teach"
+                                [value]="'teach ' + option">{{option | capitalize}}</option>
+                        <!-- <option value="teach caseStudy">Case Study</option>
                         <option value="teach fieldExperience">Field Experience Sharing</option>
                         <option value="teach groupPresentation">Group Presentation</option>
                         <option value="teach groupProblemSolving">Group Problem Solving</option>
@@ -77,14 +81,16 @@
                         <option value="teach structuredDebate">Structured Debate</option>
                         <option value="teach studyGroup">Study Group</option>
                         <option value="teach supportForum">Support Forum</option>
-                        <option value="teach topicDiscussion">Topic Discussion</option>
+                        <option value="teach topicDiscussion">Topic Discussion</option> -->
                     </optgroup>
                     <optgroup label="Ponder and Prove">
-                        <option value="ponder assessment">Assessment</option>
+                        <option *ngFor="let option of ponder"
+                                [value]="'ponder ' + option">{{option | capitalize}}</option>
+                        <!-- <option value="ponder assessment">Assessment</option>
                         <option value="ponder demonstrateProficiency">Demonstrate Proficiency</option>
                         <option value="ponder practiceApply">Practice/Apply</option>
                         <option value="ponder presentation">Presentation</option>
-                        <option value="ponder reflection">Reflection</option>
+                        <option value="ponder reflection">Reflection</option> -->
                     </optgroup>
                     <optgroup label="Other">
                         <option value="other">Other</option>
@@ -94,7 +100,7 @@
             <div class="preview">
                 <h4>Preview:</h4>
                 <div class="byui" id="bannerOut">
-                    <h2 class="activity caseStudy">Case Study</h2>
+                    <h2 class="{{bannerOutValue ? bannerOutValue : 'activity caseStudy'}}">{{(bannerOutInner ? bannerOutInner : 'CaseStudy') | capitalize}}</h2>
                 </div>
             </div>
         </div>
