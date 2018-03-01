@@ -1,41 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-const server = require('../../bin/www');
-
-export interface LtiParam {
-  param: string;
-}
+// const server = require('../../bin/www');
 
 @Injectable()
 export class LtiParamsService {
-  address: string;
-  contentItems = {
-    '@context': 'http://purl.imsglobal.org/ctx/lti/v1/ContentItem',
-    '@graph': [{
-      '@type': 'ContentItem',
-      'text': '',
-      'mediaType': 'text/html',
-      'placementAdvice': {
-        'presentationDocumentTarget': 'embed'
-        }
-      }]
-  };
+  address = 'https://localhost:1820/api/';
 
   constructor(private http: HttpClient) {
-    this.address = server.address();
+    /* this.address = server.address(); */
   }
 
-  getCourseName(): Observable<LtiParam> {
-    return this.http.get<LtiParam>(this.address + '/api/course-name');
+  getCourseName(): Observable<string> {
+    return this.http.get<string>(this.address + 'course-name');
   }
-  getCourseClass(): Observable<LtiParam> {
-    return this.http.get<LtiParam>(this.address + '/api/course-class');
+  getCourseClass(): Observable<string> {
+    return this.http.get<string>(this.address + 'course-class');
   }
-  getCourseNumber(): Observable<LtiParam> {
-    return this.http.get<LtiParam>(this.address + '/api/course-number');
+  getCourseId(): Observable<string> {
+    return this.http.get<string>(this.address + 'course-id');
   }
-  getConentItems(): string {
-    return JSON.stringify(this.contentItems);
+  getReturnUrl(): Observable<string> {
+    return this.http.get<string>(this.address + 'return-url');
   }
 }
