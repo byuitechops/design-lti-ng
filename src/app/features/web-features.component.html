@@ -41,7 +41,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('accordion')">Insert Accordion</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('accordion')">Insert Accordion</a>
         </div>
     </div>
 
@@ -79,7 +79,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('banner')">Insert Activity Banner</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('banner')">Insert Activity Banner</a>
         </div>
     </div>
 
@@ -102,7 +102,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('bannerImg')">Insert Banner Image</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('bannerImg')">Insert Banner Image</a>
         </div>
     </div> -->
 
@@ -133,7 +133,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('button')">Insert Button</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('button')">Insert Button</a>
         </div>
     </div>
 
@@ -196,7 +196,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('callout')">Insert Callout</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('callout')">Insert Callout</a>
         </div>
     </div>
 
@@ -233,7 +233,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('columns')">Insert Columns</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('columns')">Insert Columns</a>
         </div>
     </div>
 
@@ -255,7 +255,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('contentBox')">Insert Content Box</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('contentBox')">Insert Content Box</a>
         </div>
     </div> -->
 
@@ -277,7 +277,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('definition')">Insert Definition</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('definition')">Insert Definition</a>
         </div>
     </div>
 
@@ -306,7 +306,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('dialog')">Insert Dialog</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('dialog')">Insert Dialog</a>
         </div>
     </div>
 
@@ -361,7 +361,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('image')">Insert Image</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('image')">Insert Image</a>
         </div>
     </div>
 
@@ -401,7 +401,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('video')">Insert Video</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('video')">Insert Video</a>
         </div>
     </div>
 
@@ -437,7 +437,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('imgCarousel')">Insert Image Carousel</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('imgCarousel')">Insert Image Carousel</a>
         </div>
     </div>
 
@@ -463,7 +463,7 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('popover')">Insert popover</a>
+            <a class="Button btn btn-primary" href="#" onclick="submitFeature('popoverOut.innerhtml')">Insert popover</a>
         </div>
     </div>
 
@@ -509,16 +509,16 @@
             </div>
         </div>
         <div>
-            <a class="Button btn btn-primary" href="#" onclick="respond('table')">Insert Table</a>
+            <a class="Button btn btn-primary" (click)="submitFeature('table')">Insert Table</a>
         </div>
     </div>
 
   </div>
 </div>
 
-<form (ngSubmit)="onSubmit()" method="post" action="{{returnUrl}}" id="editor_button">
+<form method="post" action="{{returnUrl}}">
   <input type="hidden" name="lti_message_type" value="ContentItemSelection" />
   <input type="hidden" name="lti_version" value="LTI-1p0" />
-  <input id="contentItems" type="hidden" name="content_items" value="{{contentItems}}" />
+  <input id="contentItems" type="hidden" name="content_items" value="{{test}}" />
   <button type="submit">Submit</button>
 </form>
