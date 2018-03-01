@@ -1,23 +1,16 @@
 /*eslint-env node, es6*/
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
-var ltiMiddleware = require("./express-ims-lti");
-var session = require('express-session');
-var https = require('https');
-var fs = require('fs');
-var index = require('./routes/index');
-var app = express();
-
-//for local dev faux https
-if (!process.env.URL) {
-  https.createServer({
-    pfx: fs.readFileSync('crt/crt.pfx'),
-    passphrase: 'byuicontent'
-  }, app).listen(1820)
-}
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+const ltiMiddleware = require("./express-ims-lti");
+const session = require('express-session');
+const https = require('https');
+const fs = require('fs');
+const index = require('./routes/index');
+const app = express();
+const cors = require('cors');
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'dist'));
@@ -74,6 +67,9 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   // res.render('error');
 });
+
+// allows cross origin http requests
+app.use(cors());
 
 app.get('*', (req, res) => {
   res.sendFile('./dist/index.html');
