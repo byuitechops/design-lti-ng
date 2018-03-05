@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { LtiParamsService } from '../lti-params.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-web-features',
@@ -175,9 +176,13 @@ export class WebFeaturesComponent implements OnInit {
   }
 
   submitFeature(featureName) {
-    // this.contentItems['@graph'][0].text = '<p>Whaaaa?</p>';
-    // this._ltiParamsService.submitForm(this.returnUrl, JSON.stringify(this.test));
-    // console.log('submitted');
+    this.contentItems['@graph'][0].text = '<p>Whaaaa?</p>';
+    this._ltiParamsService.submitForm(this.returnUrl, JSON.stringify(this.test));
+    console.log('submitted');
+  }
+
+  submitForm(form: NgModel) {
+
   }
 
   ngOnInit() {
