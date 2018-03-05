@@ -28,6 +28,7 @@ import { CalloutPreviewComponent } from './web-features/previews/callout-preview
 import { ColumnsPreviewComponent } from './web-features/previews/columns-preview.component';
 import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
 import { DialogPreviewComponent } from './web-features/previews/dialog-preview.component';
+import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { DialogPreviewComponent } from './web-features/previews/dialog-preview.c
     CalloutPreviewComponent,
     ColumnsPreviewComponent,
     DefinitionPreviewComponent,
-    DialogPreviewComponent
+    DialogPreviewComponent,
+    ImagePreviewComponent
   ],
   providers: [
     LtiParamsService
