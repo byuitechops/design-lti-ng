@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+  tableStriped = false;
+
   constructor() { }
 
   ngOnInit() {
