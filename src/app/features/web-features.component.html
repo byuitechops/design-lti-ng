@@ -22,6 +22,7 @@
       <app-banner class="app-banner"></app-banner>
       <app-button class="app-button"></app-button>
       <app-callout class="app-callout"></app-callout>
+      <app-columns class="app-columns"></app-columns>
 
     <!-- <div id="bannerImg">
         <h2>Banner Image</h2>
@@ -45,43 +46,6 @@
             <a class="Button btn btn-primary" href="#" onclick="submitFeature('bannerImg')">Insert Banner Image</a>
         </div>
     </div> -->
-
-    <div id="columns">
-        <h2>Columns</h2>
-        <div>
-            <p>Guidelines</p>
-        </div>
-        <div class="row">
-            <div class="option">
-                <h4>Select number of columns:</h4>
-                <div class="size radio-inline">
-                    <div *ngFor="let column of columnNumbers">
-                        <input type="radio" name="numberOfColumns"
-                            [value]="column"
-                            [checked]="column===1"
-                            (change)="changeNumberOfColumns(column)">
-                        <label class="radio-label">{{ column }}</label>
-                    </div>
-                </div>
-            </div>
-            <div class="preview" id="columnsOut">
-                <h4>Preview:</h4>
-                <div class="content-box">
-                    <div class="grid-row">
-                        <div class="col-xs-6" *ngFor="let item of array(numberOfColumns)">
-                            <ul>
-                                <li>Lorem ipsum dolor</li>
-                                <li>Lorem ipsum dolor</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="Button btn btn-primary" href="#" onclick="submitFeature('columns')">Insert Columns</a>
-        </div>
-    </div>
 
     <!-- <div id="contentBox">
         <h2>Content Box</h2>

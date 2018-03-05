@@ -25,6 +25,7 @@ import { TableComponent } from './web-features/table.component';
 import { BannerPreviewComponent } from './web-features/previews/banner-preview.component';
 import { ButtonPreviewComponent } from './web-features/previews/button-preview.component';
 import { CalloutPreviewComponent } from './web-features/previews/callout-preview.component';
+import { ColumnsPreviewComponent } from './web-features/previews/columns-preview.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { CalloutPreviewComponent } from './web-features/previews/callout-preview
     TableComponent,
     BannerPreviewComponent,
     ButtonPreviewComponent,
-    CalloutPreviewComponent
+    CalloutPreviewComponent,
+    ColumnsPreviewComponent
   ],
   providers: [
     LtiParamsService

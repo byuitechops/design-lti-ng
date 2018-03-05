@@ -13,8 +13,6 @@ export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
 
-  columnNumbers: number[] = [1, 2, 3];
-  numberOfColumns = 1;
   dialogPrompt: string;
   dialogTitle: string;
   dialogContent: string;
@@ -85,9 +83,6 @@ export class WebFeaturesComponent implements OnInit {
     this.imageSize = value;
   }
 
-  changeNumberOfColumns(value: number): void {
-    this.numberOfColumns = value;
-  }
 
   updateImageSource(value: string): void {
     this.imageSource = value;
