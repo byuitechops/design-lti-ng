@@ -12,11 +12,7 @@ import { NgModel } from '@angular/forms';
 export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
-  positions: string[] = ['left', 'center', 'right'];
-  sizes: string[] = ['full', 'half', 'quarter'];
-  calloutPosition = 'right';
-  calloutSize = 'quarter';
-  calloutChecked = false;
+
   columnNumbers: number[] = [1, 2, 3];
   numberOfColumns = 1;
   dialogPrompt: string;
@@ -46,14 +42,6 @@ export class WebFeaturesComponent implements OnInit {
       }]
   };
   test: string = JSON.stringify(this.contentItems);
-
-  _calloutText: string;
-  get calloutText(): string {
-    return this._calloutText;
-  }
-  set calloutText(value: string) {
-    this._calloutText = value;
-  }
 
   _imageCaption: string;
   get imageCaption(): string {
@@ -88,14 +76,6 @@ export class WebFeaturesComponent implements OnInit {
   }
 
   constructor(private _ltiParamsService: LtiParamsService) {  }
-
-  changeCalloutPosition(value: string): void {
-    this.calloutPosition = value;
-  }
-
-  changeCalloutSize(value: string): void {
-    this.calloutSize = value;
-  }
 
   changeImagePosition(value: string): void {
     this.imagePosition = value;
