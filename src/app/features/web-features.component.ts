@@ -12,7 +12,6 @@ import { NgModel } from '@angular/forms';
 export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
-  makePrimary = false;
   positions: string[] = ['left', 'center', 'right'];
   sizes: string[] = ['full', 'half', 'quarter'];
   calloutPosition = 'right';
@@ -47,14 +46,6 @@ export class WebFeaturesComponent implements OnInit {
       }]
   };
   test: string = JSON.stringify(this.contentItems);
-
-  _buttonText: string;
-  get buttonText(): string {
-    return this._buttonText;
-  }
-  set buttonText(value: string) {
-    this._buttonText = value;
-  }
 
   _calloutText: string;
   get calloutText(): string {
