@@ -26,6 +26,7 @@
       <app-definition class="app-definition"></app-definition>
       <app-dialog class="app-dialog"></app-dialog>
       <app-image class="app-image"></app-image>
+      <app-image-carousel class="app-image-carousel"></app-image-carousel>
 
     <!-- <div id="bannerImg">
         <h2>Banner Image</h2>
@@ -72,7 +73,7 @@
         </div>
     </div> -->
 
-    <div id="video">
+    <!-- <div id="video">
         <h2>Video</h2>
         <div>
             <p>Guidelines</p>
@@ -110,43 +111,7 @@
         <div>
             <a class="Button btn btn-primary" href="#" onclick="submitFeature('video')">Insert Video</a>
         </div>
-    </div>
-
-    <div id="imgCarousel">
-        <h2>Image Carousel</h2>
-        <div>
-            <p>Guidelines</p>
-        </div>
-        <div class="row">
-            <div class="option">
-                <h4>Select options:</h4>
-                <input #slides type="string" id="numSlides" placeholder="Number of slides?"
-                       (keyup.enter)="updateSlideCount(slides.value)"
-                       (blur)="updateSlideCount(slides.value)">
-                    <div *ngFor="let slide of array(slideCount)">
-                        <input #slideSrc type="string" placeholder="Img {{slide + 1}} URL"
-                        id="{{slide}}"
-                        (keyup.enter)="updateSlide(slideSrc.value, slide)"
-                        (blur)="updateSlide(slideSrc.value, slide)">
-                        <input #slideAlt type="string" placeholder="Img {{slide + 1}} Alt text"
-                        id="{{slide}}"
-                        (keyup)="updateSlideAlt(slideAlt.value, slide)">
-                    </div>
-            </div>
-            <div class="preview" id="imgCarouselOut">
-                <h4>Preview:</h4>
-                <div class="carousel">
-                    <div class="slide" *ngFor="let slide of array(slideCount)">
-                        <img alt="{{slideAlt[slide] ? slideAlt[slide] : '...'}}"
-                             src="{{slideSource[slide] ? slideSource[slide] : 'http://1.bp.blogspot.com/-66D9avcPfZo/UO2VxdfheOI/AAAAAAAAAHw/4yf3mXCbzO4/s1600/050524TaylorBldg_6743.jpg'}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="Button btn btn-primary" href="#" onclick="submitFeature('imgCarousel')">Insert Image Carousel</a>
-        </div>
-    </div>
+    </div> -->
 
     <div id="popover">
         <h2>Popover</h2>

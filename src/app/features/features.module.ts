@@ -29,6 +29,7 @@ import { ColumnsPreviewComponent } from './web-features/previews/columns-preview
 import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
 import { DialogPreviewComponent } from './web-features/previews/dialog-preview.component';
 import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
+import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { ImagePreviewComponent } from './web-features/previews/image-preview.com
     ColumnsPreviewComponent,
     DefinitionPreviewComponent,
     DialogPreviewComponent,
-    ImagePreviewComponent
+    ImagePreviewComponent,
+    ImageCarouselPreviewComponent
   ],
   providers: [
     LtiParamsService
