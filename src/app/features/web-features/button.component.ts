@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
+  makePrimary = false;
+
+  _buttonText: string;
+  get buttonText(): string {
+    return this._buttonText;
+  }
+  set buttonText(value: string) {
+    this._buttonText = value;
+  }
+
   constructor() { }
 
   ngOnInit() {

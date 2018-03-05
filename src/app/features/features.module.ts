@@ -23,6 +23,7 @@ import { ImageCarouselComponent } from './web-features/image-carousel.component'
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
 import { BannerPreviewComponent } from './web-features/previews/banner-preview.component';
+import { ButtonPreviewComponent } from './web-features/previews/button-preview.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { BannerPreviewComponent } from './web-features/previews/banner-preview.c
     ImageCarouselComponent,
     PopoverComponent,
     TableComponent,
-    BannerPreviewComponent
+    BannerPreviewComponent,
+    ButtonPreviewComponent
   ],
   providers: [
     LtiParamsService
