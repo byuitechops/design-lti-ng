@@ -9,6 +9,8 @@ import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { GenericActivityComponent } from './templates/generic-activity.component';
 import { GenericQuizComponent } from './templates/generic-quiz.component';
 import { LtiParamsService } from '../lti-params.service';
+import { AccordionComponent } from './web-features/accordion.component';
+import { AccordionPreviewComponent } from './web-features/previews/accordion-preview.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { LtiParamsService } from '../lti-params.service';
     WebFeaturesComponent,
     CapitalizePipe,
     GenericActivityComponent,
-    GenericQuizComponent
+    GenericQuizComponent,
+    AccordionComponent,
+    AccordionPreviewComponent
   ],
   providers: [
     LtiParamsService

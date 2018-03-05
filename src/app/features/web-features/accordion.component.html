@@ -1,0 +1,24 @@
+
+  <h2>Accordion</h2>
+  <div>
+      <p>Guidelines</p>
+  </div>
+  <div class="row">
+      <div class="option">
+          <h4>Select options:</h4>
+          <input type="text" placeholder="Heading text" [(ngModel)]='accordionHeading' >
+          <textarea placeholder="Content Text" [(ngModel)]='accordionContent'></textarea>
+      </div>
+      <div class="preview" id="accordionOut">
+          <h4>Preview:</h4>
+          <div class="accordion" id="this_page_1">
+              <h3>{{ accordionHeading ? accordionHeading : "Heading" }}</h3>
+              <div>
+                  <p>{{ accordionContent ? accordionContent : "Content" }}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div>
+      <a class="Button btn btn-primary" href="#" onclick="submitFeature('accordion')">Insert Accordion</a>
+  </div>
