@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-banner-preview',
@@ -16,7 +16,15 @@ export class BannerPreviewComponent implements OnInit {
   @Input() bannerOutValue: string;
   @Input() bannerOutInner: string;
 
-  constructor() { }
+  elementRef: ElementRef;
+
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+
+  getHtmlContent() {
+    return this.elementRef.nativeElement.innerHTML;
+  }
 
   ngOnInit() {
   }

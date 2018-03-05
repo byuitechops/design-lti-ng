@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { BannerPreviewComponent } from './previews/banner-preview.component';
 
 @Component({
   selector: 'app-banner',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class BannerComponent implements OnInit {
+
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(BannerPreviewComponent) preview: BannerPreviewComponent;
 
   bannerOutValue: string;
   bannerOutInner: string;
@@ -20,6 +24,12 @@ export class BannerComponent implements OnInit {
     console.log(this.bannerOutValue);
     this.bannerOutInner = value.split(' ')[1];
     console.log(this.bannerOutInner);
+  }
+
+  chooseFeature() {
+    const html = this.preview.getHtmlContent().trim();
+    console.log(html);
+    this.select.emit(html);
   }
 
   constructor() { }
