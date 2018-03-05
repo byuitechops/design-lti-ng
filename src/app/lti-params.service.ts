@@ -9,7 +9,13 @@ export class LtiParamsService {
   address = 'https://localhost:1820/api/';
 
   constructor(private http: HttpClient) {
-    /* this.address = server.address(); */
+  //   /* this.address = server.address(); */
+  //   if (process.env.url) {
+  //     this.address = process.env.url;
+  //   } else {
+  //     this.address = 'https://localhost:1820';
+  //   }
+  //   this.address += '/api/';
   }
 
   getCourseName(): Observable<string> {
