@@ -37,10 +37,10 @@ export class WebFeaturesComponent implements OnInit {
     return Array.from(Array(num).keys());
   }
 
-  submitFeature(featureName) {
-    this.contentItems['@graph'][0].text = '<p>Whaaaa?</p>';
-    this._ltiParamsService.submitForm(this.returnUrl, JSON.stringify(this.test));
-    console.log('submitted');
+  submitFeature(feature) {
+    this.contentItems['@graph'][0].text = feature;
+    console.log(this.contentItems);
+    // this._ltiParamsService.submitForm(this.returnUrl, JSON.stringify(this.test));
   }
 
   submitForm(form: NgModel) {
