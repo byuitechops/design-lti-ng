@@ -13,10 +13,6 @@ export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
 
-  imageSize = 'quarter';
-  imagePosition = 'right';
-  imageClearfix = false;
-  imageSource: string;
   slideCount = 0;
   slideSource: string[] = [];
   slideAlt: string[] = [];
@@ -38,22 +34,6 @@ export class WebFeaturesComponent implements OnInit {
   };
   test: string = JSON.stringify(this.contentItems);
 
-  _imageCaption: string;
-  get imageCaption(): string {
-    return this._imageCaption;
-  }
-  set imageCaption(value: string) {
-    this._imageCaption = value;
-  }
-
-  _imageAlt: string;
-  get imageAlt(): string {
-    return this._imageAlt;
-  }
-  set imageAlt(value: string) {
-    this._imageAlt = value;
-  }
-
   _popoverBaseText: string;
   get popoverBaseText(): string {
     return this._popoverBaseText;
@@ -71,19 +51,6 @@ export class WebFeaturesComponent implements OnInit {
   }
 
   constructor(private _ltiParamsService: LtiParamsService) {  }
-
-  changeImagePosition(value: string): void {
-    this.imagePosition = value;
-  }
-
-  changeImageSize(value: string): void {
-    this.imageSize = value;
-  }
-
-
-  updateImageSource(value: string): void {
-    this.imageSource = value;
-  }
 
   updateSlideCount(value: number): void {
     if (value <= 0) {
