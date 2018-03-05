@@ -17,6 +17,10 @@ var fs = require('fs');
 var port = normalizePort(process.env.PORT || '1820');
 app.set('port', port);
 
+
+/**
+ * Create HTTP server.
+ */
 var server;
 //for local dev faux https
 if (!process.env.URL) {
@@ -27,11 +31,6 @@ if (!process.env.URL) {
 } else {
   server = http.createServer(app);
 }
-
-/**
- * Create HTTP server.
- */
-
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -101,4 +100,4 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-// module.exports(server);
+// module.export(server);
