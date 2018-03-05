@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { BannerPreviewComponent } from './previews/banner-preview.component';
 
 @Component({
   selector: 'app-banner-image',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerImageComponent implements OnInit {
 
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(BannerPreviewComponent) preview: BannerPreviewComponent;
+
   constructor() { }
+
+  chooseFeature() {
+    const html = this.preview.getHtmlContent().trim();
+    console.log(html);
+    this.select.emit(html);
+  }
 
   ngOnInit() {
   }
