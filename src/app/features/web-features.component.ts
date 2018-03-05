@@ -13,8 +13,6 @@ export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
 
-
-  tableStriped = false;
   returnUrl: string;
   /* This uses the Content Item service which is documented here:
    https://canvas.instructure.com/doc/api/file.content_item.html */
@@ -31,8 +29,6 @@ export class WebFeaturesComponent implements OnInit {
       }]
   };
   test: string = JSON.stringify(this.contentItems);
-
-  
 
   constructor(private _ltiParamsService: LtiParamsService) {  }
 

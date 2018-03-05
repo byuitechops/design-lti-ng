@@ -31,6 +31,7 @@ import { DialogPreviewComponent } from './web-features/previews/dialog-preview.c
 import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
 import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
 import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
+import { TablePreviewComponent } from './web-features/previews/table-preview.component';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { PopoverPreviewComponent } from './web-features/previews/popover-preview
     DialogPreviewComponent,
     ImagePreviewComponent,
     ImageCarouselPreviewComponent,
-    PopoverPreviewComponent
+    PopoverPreviewComponent,
+    TablePreviewComponent
   ],
   providers: [
     LtiParamsService

@@ -28,6 +28,7 @@
       <app-image class="app-image"></app-image>
       <app-image-carousel class="app-image-carousel"></app-image-carousel>
       <app-popover class="app-popover"></app-popover>
+      <app-table class="app-table"></app-table>
 
     <!-- <div id="bannerImg">
         <h2>Banner Image</h2>
@@ -113,56 +114,6 @@
             <a class="Button btn btn-primary" href="#" onclick="submitFeature('video')">Insert Video</a>
         </div>
     </div> -->
-
-    <div id="popover">
-
-    </div>
-
-    <div id="table">
-        <h2>Table</h2>
-        <div>
-            <p>Guidelines</p>
-        </div>
-        <div class="row">
-            <div class="option">
-                <h4>Select options:</h4>
-                <input type="checkbox" id="tableStriped"
-                       (change)="tableStriped = !tableStriped">
-                <label for="tableStriped">Striped</label>
-            </div>
-            <div class="preview" id="tableOut">
-                <h4>Preview:</h4>
-                <table [ngClass]="{'table-striped':tableStriped,
-                                   'ic-Table':true}">
-                    <tbody>
-                        <tr>
-                            <th>Heading</th>
-                            <th>Heading</th>
-                            <th>Heading</th>
-                        </tr>
-                        <tr>
-                            <td>Text</td>
-                            <td>Text</td>
-                            <td>Text</td>
-                        </tr>
-                        <tr>
-                            <td>Text</td>
-                            <td>Text</td>
-                            <td>Text</td>
-                        </tr>
-                        <tr>
-                            <td>Text</td>
-                            <td>Text</td>
-                            <td>Text</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div>
-            <a class="Button btn btn-primary" (click)="submitFeature('table')">Insert Table</a>
-        </div>
-    </div>
 
   </div>
 </div>
