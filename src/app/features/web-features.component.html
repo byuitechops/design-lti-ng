@@ -18,48 +18,8 @@
   <h3>Select the feature you would like to insert</h3>
 
   <div class="features">
-
       <app-accordion class="app-accordion"></app-accordion>
-
-
-
-    <div id="banner">
-        <h2>Activity Banner</h2>
-        <div>
-            <p>Guidelines</p>
-        </div>
-        <div class="row">
-            <div class="option">
-                <h4>Select options:</h4>
-                <select (change)="updateBanner($event.target.value)">
-                    <optgroup label="Prepare">
-                        <option *ngFor="let option of prepare"
-                                [value]="'prepare ' + option">{{option | capitalize}}</option>
-                    </optgroup>
-                    <optgroup label="Teach One Another">
-                        <option *ngFor="let option of teach"
-                                [value]="'teach ' + option">{{option | capitalize}}</option>
-                    </optgroup>
-                    <optgroup label="Ponder and Prove">
-                        <option *ngFor="let option of ponder"
-                                [value]="'ponder ' + option">{{option | capitalize}}</option>
-                    </optgroup>
-                    <optgroup label="Other">
-                        <option value="other">Other</option>
-                    </optgroup>
-                </select>
-            </div>
-            <div class="preview">
-                <h4>Preview:</h4>
-                <div class="byui" id="bannerOut">
-                    <h2 class="{{bannerOutValue ? bannerOutValue : 'activity caseStudy'}}">{{(bannerOutInner ? bannerOutInner : 'CaseStudy') | capitalize}}</h2>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="Button btn btn-primary" href="#" onclick="submitFeature('banner')">Insert Activity Banner</a>
-        </div>
-    </div>
+      <app-banner class="app-banner"></app-banner>
 
     <!-- <div id="bannerImg">
         <h2>Banner Image</h2>

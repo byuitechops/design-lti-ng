@@ -22,6 +22,7 @@ import { VideoComponent } from './web-features/video.component';
 import { ImageCarouselComponent } from './web-features/image-carousel.component';
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
+import { BannerPreviewComponent } from './web-features/previews/banner-preview.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { TableComponent } from './web-features/table.component';
     VideoComponent,
     ImageCarouselComponent,
     PopoverComponent,
-    TableComponent
+    TableComponent,
+    BannerPreviewComponent
   ],
   providers: [
     LtiParamsService
