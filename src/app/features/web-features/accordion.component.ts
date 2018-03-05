@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, ViewChild } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { AccordionPreviewComponent } from './previews/accordion-preview.component';
 
 @Component({
   selector: 'app-accordion',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: []
 })
 export class AccordionComponent implements OnInit {
+
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(AccordionPreviewComponent) preview: AccordionPreviewComponent;
 
   _accordionHeading: string;
   get accordionHeading(): string {
@@ -24,6 +29,12 @@ export class AccordionComponent implements OnInit {
   }
 
   constructor() { }
+
+  chooseFeature() {
+    const html = this.preview.getHtmlContent().trim();
+    console.log(html);
+    this.select.emit(html);
+  }
 
   ngOnInit() {
   }
