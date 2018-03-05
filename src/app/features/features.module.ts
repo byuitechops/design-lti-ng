@@ -32,6 +32,8 @@ import { ImagePreviewComponent } from './web-features/previews/image-preview.com
 import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
 import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
 import { TablePreviewComponent } from './web-features/previews/table-preview.component';
+import { ContentBoxComponent } from './web-features/content-box.component';
+import { BannerImageComponent } from './web-features/banner-image.component';
 
 
 @NgModule({
@@ -74,7 +76,9 @@ import { TablePreviewComponent } from './web-features/previews/table-preview.com
     ImagePreviewComponent,
     ImageCarouselPreviewComponent,
     PopoverPreviewComponent,
-    TablePreviewComponent
+    TablePreviewComponent,
+    ContentBoxComponent,
+    BannerImageComponent
   ],
   providers: [
     LtiParamsService
