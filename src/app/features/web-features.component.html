@@ -1,42 +1,36 @@
 <div id="pageOne" class="page visible">
   <nav>
-    <a [routerLink]="['.']" fragment="accordion">Accordion</a>
-    <a [routerLink]="['.']" fragment="banner">Activity Banner</a>
+    <a [routerLink]="['.']" fragment="app-accordion">Accordion</a>
+    <a [routerLink]="['.']" fragment="app-banner">Activity Banner</a>
     <!-- <a href="#bannerImg">Banner Image</a> -->
-    <a [routerLink]="['.']" fragment="button">Button</a>
-    <a [routerLink]="['.']" fragment="callout">Callout</a>
-    <a [routerLink]="['.']" fragment="columns">Columns</a>
+    <a [routerLink]="['.']" fragment="app-button">Button</a>
+    <a [routerLink]="['.']" fragment="app-callout">Callout</a>
+    <a [routerLink]="['.']" fragment="app-columns">Columns</a>
     <!-- <a href="#contentBox">Content Box</a> -->
-    <a [routerLink]="['.']" fragment="definition">Definition</a>
-    <a [routerLink]="['.']" fragment="dialog">Dialog</a>
-    <a [routerLink]="['.']" fragment="image">Image</a>
-    <a [routerLink]="['.']" fragment="imgCarousel">Image Carousel</a>
-    <a [routerLink]="['.']" fragment="popover">Popover</a>
-    <a [routerLink]="['.']" fragment="table">Table</a>
+    <a [routerLink]="['.']" fragment="app-definition">Definition</a>
+    <a [routerLink]="['.']" fragment="app-dialog">Dialog</a>
+    <a [routerLink]="['.']" fragment="app-image">Image</a>
+    <a [routerLink]="['.']" fragment="app-image-carousel">Image Carousel</a>
+    <a [routerLink]="['.']" fragment="app-popover">Popover</a>
+    <a [routerLink]="['.']" fragment="app-table">Table</a>
   </nav>
 
   <h3>Select the feature you would like to insert</h3>
 
   <div class="features">
-      <app-accordion class="app-accordion"></app-accordion>
-      <app-banner class="app-banner"></app-banner>
-      <app-button class="app-button"></app-button>
-      <app-callout class="app-callout"></app-callout>
-      <app-columns class="app-columns"></app-columns>
-      <app-definition class="app-definition"></app-definition>
-      <app-dialog class="app-dialog"></app-dialog>
-      <app-image class="app-image"></app-image>
-      <app-image-carousel class="app-image-carousel"></app-image-carousel>
-      <app-popover class="app-popover"></app-popover>
-      <app-table class="app-table"></app-table>
 
-    <!-- <div id="bannerImg">
-        
-    </div> -->
-
-    <!-- <div id="contentBox">
-
-    </div> -->
+      <app-accordion id="app-accordion"
+        (select)="submitFeature($event)"></app-accordion>
+      <app-banner id="app-banner"></app-banner>
+      <app-button id="app-button"></app-button>
+      <app-callout id="app-callout"></app-callout>
+      <app-columns id="app-columns"></app-columns>
+      <app-definition id="app-definition"></app-definition>
+      <app-dialog id="app-dialog"></app-dialog>
+      <app-image id="app-image"></app-image>
+      <app-image-carousel id="app-image-carousel"></app-image-carousel>
+      <app-popover id="app-popover"></app-popover>
+      <app-table id="app-table"></app-table>
 
   </div>
 </div>
