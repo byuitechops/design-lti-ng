@@ -11,12 +11,10 @@
       </div>
       <div class="preview" id="accordionOut">
           <h4>Preview:</h4>
-          <div class="accordion" id="this_page_1">
-              <h3>{{ accordionHeading ? accordionHeading : "Heading" }}</h3>
-              <div>
-                  <p>{{ accordionContent ? accordionContent : "Content" }}</p>
-              </div>
-          </div>
+          <app-accordion-preview
+              [accordionContent]="accordionContent"
+              [accordionHeading]="accordionHeading">
+          </app-accordion-preview>
       </div>
   </div>
   <div>
