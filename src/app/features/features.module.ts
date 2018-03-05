@@ -30,6 +30,7 @@ import { DefinitionPreviewComponent } from './web-features/previews/definition-p
 import { DialogPreviewComponent } from './web-features/previews/dialog-preview.component';
 import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
 import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
+import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { ImageCarouselPreviewComponent } from './web-features/previews/image-car
     DefinitionPreviewComponent,
     DialogPreviewComponent,
     ImagePreviewComponent,
-    ImageCarouselPreviewComponent
+    ImageCarouselPreviewComponent,
+    PopoverPreviewComponent
   ],
   providers: [
     LtiParamsService
