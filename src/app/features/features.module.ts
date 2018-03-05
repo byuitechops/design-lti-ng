@@ -26,6 +26,7 @@ import { BannerPreviewComponent } from './web-features/previews/banner-preview.c
 import { ButtonPreviewComponent } from './web-features/previews/button-preview.component';
 import { CalloutPreviewComponent } from './web-features/previews/callout-preview.component';
 import { ColumnsPreviewComponent } from './web-features/previews/columns-preview.component';
+import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { ColumnsPreviewComponent } from './web-features/previews/columns-preview
     BannerPreviewComponent,
     ButtonPreviewComponent,
     CalloutPreviewComponent,
-    ColumnsPreviewComponent
+    ColumnsPreviewComponent,
+    DefinitionPreviewComponent
   ],
   providers: [
     LtiParamsService
