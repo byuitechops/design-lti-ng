@@ -11,6 +11,17 @@ import { GenericQuizComponent } from './templates/generic-quiz.component';
 import { LtiParamsService } from '../lti-params.service';
 import { AccordionComponent } from './web-features/accordion.component';
 import { AccordionPreviewComponent } from './web-features/previews/accordion-preview.component';
+import { BannerComponent } from './web-features/banner.component';
+import { ButtonComponent } from './web-features/button.component';
+import { CalloutComponent } from './web-features/callout.component';
+import { ColumnsComponent } from './web-features/columns.component';
+import { DefinitionComponent } from './web-features/definition.component';
+import { DialogComponent } from './web-features/dialog.component';
+import { ImageComponent } from './web-features/image.component';
+import { VideoComponent } from './web-features/video.component';
+import { ImageCarouselComponent } from './web-features/image-carousel.component';
+import { PopoverComponent } from './web-features/popover.component';
+import { TableComponent } from './web-features/table.component';
 
 
 @NgModule({
@@ -32,7 +43,18 @@ import { AccordionPreviewComponent } from './web-features/previews/accordion-pre
     GenericActivityComponent,
     GenericQuizComponent,
     AccordionComponent,
-    AccordionPreviewComponent
+    AccordionPreviewComponent,
+    BannerComponent,
+    ButtonComponent,
+    CalloutComponent,
+    ColumnsComponent,
+    DefinitionComponent,
+    DialogComponent,
+    ImageComponent,
+    VideoComponent,
+    ImageCarouselComponent,
+    PopoverComponent,
+    TableComponent
   ],
   providers: [
     LtiParamsService

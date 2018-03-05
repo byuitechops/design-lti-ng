@@ -55,22 +55,6 @@ export class WebFeaturesComponent implements OnInit {
   };
   test: string = JSON.stringify(this.contentItems);
 
-  _accordionHeading: string;
-  get accordionHeading(): string {
-    return this._accordionHeading;
-  }
-  set accordionHeading(value: string) {
-    this._accordionHeading = value;
-  }
-
-  _accordionContent: string;
-  get accordionContent(): string {
-    return this._accordionContent;
-  }
-  set accordionContent(value: string) {
-    this._accordionContent = value;
-  }
-
   _buttonText: string;
   get buttonText(): string {
     return this._buttonText;
