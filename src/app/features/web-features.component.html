@@ -27,6 +27,7 @@
       <app-dialog class="app-dialog"></app-dialog>
       <app-image class="app-image"></app-image>
       <app-image-carousel class="app-image-carousel"></app-image-carousel>
+      <app-popover class="app-popover"></app-popover>
 
     <!-- <div id="bannerImg">
         <h2>Banner Image</h2>
@@ -114,29 +115,7 @@
     </div> -->
 
     <div id="popover">
-        <h2>Popover</h2>
-        <div>
-            <p>Guidelines</p>
-        </div>
 
-        <div class="row">
-            <div class="option">
-                <h4>Select options:</h4>
-                <input type="text" placeholder="Text" [(ngModel)]='popoverBaseText'>
-                <textarea placeholder="Popover Text" [(ngModel)]='popoverText'></textarea>
-            </div>
-            <div>
-                <div class="preview" id="popoverOut">
-                <h4>Preview:</h4>
-                    <a data-tooltip='{"tooltipClass":"popover popover-padded", "position":"right"}' title="{{popoverText ? popoverText : 'Ohai'}}">
-                        {{popoverBaseText ? popoverBaseText : "Text with accessible popover"}}
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="Button btn btn-primary" href="#" onclick="submitFeature('popoverOut.innerhtml')">Insert popover</a>
-        </div>
     </div>
 
     <div id="table">
