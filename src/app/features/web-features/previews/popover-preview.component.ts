@@ -3,9 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-popover-preview',
   template: `
-    <a data-tooltip='{"tooltipClass":"popover popover-padded", "position":"right"}' title="{{popoverText ? popoverText : 'Ohai'}}">
-      {{popoverBaseText ? popoverBaseText : "Text with accessible popover"}}
-    </a>
+<a data-tooltip='{"tooltipClass":"popover popover-padded", "position":"right"}' title="{{popoverText ? popoverText : 'Ohai'}}">
+  {{popoverBaseText ? popoverBaseText : "Text with accessible popover"}}
+</a>
   `,
   styles: []
 })
