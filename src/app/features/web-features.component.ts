@@ -31,13 +31,6 @@ export class WebFeaturesComponent implements OnInit {
   slideSource: string[] = [];
   slideAlt: string[] = [];
   tableStriped = false;
-  prepare: string[] = ['caseStudy', 'checkUnderstanding', 'preAssessment', 'readings', 'research', 'video'];
-  teach: string[] = ['caseStudy', 'fieldExperience', 'groupPresentation', 'groupProblemSolving', 'groupProject',
-  'iceBreaker', 'insightSharing', 'jigsawActivity', 'peerAccountability', 'peerFeedback',
-  'rolePlayDiscussion', 'structuredDebate', 'studyGroup', 'supportForum', 'topicDiscussion'];
-  ponder: string[] = ['assessment', 'demonstrateProficiency', 'practiceApply', 'presentation', 'reflection'];
-  bannerOutValue: string;
-  bannerOutInner: string;
   returnUrl: string;
   /* This uses the Content Item service which is documented here:
    https://canvas.instructure.com/doc/api/file.content_item.html */
@@ -145,13 +138,6 @@ export class WebFeaturesComponent implements OnInit {
 
   updateSlideAlt(value: string, index: number): void {
     this.slideAlt[index] = value;
-  }
-
-  updateBanner(value: string) {
-    this.bannerOutValue = value;
-    console.log(this.bannerOutValue);
-    this.bannerOutInner = value.split(' ')[1];
-    console.log(this.bannerOutInner);
   }
 
   array(value: number): any[] {
