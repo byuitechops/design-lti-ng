@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogComponent implements OnInit {
 
+  dialogPrompt: string;
+  dialogTitle: string;
+  dialogContent: string;
+
   constructor() { }
 
   ngOnInit() {

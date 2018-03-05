@@ -13,9 +13,6 @@ export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
 
-  dialogPrompt: string;
-  dialogTitle: string;
-  dialogContent: string;
   imageSize = 'quarter';
   imagePosition = 'right';
   imageClearfix = false;
