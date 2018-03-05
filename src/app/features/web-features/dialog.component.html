@@ -10,10 +10,11 @@
         <textarea placeholder="Content" [(ngModel)]="dialogContent"></textarea>
     </div>
     <div class="preview" id="dialogOut">
-        <app-dialog-preview
-            [dialogContent]="dialogContent"
-            [dialogPrompt]="dialogPrompt">
-        </app-dialog-preview>
+        <h4>Preview:</h4>
+            <app-dialog-preview
+                [dialogContent]="dialogContent"
+                [dialogPrompt]="dialogPrompt">
+            </app-dialog-preview>
     </div>
 </div>
 <div>
