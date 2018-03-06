@@ -9,6 +9,31 @@ import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { GenericActivityComponent } from './templates/generic-activity.component';
 import { GenericQuizComponent } from './templates/generic-quiz.component';
 import { LtiParamsService } from '../lti-params.service';
+import { AccordionComponent } from './web-features/accordion.component';
+import { AccordionPreviewComponent } from './web-features/previews/accordion-preview.component';
+import { BannerComponent } from './web-features/banner.component';
+import { ButtonComponent } from './web-features/button.component';
+import { CalloutComponent } from './web-features/callout.component';
+import { ColumnsComponent } from './web-features/columns.component';
+import { DefinitionComponent } from './web-features/definition.component';
+import { DialogComponent } from './web-features/dialog.component';
+import { ImageComponent } from './web-features/image.component';
+import { VideoComponent } from './web-features/video.component';
+import { ImageCarouselComponent } from './web-features/image-carousel.component';
+import { PopoverComponent } from './web-features/popover.component';
+import { TableComponent } from './web-features/table.component';
+import { BannerPreviewComponent } from './web-features/previews/banner-preview.component';
+import { ButtonPreviewComponent } from './web-features/previews/button-preview.component';
+import { CalloutPreviewComponent } from './web-features/previews/callout-preview.component';
+import { ColumnsPreviewComponent } from './web-features/previews/columns-preview.component';
+import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
+import { DialogPreviewComponent } from './web-features/previews/dialog-preview.component';
+import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
+import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
+import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
+import { TablePreviewComponent } from './web-features/previews/table-preview.component';
+import { ContentBoxComponent } from './web-features/content-box.component';
+import { BannerImageComponent } from './web-features/banner-image.component';
 
 
 @NgModule({
@@ -28,7 +53,32 @@ import { LtiParamsService } from '../lti-params.service';
     WebFeaturesComponent,
     CapitalizePipe,
     GenericActivityComponent,
-    GenericQuizComponent
+    GenericQuizComponent,
+    AccordionComponent,
+    AccordionPreviewComponent,
+    BannerComponent,
+    ButtonComponent,
+    CalloutComponent,
+    ColumnsComponent,
+    DefinitionComponent,
+    DialogComponent,
+    ImageComponent,
+    VideoComponent,
+    ImageCarouselComponent,
+    PopoverComponent,
+    TableComponent,
+    BannerPreviewComponent,
+    ButtonPreviewComponent,
+    CalloutPreviewComponent,
+    ColumnsPreviewComponent,
+    DefinitionPreviewComponent,
+    DialogPreviewComponent,
+    ImagePreviewComponent,
+    ImageCarouselPreviewComponent,
+    PopoverPreviewComponent,
+    TablePreviewComponent,
+    ContentBoxComponent,
+    BannerImageComponent
   ],
   providers: [
     LtiParamsService

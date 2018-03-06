@@ -2,22 +2,14 @@
 var express = require('express');
 const path = require('path');
 var router = express.Router();
-// var generation = require('../modules/generation');
 var ejs = require('ejs');
 var fs = require('fs');
-
-require.extensions['.ejs'] = function (module, filename) {
-    module.exports = fs.readFileSync(filename, 'utf8');
-};
-
-// var activityTemplates = require('../views/templates.ejs')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.sendFile(path.join(__dirname, '../dist/index.html'), {
     title: 'Express'
   });
-  console.log('get');
 });
 
 router.route('/api/course-name').get((req, res) => {
@@ -41,12 +33,17 @@ router.route('/api/course-id').get((req, res) => {
 router.route('/api/return-url').get((req, res) => {
   var ltiParams = req.session.lti.params;
   var returnUrl = ltiParams.content_item_return_url;
+  console.log(returnUrl)
   res.send(JSON.stringify(returnUrl));
+}
+)
+router.route('/api/return').post((req, res) => {
+  console.log('post');
+  var url = res['@graph'][0].url
+  header(`Location: ` + url);
 })
 
 /* Handle LTI launch */
-/* This uses the Content Item service which is documented here:
-   https://canvas.instructure.com/doc/api/file.content_item.html */
 router.post('/', function (req, res, next) {
   var filename = path.join(__dirname, '../dist/index.html');
   console.log(filename);

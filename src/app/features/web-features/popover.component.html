@@ -1,0 +1,24 @@
+<h2>Popover</h2>
+<div>
+    <p>Guidelines</p>
+</div>
+
+<div class="row">
+    <div class="option">
+        <h4>Select options:</h4>
+        <input type="text" placeholder="Text" [(ngModel)]='popoverBaseText'>
+        <textarea placeholder="Popover Text" [(ngModel)]='popoverText'></textarea>
+    </div>
+    <div>
+        <div class="preview" id="popoverOut">
+        <h4>Preview:</h4>
+            <app-popover-preview
+              [popoverBaseText]="popoverBaseText"
+              [popoverText]="popoverText">
+            </app-popover-preview>
+        </div>
+    </div>
+</div>
+<div>
+    <a class="Button btn btn-primary" (click)="chooseFeature()">Insert popover</a>
+</div>

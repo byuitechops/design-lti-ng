@@ -111,22 +111,23 @@ nav {
     margin-left:10px;
 }
 
-.features>div,
+.features>[id^="app"],
 #pageTwo>div {
     border-bottom: #ccc solid 1px;
 }
 
-.features>div>h2,
+.features>[id^="app"]>h2,
 #pageTwo>div {
     padding-top: 77px;
     margin-top: -77px;
 }
 
-.features>div>div:last-child,
+.features>[id^="app"]>div:last-child,
 #pageTwo .buttonWrapper {
     display: flex;
     justify-content: flex-end;
     padding-bottom: 12px;
+    border-bottom: #ccc solid 1px;
 }
 
 #feedback {

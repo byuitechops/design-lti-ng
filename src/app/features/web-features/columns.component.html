@@ -1,0 +1,27 @@
+<h2>Columns</h2>
+<div>
+    <p>Guidelines</p>
+</div>
+<div class="row">
+    <div class="option">
+        <h4>Select number of columns:</h4>
+        <div class="size radio-inline">
+            <div *ngFor="let column of columnNumbers">
+                <input type="radio" name="numberOfColumns"
+                    [value]="column"
+                    [checked]="column===1"
+                    (change)="changeNumberOfColumns(column)">
+                <label class="radio-label">{{ column }}</label>
+            </div>
+        </div>
+    </div>
+    <div class="preview" id="columnsOut">
+        <h4>Preview:</h4>
+        <app-columns-preview
+          [numberOfColumns]="numberOfColumns">
+        </app-columns-preview>
+    </div>
+</div>
+<div>
+    <a class="Button btn btn-primary" (click)="chooseFeature()">Insert Columns</a>
+</div>
