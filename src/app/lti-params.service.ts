@@ -32,6 +32,8 @@ export class LtiParamsService {
   }
   submitForm(url: string, body: string): void {
     console.log(url, body);
-    this.http.post(url, body).subscribe(res => console.log(res));
+    console.log('submit');
+    this.http.post(url, body)
+      .subscribe(res => console.log(res));
   }
 }

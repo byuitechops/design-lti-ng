@@ -20,34 +20,33 @@
   <div class="features">
 
       <app-accordion id="app-accordion"
-        (select)="submitFeature($event)"></app-accordion>
+        (select)="updateFeature($event)"></app-accordion>
       <app-banner id="app-banner"
-        (select)="submitFeature($event)"></app-banner>
+        (select)="updateFeature($event)"></app-banner>
       <app-button id="app-button"
-        (select)="submitFeature($event)"></app-button>
+        (select)="updateFeature($event)"></app-button>
       <app-callout id="app-callout"
-        (select)="submitFeature($event)"></app-callout>
+        (select)="updateFeature($event)"></app-callout>
       <app-columns id="app-columns"
-        (select)="submitFeature($event)"></app-columns>
+        (select)="updateFeature($event)"></app-columns>
       <app-definition id="app-definition"
-        (select)="submitFeature($event)"></app-definition>
+        (select)="updateFeature($event)"></app-definition>
       <app-dialog id="app-dialog"
-        (select)="submitFeature($event)"></app-dialog>
+        (select)="updateFeature($event)"></app-dialog>
       <app-image id="app-image"
-        (select)="submitFeature($event)"></app-image>
+        (select)="updateFeature($event)"></app-image>
       <app-image-carousel id="app-image-carousel"
-        (select)="submitFeature($event)"></app-image-carousel>
+        (select)="updateFeature($event)"></app-image-carousel>
       <app-popover id="app-popover"
-        (select)="submitFeature($event)"></app-popover>
+        (select)="updateFeature($event)"></app-popover>
       <app-table id="app-table"
-        (select)="submitFeature($event)"></app-table>
+        (select)="updateFeature($event)"></app-table>
 
   </div>
 </div>
 
-<form #form="ngForm" method="post" action="{{returnUrl}}">
+<form method="post" action="{{returnUrl}}" id="submit">
   <input type="hidden" name="lti_message_type" value="ContentItemSelection" />
   <input type="hidden" name="lti_version" value="LTI-1p0" />
-  <input id="contentItems" type="hidden" name="content_items" value="{{test}}" />
-  <button type="submit">Submit</button>
+  <input id="contentItems" type="hidden" name="content_items" value="{{contentItemsJson}}" />
 </form>
