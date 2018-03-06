@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-dialog-preview',
@@ -19,7 +19,15 @@ export class DialogPreviewComponent implements OnInit {
   @Input() dialogContent: string;
   @Input() dialogPrompt: string;
 
-  constructor() { }
+  elementRef: ElementRef;
+
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+
+  getHtmlContent() {
+    return this.elementRef.nativeElement.innerHTML;
+  }
 
   ngOnInit() {
   }
