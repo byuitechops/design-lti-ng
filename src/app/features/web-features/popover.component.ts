@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { PopoverPreviewComponent } from './previews/popover-preview.component';
 
 @Component({
   selector: 'app-popover',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class PopoverComponent implements OnInit {
+
+
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(PopoverPreviewComponent) preview: PopoverPreviewComponent;
 
   _popoverBaseText: string;
   get popoverBaseText(): string {
@@ -24,6 +29,12 @@ export class PopoverComponent implements OnInit {
   }
 
   constructor() { }
+
+  chooseFeature() {
+    const html = this.preview.getHtmlContent().trim();
+    console.log(html);
+    this.select.emit(html);
+  }
 
   ngOnInit() {
   }
