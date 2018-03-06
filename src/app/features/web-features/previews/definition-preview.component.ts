@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-definition-preview',
@@ -13,7 +13,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefinitionPreviewComponent implements OnInit {
 
-  constructor() { }
+  elementRef: ElementRef;
+
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+
+  getHtmlContent() {
+    return this.elementRef.nativeElement.innerHTML;
+  }
 
   ngOnInit() {
   }
