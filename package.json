@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "restart": "nodemon -e html,css,js ./bin/www"
+    "restart": "nodemon -e html,css,js,ts ./bin/www"
   },
   "private": true,
   "dependencies": {
