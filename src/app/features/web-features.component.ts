@@ -20,15 +20,14 @@ export class WebFeaturesComponent implements OnInit {
     '@context': 'http://purl.imsglobal.org/ctx/lti/v1/ContentItem',
     '@graph': [{
       '@type': 'ContentItem',
-      'url': this.returnUrl,
-      'text': '<p>Whaaaa?</p>',
+      'url': '',
+      'text': '',
       'mediaType': 'text/html',
       'placementAdvice': {
         'presentationDocumentTarget': 'embed'
         }
       }]
   };
-  test: string = JSON.stringify(this.contentItems);
 
   constructor(private _ltiParamsService: LtiParamsService) {  }
 
@@ -49,8 +48,9 @@ export class WebFeaturesComponent implements OnInit {
 
   ngOnInit() {
     this._ltiParamsService.getReturnUrl()
-    .subscribe(param => {
-      this.returnUrl = param;
-    });
+      .subscribe(param => {
+        this.returnUrl = param;
+        this.contentItems['@graph'][0].url = param;
+      });
   }
 }

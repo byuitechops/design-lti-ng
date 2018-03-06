@@ -33,6 +33,7 @@ router.route('/api/course-id').get((req, res) => {
 router.route('/api/return-url').get((req, res) => {
   var ltiParams = req.session.lti.params;
   var returnUrl = ltiParams.content_item_return_url;
+  console.log(returnUrl)
   res.send(JSON.stringify(returnUrl));
 })
 

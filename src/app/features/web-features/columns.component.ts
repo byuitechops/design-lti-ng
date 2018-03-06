@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { ColumnsPreviewComponent } from './previews/columns-preview.component';
 
 @Component({
   selector: 'app-columns',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class ColumnsComponent implements OnInit {
+
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(ColumnsPreviewComponent) preview: ColumnsPreviewComponent;
 
   columnNumbers: number[] = [1, 2, 3];
   numberOfColumns = 1;
@@ -19,6 +23,12 @@ export class ColumnsComponent implements OnInit {
   array(value: number): any[] {
     const num = Number(value);
     return Array.from(Array(num).keys());
+  }
+
+  chooseFeature() {
+    const html = this.preview.getHtmlContent().trim();
+    console.log(html);
+    this.select.emit(html);
   }
 
   ngOnInit() {
