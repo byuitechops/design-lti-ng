@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-popover-preview',
@@ -14,7 +14,15 @@ export class PopoverPreviewComponent implements OnInit {
   @Input() popoverBaseText: string;
   @Input() popoverText: string;
 
-  constructor() { }
+  elementRef: ElementRef;
+
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+
+  getHtmlContent() {
+    return this.elementRef.nativeElement.innerHTML;
+  }
 
   ngOnInit() {
   }
