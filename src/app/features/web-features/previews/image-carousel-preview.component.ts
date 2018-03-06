@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-image-carousel-preview',
@@ -19,7 +19,15 @@ export class ImageCarouselPreviewComponent implements OnInit {
   @Input() slideCount: number;
   @Input() slideSource: string;
 
-  constructor() { }
+  elementRef: ElementRef;
+
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+
+  getHtmlContent() {
+    return this.elementRef.nativeElement.innerHTML;
+  }
 
   array(value: number): any[] {
     const num = Number(value);
