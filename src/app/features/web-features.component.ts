@@ -20,7 +20,6 @@ export class WebFeaturesComponent implements OnInit {
     '@context': 'http://purl.imsglobal.org/ctx/lti/v1/ContentItem',
     '@graph': [{
       '@type': 'ContentItem',
-      'url': '',
       'text': '',
       'mediaType': 'text/html',
       'placementAdvice': {
@@ -28,6 +27,7 @@ export class WebFeaturesComponent implements OnInit {
         }
       }]
   };
+  contentItemsJson: string;
 
   constructor(private _ltiParamsService: LtiParamsService) {  }
 
@@ -36,21 +36,24 @@ export class WebFeaturesComponent implements OnInit {
     return Array.from(Array(num).keys());
   }
 
-  submitFeature(feature) {
+  updateFeature(feature) {
     this.contentItems['@graph'][0].text = feature;
-    console.log(this.contentItems);
-    // this._ltiParamsService.submitForm(this.returnUrl, JSON.stringify(this.test));
+    this.contentItemsJson = JSON.stringify(this.contentItems);
+    const input = <HTMLInputElement>document.getElementById('contentItems');
+    // wait for content to update in html
+    input.value = this.contentItemsJson;
+    this.submit();
   }
 
-  submitForm(form: NgModel) {
-
+  submit() {
+    const form = <HTMLFormElement>document.getElementById('submit');
+    form.submit();
   }
 
   ngOnInit() {
     this._ltiParamsService.getReturnUrl()
       .subscribe(param => {
         this.returnUrl = param;
-        this.contentItems['@graph'][0].url = param;
       });
   }
 }
