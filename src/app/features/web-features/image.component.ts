@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { ImagePreviewComponent } from './previews/image-preview.component';
 
 @Component({
   selector: 'app-image',
@@ -13,6 +14,9 @@ export class ImageComponent implements OnInit {
   imagePosition = 'right';
   imageClearfix = false;
   imageSource: string;
+
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(ImagePreviewComponent) preview: ImagePreviewComponent;
 
   _imageCaption: string;
   get imageCaption(): string {
@@ -31,6 +35,12 @@ export class ImageComponent implements OnInit {
   }
 
   constructor() { }
+
+  chooseFeature() {
+    const html = this.preview.getHtmlContent().trim();
+    console.log(html);
+    this.select.emit(html);
+  }
 
   changeImagePosition(value: string): void {
     this.imagePosition = value;

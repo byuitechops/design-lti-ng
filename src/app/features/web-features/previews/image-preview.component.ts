@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-image-preview',
@@ -26,7 +26,15 @@ export class ImagePreviewComponent implements OnInit {
   @Input() imageSize: string;
   @Input() imageClearfix: string;
 
-  constructor() { }
+  elementRef: ElementRef;
+
+  constructor(elementRef: ElementRef) {
+    this.elementRef = elementRef;
+  }
+
+  getHtmlContent() {
+    return this.elementRef.nativeElement.innerHTML;
+  }
 
   ngOnInit() {
   }
