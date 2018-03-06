@@ -12,6 +12,8 @@ import { NgModel } from '@angular/forms';
 export class WebFeaturesComponent implements OnInit {
 
   private fragment: string;
+  features: string[] = ['accordion', 'banner', 'button', 'callout',
+  'columns', 'definition', 'dialog', 'image', 'imageCarousel', 'popover', 'table'];
 
   returnUrl: string;
   /* This uses the Content Item service which is documented here:
