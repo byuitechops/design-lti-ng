@@ -3,6 +3,17 @@ import { ActivatedRoute } from '@angular/router';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { LtiParamsService } from '../lti-params.service';
 import { NgModel } from '@angular/forms';
+import { AccordionComponent } from './web-features/accordion.component';
+import { BannerComponent } from './web-features/banner.component';
+import { ButtonComponent } from './web-features/button.component';
+import { CalloutComponent } from './web-features/callout.component';
+import { ColumnsComponent } from './web-features/columns.component';
+import { DefinitionComponent } from './web-features/definition.component';
+import { DialogComponent } from './web-features/dialog.component';
+import { ImageComponent } from './web-features/image.component';
+import { ImageCarouselComponent } from './web-features/image-carousel.component';
+import { PopoverComponent } from './web-features/popover.component';
+import { TableComponent } from './web-features/table.component';
 
 @Component({
   selector: 'app-web-features',
@@ -10,6 +21,10 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./web-features.component.css'],
 })
 export class WebFeaturesComponent implements OnInit {
+
+  featureTypes = [AccordionComponent, BannerComponent, ButtonComponent, CalloutComponent,
+    ColumnsComponent, DefinitionComponent, DialogComponent, ImageComponent,
+    ImageCarouselComponent, PopoverComponent, TableComponent];
 
   private fragment: string;
   features: string[] = ['accordion', 'banner', 'button', 'callout',
