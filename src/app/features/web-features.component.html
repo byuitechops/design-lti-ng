@@ -1,49 +1,14 @@
 <div id="pageOne" class="page visible">
   <nav>
     <a [routerLink]="['.']" *ngFor="let feature of features"
-      fragment="app-{{feature}}">{{feature | capitalize}}</a>
-    <!-- <a [routerLink]="['.']" fragment="app-accordion">Accordion</a>
-    <a [routerLink]="['.']" fragment="app-banner">Activity Banner</a>
-    <!-- <a href="#bannerImg">Banner Image</a>
-    <a [routerLink]="['.']" fragment="app-button">Button</a>
-    <a [routerLink]="['.']" fragment="app-callout">Callout</a>
-    <a [routerLink]="['.']" fragment="app-columns">Columns</a>
-    <!-- <a href="#contentBox">Content Box</a>
-    <a [routerLink]="['.']" fragment="app-definition">Definition</a>
-    <a [routerLink]="['.']" fragment="app-dialog">Dialog</a>
-    <a [routerLink]="['.']" fragment="app-image">Image</a>
-    <a [routerLink]="['.']" fragment="app-image-carousel">Image Carousel</a>
-    <a [routerLink]="['.']" fragment="app-popover">Popover</a>
-    <a [routerLink]="['.']" fragment="app-table">Table</a> -->
+      fragment="{{feature}}">{{feature | capitalize}}</a>
   </nav>
 
   <h3>Select the feature you would like to insert</h3>
 
-  <div class="features">
+  <div class="features" *ngFor="let feature of featureTypes; let i=index">
 
-      <!-- <app-features [type]="feature"></app-features> -->
-      <app-accordion id="app-accordion"
-        (select)="updateFeature($event)"></app-accordion>
-      <app-banner id="app-banner"
-        (select)="updateFeature($event)"></app-banner>
-      <app-button id="app-button"
-        (select)="updateFeature($event)"></app-button>
-      <app-callout id="app-callout"
-        (select)="updateFeature($event)"></app-callout>
-      <app-columns id="app-columns"
-        (select)="updateFeature($event)"></app-columns>
-      <app-definition id="app-definition"
-        (select)="updateFeature($event)"></app-definition>
-      <app-dialog id="app-dialog"
-        (select)="updateFeature($event)"></app-dialog>
-      <app-image id="app-image"
-        (select)="updateFeature($event)"></app-image>
-      <app-image-carousel id="app-imageCarousel"
-        (select)="updateFeature($event)"></app-image-carousel>
-      <app-popover id="app-popover"
-        (select)="updateFeature($event)"></app-popover>
-      <app-table id="app-table"
-        (select)="updateFeature($event)"></app-table>
+      <app-feature-wrapper [type]="feature" id="{{features[i]}}" (select)="updateFeature($event)"></app-feature-wrapper>
 
   </div>
 </div>

@@ -34,6 +34,7 @@ import { PopoverPreviewComponent } from './web-features/previews/popover-preview
 import { TablePreviewComponent } from './web-features/previews/table-preview.component';
 import { ContentBoxComponent } from './web-features/content-box.component';
 import { BannerImageComponent } from './web-features/banner-image.component';
+import { FeatureWrapperComponent } from './feature-wrapper.component';
 
 
 @NgModule({
@@ -78,10 +79,25 @@ import { BannerImageComponent } from './web-features/banner-image.component';
     PopoverPreviewComponent,
     TablePreviewComponent,
     ContentBoxComponent,
-    BannerImageComponent
+    BannerImageComponent,
+    FeatureWrapperComponent
   ],
   providers: [
     LtiParamsService
+  ],
+  entryComponents: [
+    AccordionComponent,
+    BannerComponent,
+    ButtonComponent,
+    CalloutComponent,
+    ColumnsComponent,
+    DefinitionComponent,
+    DialogComponent,
+    ImageComponent,
+    VideoComponent,
+    ImageCarouselComponent,
+    PopoverComponent,
+    TableComponent
   ]
 })
 export class FeaturesModule { }
