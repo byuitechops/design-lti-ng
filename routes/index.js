@@ -35,8 +35,8 @@ router.route('/api/return-url').get((req, res) => {
   var returnUrl = ltiParams.content_item_return_url;
   console.log(returnUrl)
   res.send(JSON.stringify(returnUrl));
-}
-)
+})
+
 router.route('/api/return').post((req, res) => {
   console.log('post');
   var url = res['@graph'][0].url
