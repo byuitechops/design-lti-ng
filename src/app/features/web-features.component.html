@@ -1,14 +1,18 @@
 <div id="pageOne" class="page visible">
   <nav>
     <a [routerLink]="['.']" *ngFor="let feature of features"
-      fragment="{{feature}}">{{feature | capitalize}}</a>
+      fragment="app-{{feature}}">{{feature | capitalize}}</a>
   </nav>
 
   <h3>Select the feature you would like to insert</h3>
 
-  <div class="features" *ngFor="let feature of featureTypes; let i=index">
+  <div class="features">
 
-      <app-feature-wrapper [type]="feature" id="{{features[i]}}" (select)="updateFeature($event)"></app-feature-wrapper>
+      <app-feature-wrapper *ngFor="let feature of featureTypes; let i=index"
+        [type]="feature"
+        id="app-{{features[i]}}"
+        (select)="updateFeature($event)">
+      </app-feature-wrapper>
 
   </div>
 </div>
