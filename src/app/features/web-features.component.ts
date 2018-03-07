@@ -57,20 +57,19 @@ export class WebFeaturesComponent implements OnInit {
   }
 
   updateFeature(feature) {
+    // insert the html string to the content items
     this.contentItems['@graph'][0].text = feature;
     this.contentItemsJson = JSON.stringify(this.contentItems);
+    // make sure that the value updates before you submit
     const input = <HTMLInputElement>document.getElementById('contentItems');
-    // wait for content to update in html
     input.value = this.contentItemsJson;
-    this.submit();
-  }
-
-  submit() {
+    // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
     form.submit();
   }
 
   ngOnInit() {
+    // use the service to get the return url
     this._ltiParamsService.getReturnUrl()
       .subscribe(param => {
         this.returnUrl = param;
