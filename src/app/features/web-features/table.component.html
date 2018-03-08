@@ -1,0 +1,21 @@
+<h2>Table</h2>
+<div>
+    <p>Guidelines</p>
+</div>
+<div class="row">
+    <div class="option">
+        <h4>Select options:</h4>
+        <input type="checkbox" id="tableStriped"
+                (change)="tableStriped = !tableStriped">
+        <label for="tableStriped">Striped</label>
+    </div>
+    <div class="preview" id="tableOut">
+        <h4>Preview:</h4>
+        <app-table-preview
+          [tableStriped]="tableStriped">
+        </app-table-preview>
+    </div>
+</div>
+<div>
+    <a class="Button btn btn-primary" (click)="chooseFeature()">Insert Table</a>
+</div>
