@@ -37,12 +37,6 @@ router.route('/api/return-url').get((req, res) => {
   res.send(JSON.stringify(returnUrl));
 })
 
-router.route('/api/return').post((req, res) => {
-  console.log('post');
-  var url = res['@graph'][0].url
-  header(`Location: ` + url);
-})
-
 /* Handle LTI launch */
 router.post('/', function (req, res, next) {
   var filename = path.join(__dirname, '../dist/index.html');
