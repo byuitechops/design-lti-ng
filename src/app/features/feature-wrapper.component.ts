@@ -1,23 +1,30 @@
 import { NgModule, Component, Compiler, ViewContainerRef, ViewChild, Input,
   ComponentRef, ComponentFactory, ComponentFactoryResolver, ChangeDetectorRef,
   OnChanges, AfterViewInit, OnDestroy, EventEmitter, Output } from '@angular/core';
+import { DynamicModule } from 'ng-dynamic-component';
 
 @Component({
   selector: 'app-feature-wrapper',
   template: `
-    <ng-container *ngComponentOutlet="type" (select)="pass($event)" ngOutletInjector=""></ng-container>
+    <ndc-dynamic [ndcDynamicComponent]="type"
+                 [ndcDynamicOutputs]="outputs">
+    </ndc-dynamic>
   `,
   styles: []
 })
 export class FeatureWrapperComponent {
 
-  @Input() type;
   @Output() select: EventEmitter<string> = new EventEmitter();
+  @Input() type;
+
+  outputs = {
+    select: (feature) => this.pass(feature)
+  };
 
   constructor() { }
 
   pass(feature) {
-    console.log('pass');
+    console.log(feature);
     this.select.emit(feature);
   }
 }

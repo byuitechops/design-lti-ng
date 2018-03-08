@@ -35,6 +35,7 @@ import { TablePreviewComponent } from './web-features/previews/table-preview.com
 import { ContentBoxComponent } from './web-features/content-box.component';
 import { BannerImageComponent } from './web-features/banner-image.component';
 import { FeatureWrapperComponent } from './feature-wrapper.component';
+import { DynamicModule } from 'ng-dynamic-component';
 
 
 @NgModule({
@@ -44,7 +45,20 @@ import { FeatureWrapperComponent } from './feature-wrapper.component';
     RouterModule.forChild([
       { path: 'page-templates', component: PageTemplatesComponent },
       { path: 'web-features', component: WebFeaturesComponent }
-    ])
+    ]),
+    DynamicModule.withComponents([
+      AccordionComponent,
+      BannerComponent,
+      ButtonComponent,
+      CalloutComponent,
+      ColumnsComponent,
+      DefinitionComponent,
+      DialogComponent,
+      ImageComponent,
+      VideoComponent,
+      ImageCarouselComponent,
+      PopoverComponent,
+      TableComponent])
   ],
   exports: [
     // WebFeaturesComponent
