@@ -30,10 +30,4 @@ export class LtiParamsService {
   getReturnUrl(): Observable<string> {
     return this.http.get<string>(this.address + 'return-url');
   }
-  submitForm(url: string, body: string): void {
-    console.log(url, body);
-    console.log('submit');
-    this.http.post(url, body)
-      .subscribe(res => console.log(res));
-  }
 }
