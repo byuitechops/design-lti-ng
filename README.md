@@ -99,6 +99,13 @@ Here are instructions on how to set up the development server:
 - Explain each of your unit tests and their inputs.
 - Provide all inputs used in testing so developers can use the same tests (or add on to them). For example, attach a CSV for each test case.
 
-### Design
+### Current Design
+![App Design Layout](./src/assets/NewByuiDesignLti.png?raw=true "Current App Design")
 
+### Old Design
 ![App Design Layout](./src/assets/design-lti-ng.png?raw=true "App Design")
+
+### UI Screenshots
+![App Design Layout](./src/assets/designAppPageTemplates.png?raw=true "App Design")
+
+![App Design Layout](./src/assets/designAppWebFeatures.png?raw=true "App Design")
