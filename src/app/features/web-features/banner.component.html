@@ -1,0 +1,36 @@
+<h2>Activity Banner</h2>
+        <div>
+            <p>Guidelines</p>
+        </div>
+        <div class="row">
+            <div class="option">
+                <h4>Select options:</h4>
+                <select (change)="updateBanner($event.target.value)">
+                    <optgroup label="Prepare">
+                        <option *ngFor="let option of prepare"
+                                [value]="'prepare ' + option">{{option | capitalize}}</option>
+                    </optgroup>
+                    <optgroup label="Teach One Another">
+                        <option *ngFor="let option of teach"
+                                [value]="'teach ' + option">{{option | capitalize}}</option>
+                    </optgroup>
+                    <optgroup label="Ponder and Prove">
+                        <option *ngFor="let option of ponder"
+                                [value]="'ponder ' + option">{{option | capitalize}}</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="other">Other</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="preview">
+                <h4>Preview:</h4>
+                <app-banner-preview
+                    [bannerOutInner]="bannerOutInner"
+                    [bannerOutValue]="bannerOutValue">
+                </app-banner-preview>
+            </div>
+        </div>
+        <div>
+            <a class="Button btn btn-primary" (click)="chooseFeature()">Insert Activity Banner</a>
+        </div>

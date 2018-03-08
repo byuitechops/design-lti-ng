@@ -1,0 +1,44 @@
+<h2>Callout</h2>
+<div>
+    <p>Guidelines</p>
+</div>
+<div class="row">
+    <div class="option">
+        <h4>Select options:</h4>
+        <div class="position radio-inline">
+            <div *ngFor="let position of positions">
+                <input type="radio" name="calloutPosition"
+                    [value]="position"
+                    [checked]="position==='right'"
+                    (change)="changeCalloutPosition(position)">
+                <label class="radio-label">{{position | capitalize}}</label>
+            </div>
+        </div>
+        <div class="size radio-inline">
+            <div *ngFor="let size of sizes">
+                <input type="radio" name="calloutSize"
+                    [value]="size"
+                    [checked]="size==='quarter'"
+                    (change)="changeCalloutSize(size)">
+                <label class="radio-label">{{size | capitalize}}</label>
+            </div>
+        </div>
+        <textarea placeholder="Content Text" [(ngModel)]='calloutText'></textarea>
+        <input type="checkbox"
+                [checked]="calloutChecked"
+                (change)="calloutChecked = !calloutChecked">
+        <label for="shaded">Shaded</label>
+    </div>
+    <div class="preview">
+        <h4>Preview:</h4>
+        <app-callout-preview
+          [calloutChecked]="calloutChecked"
+          [calloutPosition]="calloutPosition"
+          [calloutSize]="calloutSize"
+          [calloutText]="calloutText">
+        </app-callout-preview>
+    </div>
+</div>
+<div>
+    <a class="Button btn btn-primary" (click)="chooseFeature()">Insert Callout</a>
+</div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import { Headers, RequestOptions } from '@angular/http';
 // const server = require('../../bin/www');
 
 @Injectable()
@@ -8,7 +9,13 @@ export class LtiParamsService {
   address = 'https://localhost:1820/api/';
 
   constructor(private http: HttpClient) {
-    /* this.address = server.address(); */
+  //   /* this.address = server.address(); */
+  //   if (process.env.url) {
+  //     this.address = process.env.url;
+  //   } else {
+  //     this.address = 'https://localhost:1820';
+  //   }
+  //   this.address += '/api/';
   }
 
   getCourseName(): Observable<string> {
@@ -22,5 +29,11 @@ export class LtiParamsService {
   }
   getReturnUrl(): Observable<string> {
     return this.http.get<string>(this.address + 'return-url');
+  }
+  submitForm(url: string, body: string): void {
+    console.log(url, body);
+    console.log('submit');
+    this.http.post(url, body)
+      .subscribe(res => console.log(res));
   }
 }

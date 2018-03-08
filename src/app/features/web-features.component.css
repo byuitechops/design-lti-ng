@@ -1,0 +1,12 @@
+
+.byui h2.activity {
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #555;
+  border: var(--theme-med1) solid;
+  border-width: 3px 0;
+  position: relative;
+  padding: 4px 20px 3px 100px;
+  margin: 35px 0 25px;
+}
