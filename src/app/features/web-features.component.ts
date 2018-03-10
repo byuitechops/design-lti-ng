@@ -14,6 +14,7 @@ import { ImageComponent } from './web-features/image.component';
 import { ImageCarouselComponent } from './web-features/image-carousel.component';
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-web-features',
@@ -74,5 +75,7 @@ export class WebFeaturesComponent implements OnInit {
       .subscribe(param => {
         this.returnUrl = param;
       });
+
+    // this.returnUrl = this._ltiParamsService.getReturnUrl();
   }
 }
