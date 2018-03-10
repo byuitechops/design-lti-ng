@@ -28,22 +28,26 @@ export class PageTemplatesComponent implements OnInit {
   constructor(private _ltiParamsService: LtiParamsService) { }
 
   ngOnInit(): void {
-    this._ltiParamsService.getCourseName()
-        .subscribe(param => {
-          this.courseName = param;
-        });
-    this._ltiParamsService.getCourseClass()
-        .subscribe(param => {
-          this.courseClass = param;
-        });
-    this._ltiParamsService.getCourseId()
-        .subscribe(param => {
-          this.courseId = param;
-        });
+    // this._ltiParamsService.getCourseName()
+    //     .subscribe(param => {
+    //       this.courseName = param;
+    //     });
+    // this._ltiParamsService.getCourseClass()
+    //     .subscribe(param => {
+    //       this.courseClass = param;
+    //     });
+    // this._ltiParamsService.getCourseId()
+    //     .subscribe(param => {
+    //       this.courseId = param;
+    //     });
     this._ltiParamsService.getReturnUrl()
         .subscribe(param => {
           this.returnUrl = param;
         });
+    this.courseName = this._ltiParamsService.getCourseName();
+    this.courseId = this._ltiParamsService.getCourseId();
+    this.courseClass = this._ltiParamsService.getCourseClass();
+    // this.returnUrl = this._ltiParamsService.getReturnUrl();
   }
 
   updateTemplate(value: string) {
