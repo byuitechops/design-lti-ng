@@ -14,6 +14,7 @@ router.get('/', function (req, res, next) {
 
 router.route('/api/course-name').get((req, res) => {
   var ltiParams = req.session.lti.params;
+  console.log('Params: ' + JSON.stringify(ltiParams));
   var courseName = ltiParams.context_title;
   res.send(JSON.stringify(courseName));
 })
@@ -35,6 +36,12 @@ router.route('/api/return-url').get((req, res) => {
   var returnUrl = ltiParams.content_item_return_url;
   console.log(returnUrl)
   res.send(JSON.stringify(returnUrl));
+})
+
+router.route('/api').get((req, res) => {
+  var ltiParams = req.session.lti.params;
+  console.log(ltiParams);
+  res.send(JSON.stringify(ltiParams));
 })
 
 /* Handle LTI launch */
