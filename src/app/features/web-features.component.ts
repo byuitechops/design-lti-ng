@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { LtiParamsService } from '../lti-params.service';
@@ -20,7 +20,7 @@ import { TableComponent } from './web-features/table.component';
   templateUrl: './web-features.component.html',
   styleUrls: ['./web-features.component.css'],
 })
-export class WebFeaturesComponent implements OnInit {
+export class WebFeaturesComponent implements AfterViewInit {
 
   private fragment: string;
 
@@ -49,7 +49,7 @@ export class WebFeaturesComponent implements OnInit {
   };
   contentItemsJson: string;
 
-  constructor(private _ltiParamsService: LtiParamsService) {  }
+  constructor(private _ltiParamsService: LtiParamsService) { }
 
   array(value: number): any[] {
     const num = Number(value);
@@ -68,13 +68,9 @@ export class WebFeaturesComponent implements OnInit {
     form.submit();
   }
 
-  ngOnInit() {
-    // use the service to get the return url
-    this._ltiParamsService.getReturnUrl()
-      .subscribe(param => {
-        this.returnUrl = param;
-      });
-
-    // this.returnUrl = this._ltiParamsService.getReturnUrl();
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.returnUrl = this._ltiParamsService.getReturnUrl();
+    }, 1000);
   }
 }

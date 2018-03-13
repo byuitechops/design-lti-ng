@@ -36,8 +36,8 @@ export class LtiParamsService {
     return this.ltiParams.content_item_return_url.split('/')[4];
   }
 
-  getReturnUrl(): Observable<string> {
-    return this.http.get<string>(this.address + 'return-url');
-    // return this.ltiParams.content_item_return_url;
+  getReturnUrl(): string {
+    // return this.http.get<string>(this.address + 'return-url');
+    return this.ltiParams.content_item_return_url;
   }
 }
