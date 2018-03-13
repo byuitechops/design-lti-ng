@@ -49,4 +49,4 @@ router.post('/', function (req, res, next) {
   res.sendFile(filename, console.log);
 });
 
-// module.exports = router
+module.exports = router
