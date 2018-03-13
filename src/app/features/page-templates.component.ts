@@ -40,14 +40,14 @@ export class PageTemplatesComponent implements OnInit {
     //     .subscribe(param => {
     //       this.courseId = param;
     //     });
-    this._ltiParamsService.getReturnUrl()
-        .subscribe(param => {
-          this.returnUrl = param;
-        });
+    // this._ltiParamsService.getReturnUrl()
+    //     .subscribe(param => {
+    //       this.returnUrl = param;
+    //     });
     this.courseName = this._ltiParamsService.getCourseName();
     this.courseId = this._ltiParamsService.getCourseId();
     this.courseClass = this._ltiParamsService.getCourseClass();
-    // this.returnUrl = this._ltiParamsService.getReturnUrl();
+    this.returnUrl = this._ltiParamsService.getReturnUrl();
   }
 
   updateTemplate(value: string) {
