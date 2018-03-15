@@ -7,7 +7,14 @@ import { LtiParamsService } from '../lti-params.service';
   styleUrls: []
 })
 export class PageTemplatesComponent implements OnInit {
+  bannerInner: any;
+  selectedBanner: string;
   selectedTemplate = 'genericActivity';
+  bannerValuesPrepare = ['caseStudy', 'checkUnderstanding', 'preAssessment', 'readings', 'research', 'video'];
+  bannerValuesTeach = ['caseStudy', 'fieldExperience', 'groupPresentation', 'groupProblemSolving',
+  'groupProject', 'iceBreaker', 'insightSharing', 'jigsawActivity', 'peerAccountability', 'peerFeedback',
+  'rolePlayDiscussion', 'structuredDebate', 'studyGroup', 'supportForum', 'topicDiscussion'];
+  bannerValuesPonder = ['assessment', 'demonstrateProficiency', 'practiceApply', 'presentation', 'reflection'];
   templates: string[] = ['genericActivity', 'genericQuiz'];
   contentItems = {
     '@context': 'http://purl.imsglobal.org/ctx/lti/v1/ContentItem',
@@ -28,22 +35,6 @@ export class PageTemplatesComponent implements OnInit {
   constructor(private _ltiParamsService: LtiParamsService) { }
 
   ngOnInit(): void {
-    // this._ltiParamsService.getCourseName()
-    //     .subscribe(param => {
-    //       this.courseName = param;
-    //     });
-    // this._ltiParamsService.getCourseClass()
-    //     .subscribe(param => {
-    //       this.courseClass = param;
-    //     });
-    // this._ltiParamsService.getCourseId()
-    //     .subscribe(param => {
-    //       this.courseId = param;
-    //     });
-    // this._ltiParamsService.getReturnUrl()
-    //     .subscribe(param => {
-    //       this.returnUrl = param;
-    //     });
     this.courseName = this._ltiParamsService.getCourseName();
     this.courseId = this._ltiParamsService.getCourseId();
     this.courseClass = this._ltiParamsService.getCourseClass();
@@ -53,5 +44,11 @@ export class PageTemplatesComponent implements OnInit {
   updateTemplate(value: string) {
     this.selectedTemplate = value;
     console.log(this.selectedTemplate);
+  }
+
+  updateBanner(value: string) {
+    this.selectedBanner = value;
+    this.bannerInner = this.selectedBanner.split(' ')[1];
+    console.log(this.selectedBanner);
   }
 }
