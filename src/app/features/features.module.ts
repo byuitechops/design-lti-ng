@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { PageTemplatesComponent } from './page-templates.component';
 import { WebFeaturesComponent } from './web-features.component';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
+import { RangePipe } from '../shared/range.pipe';
 import { GenericActivityComponent } from './templates/generic-activity.component';
 import { GenericQuizComponent } from './templates/generic-quiz.component';
 import { LtiParamsService } from '../lti-params.service';
@@ -69,6 +70,7 @@ import { HomePageComponent } from './templates/home-page.component';
     PageTemplatesComponent,
     WebFeaturesComponent,
     CapitalizePipe,
+    RangePipe,
     GenericActivityComponent,
     GenericQuizComponent,
     AccordionComponent,

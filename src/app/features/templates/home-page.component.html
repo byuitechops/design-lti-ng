@@ -20,22 +20,10 @@
                     <h2>Weeks</h2>
                     <div class="lessons">
                         <div>
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">7</a>
+                            <a *ngFor="let i of [] | range:1:7">{{i}}</a>
                         </div>
                         <div>
-                            <a href="#">8</a>
-                            <a href="#">9</a>
-                            <a href="#">10</a>
-                            <a href="#">11</a>
-                            <a href="#">12</a>
-                            <a href="#">13</a>
-                            <a href="#">14</a>
+                            <a *ngFor="let i of [] | range:8:14">{{i}}</a>
                         </div>
                     </div>
                     <p class="copyright">Copyright 2018 Brigham Young University-Idaho</p>
@@ -44,6 +32,6 @@
         </div>
     </div>
     <div class="buttonWrapper">
-        <a class="Button btn btn-primary" href="#" onclick="respond('homeTemplate')">Insert Home Page</a>
+        <a class="Button btn btn-primary" onclick="respond('homeTemplate')">Insert Home Page</a>
     </div>
 </div>
