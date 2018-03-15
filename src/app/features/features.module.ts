@@ -39,6 +39,7 @@ import { FeatureWrapperComponent } from './feature-wrapper.component';
 import { DynamicModule } from 'ng-dynamic-component';
 import { OrgTemplateComponent } from './templates/org-template.component';
 import { HomePageComponent } from './templates/home-page.component';
+import { HomePagePreviewComponent } from './templates/previews/home-page-preview.component';
 
 
 @NgModule({
@@ -100,7 +101,8 @@ import { HomePageComponent } from './templates/home-page.component';
     BannerImageComponent,
     FeatureWrapperComponent,
     OrgTemplateComponent,
-    HomePageComponent
+    HomePageComponent,
+    HomePagePreviewComponent
   ],
   providers: [
     LtiParamsService

@@ -4,34 +4,14 @@
         </div>
         <div class="preview" id="homeTemplateOut">
             <h4>Preview:</h4>
-            <div class="byui {{courseClass}}">
-                <div class="welcome">
-                    <img src="https://byui.instructure.com/courses/{{courseId}}/file_contents/course%20files/Web%20Files/homeImage.jpg">
-                    <h2>Welcome to {{ courseName }}</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div id="navigation">
-                    <div class="steps">
-                        <a id="start" class="Button Button--primary" href="#">Start Here</a>
-                        <a id="instructor" class="Button Button--primary" href="#">Your Instructor</a>
-                        <a id="syllabus" class="Button Button--primary" href="#">Syllabus</a>
-                        <a id="resources" class="Button Button--primary" href="#">Additional Resources</a>
-                    </div>
-                    <h2>Weeks</h2>
-                    <div class="lessons">
-                        <div>
-                            <a *ngFor="let i of [] | range:1:7">{{i}}</a>
-                        </div>
-                        <div>
-                            <a *ngFor="let i of [] | range:8:14">{{i}}</a>
-                        </div>
-                    </div>
-                    <p class="copyright">Copyright 2018 Brigham Young University-Idaho</p>
-                </div>
-            </div>
+            <app-home-page-preview
+                [courseClass]="courseClass"
+                [courseId]="courseId"
+                [courseName]="courseName">
+            </app-home-page-preview>
         </div>
     </div>
     <div class="buttonWrapper">
-        <a class="Button btn btn-primary" onclick="respond('homeTemplate')">Insert Home Page</a>
+        <a class="Button btn btn-primary" (click)="chooseFeature()">Insert Home Page</a>
     </div>
 </div>

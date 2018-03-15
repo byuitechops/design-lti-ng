@@ -35,16 +35,17 @@ export class PageTemplatesComponent implements OnInit {
     // make sure that the value updates before you submit
     const input = <HTMLInputElement>document.getElementById('contentItems');
     input.value = this.contentItemsJson;
+    console.log(this.contentItemsJson);
     // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
     form.submit();
   }
 
   ngOnInit(): void {
-    // this.courseName = this._ltiParamsService.getCourseName();
-    // this.courseId = this._ltiParamsService.getCourseId();
-    // this.courseClass = this._ltiParamsService.getCourseClass();
-    // this.returnUrl = this._ltiParamsService.getReturnUrl();
+    this.courseName = this._ltiParamsService.getCourseName();
+    this.courseId = this._ltiParamsService.getCourseId();
+    this.courseClass = this._ltiParamsService.getCourseClass();
+    this.returnUrl = this._ltiParamsService.getReturnUrl();
   }
 
 }
