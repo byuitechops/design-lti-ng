@@ -19,6 +19,17 @@ export class OrgTemplateComponent implements OnInit {
 
   constructor() { }
 
+  updateTemplate(value: string) {
+    this.selectedTemplate = value;
+    console.log(this.selectedTemplate);
+  }
+
+  updateBanner(value: string) {
+    this.selectedBanner = value;
+    this.bannerInner = this.selectedBanner.split(' ')[1];
+    console.log(this.selectedBanner);
+  }
+
   ngOnInit() {
   }
 
