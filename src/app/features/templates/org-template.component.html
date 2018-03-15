@@ -1,0 +1,92 @@
+<div id="orgTemplate">
+    <div class="row">
+        <div class="option">
+            <h4>Select options:</h4>
+                <label for="avtivitySelected2" class="templateLabel">Banner:</label>
+                <select (change)="updateBanner($event.target.value)" id="activitySelected2">
+                    <optgroup label="Prepare">
+                        <option *ngFor="let title of bannerValuesPrepare"
+                                [value]="'prepare ' + title">
+                                {{title | capitalize}}
+                        </option>
+                    </optgroup>
+                    <optgroup label="Teach One Another">
+                        <option *ngFor="let title of bannerValuesTeach"
+                                [value]="'teach ' + title">
+                                {{title | capitalize}}
+                        </option>
+                    </optgroup>
+                    <optgroup label="Ponder and Prove">
+                        <option *ngFor="let title of bannerValuesPonder"
+                                [value]="'ponder ' + title">
+                                {{title | capitalize}}
+                        </option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="other">Other</option>
+                        <option value="None">None</option>
+                    </optgroup>
+                </select>
+            <br>
+            <label for="selectTemplate" class="templateLabel">Page Template:</label>
+            <select (change)="updateTemplate($event.target.value)" id="selectTemplate">
+                <option disabled selected value>Select a template</option>
+                <option *ngFor="let template of templates"
+                        [value]="template">{{template | capitalize}}</option>
+                <!-- <option value="2">Prepare - Read/Watch/Listen</option>
+                <option value="3">Prepare - Read/Watch/Listen (Instructions in another activity)</option>
+                <option value="4">Prepare - Pre-Assesment</option>
+                <option value="5">Prepare - Interview</option>
+                <option value="6">Prepare - Concept Matching</option>
+                <option value="7">Prepare - Note Taking</option>
+                <option value="8">Prepare - Information Gathering</option>
+                <option value="9">Prepare - Scholarly Research</option>
+                <option value="10">Prepare - Learning Contract</option>
+                <option value="11">Prepare - Project Plan</option>
+                <option value="12">Prepare - Sign Up</option>
+                <option value="13">Prepare - Quiz Writing</option>
+                <option value="14">TOA - Presentation</option>
+                <option value="15">TOA - Case Study</option>
+                <option value="16">TOA - Field Experience</option>
+                <option value="17">TOA - Group Problem Solving</option>
+                <option value="18">TOA - Group Project</option>
+                <option value="19">TOA - Icebreaker</option>
+                <option value="20">TOA - Insight Sharing</option>
+                <option value="21">TOA - Jigsaw Teaching</option>
+                <option value="22">TOA - Peer Accountability</option>
+                <option value="23">TOA - Peer Feedback</option>
+                <option value="24">TOA - Q&amp;A/Support Forum</option>
+                <option value="25">TOA - Role Play Discussion</option>
+                <option value="26">TOA - Structured Debate</option>
+                <option value="27">TOA - Study Group</option>
+                <option value="28">TOA - Topic Discussion</option>
+                <option value="38">Ponder/Prove - Reflective Write-Up</option>
+                <option value="29">Ponder/Prove - Unanswered Questions</option>
+                <option value="30">Ponder/Prove - Quiz</option>
+                <option value="31">Ponder/Prove - Exam</option>
+                <option value="32">Ponder/Prove - Presentation</option>
+                <option value="33">Ponder/Prove - Project</option>
+                <option value="34">Ponder/Prove - Essay</option>
+                <option value="35">Ponder/Prove - Worksheet-Workbook</option>
+                <option value="36">Ponder/Prove - Portfolio</option> -->
+            </select>
+            <br>
+            <a target="_blank" href="https://docs.google.com/document/d/1ZoDam0yGbEkZX9i1o1ognWJFp6Jqh9IP6eeyOR23oj4/">View docs</a>
+        </div>
+        <div class="preview">
+            <h4>Preview:</h4>
+            <div class="byui">
+                <h2 *ngIf="selectedBanner"
+                    class="{{selectedBanner}}">{{bannerInner | capitalize}}</h2>
+            </div>
+            <div id="orgTemplateOut">
+                <p *ngIf="!selectedTemplate">Please select an option to the left</p>
+                <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'"></app-generic-activity>
+                <app-generic-quiz *ngIf="selectedTemplate == 'genericQuiz'"></app-generic-quiz>
+            </div>
+        </div>
+    </div>
+    <div class="buttonWrapper">
+        <a class="Button btn btn-primary" href="#" onclick="respond('customTemplate')">Insert Activity Template</a>
+    </div>
+</div>

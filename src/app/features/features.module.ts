@@ -36,6 +36,7 @@ import { ContentBoxComponent } from './web-features/content-box.component';
 import { BannerImageComponent } from './web-features/banner-image.component';
 import { FeatureWrapperComponent } from './feature-wrapper.component';
 import { DynamicModule } from 'ng-dynamic-component';
+import { OrgTemplateComponent } from './templates/org-template.component';
 
 
 @NgModule({
@@ -94,7 +95,8 @@ import { DynamicModule } from 'ng-dynamic-component';
     TablePreviewComponent,
     ContentBoxComponent,
     BannerImageComponent,
-    FeatureWrapperComponent
+    FeatureWrapperComponent,
+    OrgTemplateComponent
   ],
   providers: [
     LtiParamsService
