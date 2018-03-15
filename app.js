@@ -9,8 +9,12 @@ const session = require('express-session');
 const https = require('https');
 const fs = require('fs');
 const index = require('./routes/index');
-const app = express();
 const cors = require('cors');
+const webpack = require('webpack');
+const config = require('./webpack.config.dev');
+
+const app = express();
+const compiler = webpack(config);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -42,6 +46,14 @@ app.use(ltiMiddleware({
 
 //tells express what path to serve from
 app.use(express.static(path.join(__dirname, 'dist')));
+
+// use webpack middlware dev server
+// app.use(require('webpack-dev-middleware')(compiler, {
+//   noInfo: true,
+//   publicPath: config.output.publicPath
+// }));
+
+// uses production server
 app.use('/', index);
 
 // catch 404 and forward to error handler
