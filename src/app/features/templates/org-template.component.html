@@ -81,7 +81,8 @@
             </div>
             <div id="orgTemplateOut">
                 <p *ngIf="!selectedTemplate">Please select an option to the left</p>
-                <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'"></app-generic-activity>
+                <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'"
+                                      [courseClass]="courseClass"></app-generic-activity>
                 <app-generic-quiz *ngIf="selectedTemplate == 'genericQuiz'"></app-generic-quiz>
             </div>
         </div>

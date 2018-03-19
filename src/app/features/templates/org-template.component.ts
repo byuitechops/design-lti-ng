@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, ViewChild, EventEmitter } from '@angular/core';
+import { GenericActivityComponent } from './previews/generic-activity.component';
 
 @Component({
   selector: 'app-org-template',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class OrgTemplateComponent implements OnInit {
+
+  @Input() courseClass: string;
+
+  @Output() select: EventEmitter<string> = new EventEmitter();
+  @ViewChild(GenericActivityComponent) preview: GenericActivityComponent;
 
   bannerInner: string;
   selectedBanner: string;
