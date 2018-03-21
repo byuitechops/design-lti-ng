@@ -4,7 +4,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
   selector: 'app-banner-preview',
   template: `
 <div class="byui" id="bannerOut">
-  <h2 class="{{bannerOutValue ? bannerOutValue : 'activity caseStudy'}}">
+  <h2 class="activity {{bannerOutValue ? bannerOutValue.split(' ')[1] : 'caseStudy'}}">
     {{(bannerOutInner ? bannerOutInner : 'CaseStudy') | capitalize}}
   </h2>
 </div>
