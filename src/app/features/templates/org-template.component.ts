@@ -39,11 +39,12 @@ export class OrgTemplateComponent implements OnInit {
   }
 
   chooseFeature() {
-    let html: string;
+    const banner = <HTMLElement>document.querySelector('.byui');
+    let html: string = '<div class="byui">' + banner.innerHTML + '</div>';
     if (this.selectedTemplate === 'genericActivity') {
-      html = this.activity.getHtmlContent().trim();
+      html += this.activity.getHtmlContent().trim();
     } else if (this.selectedTemplate === 'genericQuiz') {
-      html = this.quiz.getHtmlContent().trim();
+      html += this.quiz.getHtmlContent().trim();
     }
 
     console.log(html);
