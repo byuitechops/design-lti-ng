@@ -8,6 +8,8 @@ import { LtiParamsService } from '../lti-params.service';
 })
 export class PageTemplatesComponent implements OnInit {
 
+  templates: string[] = ['orgTemplate', 'homeTemplate'];
+
   contentItems = {
     '@context': 'http://purl.imsglobal.org/ctx/lti/v1/ContentItem',
     '@graph': [{

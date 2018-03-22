@@ -1,17 +1,23 @@
 <div id="pageTwo" class="page visible">
     <nav>
+        <a [routerLink]="['.']" *ngFor="let template of templates"
+          fragment="app-{{template}}">{{template | capitalize}}</a>
+    </nav>
+    <!-- <nav>
         <a href="#orgTemplate">Org Template</a>
         <a href="#homeTemplate">Home Page</a>
-        <!--<a href="#templateSmall">Small Template</a>-->
-    </nav>
+        <!--<a href="#templateSmall">Small Template</a>
+    </nav> -->
     <div class="templates">
         <app-org-template [courseClass]="courseClass"
-                          (select)=updateFeature($event)>
+                          (select)=updateFeature($event)
+                          id="app-{{templates[0]}}">
         </app-org-template>
         <app-home-page [courseClass]="courseClass"
                        [courseId]="courseId"
                        [courseName]="courseName"
-                       (select)="updateFeature($event)">
+                       (select)="updateFeature($event)"
+                       id="app-{{templates[1]}}">
         </app-home-page>
 
         <!--<div class="row" id="templateSmall">
