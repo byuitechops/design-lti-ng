@@ -87,7 +87,7 @@ nav {
 /* Not Ben's CSS */
 
 .page nav {
-    background-color: #525252;
+    background-color: #0076c6;
     position: fixed;
     margin-top: 0px;
     padding: 5px;
@@ -100,6 +100,10 @@ nav {
 
 .page nav a {
     color: white;
+}
+
+nav a.selected {
+    background-color: #004d82;
 }
 
 .features {

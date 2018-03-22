@@ -8,6 +8,15 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent {
   title = 'app';
+  selected = 'webFeatures';
+
+  _headingText: string;
+  get headingText(): string {
+    return this._headingText;
+  }
+  set headingText(value: string) {
+    this._headingText = value;
+  }
 
   constructor(router: Router) {
     router.events.subscribe(s => {
@@ -21,11 +30,7 @@ export class AppComponent {
     });
   }
 
-  _headingText: string;
-  get headingText(): string {
-    return this._headingText;
-  }
-  set headingText(value: string) {
-    this._headingText = value;
+  update(value: string) {
+    this.selected = value;
   }
 }
