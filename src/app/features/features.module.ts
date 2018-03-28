@@ -40,6 +40,42 @@ import { DynamicModule } from 'ng-dynamic-component';
 import { OrgTemplateComponent } from './templates/org-template.component';
 import { HomePageComponent } from './templates/home-page.component';
 import { HomePagePreviewComponent } from './templates/previews/home-page-preview.component';
+import { PrepareReadWatchListenComponent } from './templates/previews/prepare-rwl.component';
+import { PrepareRwlInstructionsComponent } from './templates/previews/prepare-rwl-instructions.component';
+import { PreparePreAssesmentComponent } from './templates/previews/prepare-pre-assesment.component';
+import { PrepareInterviewComponent } from './templates/previews/prepare-interview.component';
+import { PrepareConceptMatchingComponent } from './templates/previews/prepare-concept-matching.component';
+import { PrepareNoteTakingComponent } from './templates/previews/prepare-note-taking.component';
+import { PrepareInfoGatheringComponent } from './templates/previews/prepare-info-gathering.component';
+import { PrepareScholarlyResearchComponent } from './templates/previews/prepare-scholarly-research.component';
+import { PrepareLearningContractComponent } from './templates/previews/prepare-learning-contract.component';
+import { PrepareProjectPlanComponent } from './templates/previews/prepare-project-plan.component';
+import { PrepareSignUpComponent } from './templates/previews/prepare-sign-up.component';
+import { PrepareQuizWritingComponent } from './templates/previews/prepare-quiz-writing.component';
+import { ToaPresentationComponent } from './templates/previews/toa-presentation.component';
+import { ToaCaseStudyComponent } from './templates/previews/toa-case-study.component';
+import { ToaFieldExperienceComponent } from './templates/previews/toa-field-experience.component';
+import { ToaGroupProblemSolvingComponent } from './templates/previews/toa-group-problem-solving.component';
+import { ToaGroupProjectComponent } from './templates/previews/toa-group-project.component';
+import { ToaIcebreakerComponent } from './templates/previews/toa-icebreaker.component';
+import { ToaInsightSharingComponent } from './templates/previews/toa-insight-sharing.component';
+import { ToaJigsawTeachingComponent } from './templates/previews/toa-jigsaw-teaching.component';
+import { ToaPeerAccountabilityComponent } from './templates/previews/toa-peer-accountability.component';
+import { ToaPeerFeedbackComponent } from './templates/previews/toa-peer-feedback.component';
+import { ToaQnaSupportForumComponent } from './templates/previews/toa-qna-support-forum.component';
+import { ToaRolePlayDiscussionComponent } from './templates/previews/toa-role-play-discussion.component';
+import { ToaStructuredDebateComponent } from './templates/previews/toa-structured-debate.component';
+import { ToaStudyGroupComponent } from './templates/previews/toa-study-group.component';
+import { ToaTopicDiscussionComponent } from './templates/previews/toa-topic-discussion.component';
+import { PonderProveUnansweredQuestionsComponent } from './templates/previews/ponder-prove-unanswered-questions.component';
+import { PonderProveQuizComponent } from './templates/previews/ponder-prove-quiz.component';
+import { PonderProveExamComponent } from './templates/previews/ponder-prove-exam.component';
+import { PonderPresentationComponent } from './templates/previews/ponder-presentation.component';
+import { PonderProveProjectComponent } from './templates/previews/ponder-prove-project.component';
+import { PonderProveEssayComponent } from './templates/previews/ponder-prove-essay.component';
+import { PonderProveWorksheetWorkbookComponent } from './templates/previews/ponder-prove-worksheet-workbook.component';
+import { PonderProvePortfolioComponent } from './templates/previews/ponder-prove-portfolio.component';
+import { PonderProveReflectiveWriteUpComponent } from './templates/previews/ponder-prove-reflective-write-up.component';
 
 
 @NgModule({
@@ -102,7 +138,43 @@ import { HomePagePreviewComponent } from './templates/previews/home-page-preview
     FeatureWrapperComponent,
     OrgTemplateComponent,
     HomePageComponent,
-    HomePagePreviewComponent
+    HomePagePreviewComponent,
+    PrepareReadWatchListenComponent,
+    PrepareRwlInstructionsComponent,
+    PreparePreAssesmentComponent,
+    PrepareInterviewComponent,
+    PrepareConceptMatchingComponent,
+    PrepareNoteTakingComponent,
+    PrepareInfoGatheringComponent,
+    PrepareScholarlyResearchComponent,
+    PrepareLearningContractComponent,
+    PrepareProjectPlanComponent,
+    PrepareSignUpComponent,
+    PrepareQuizWritingComponent,
+    ToaPresentationComponent,
+    ToaCaseStudyComponent,
+    ToaFieldExperienceComponent,
+    ToaGroupProblemSolvingComponent,
+    ToaGroupProjectComponent,
+    ToaIcebreakerComponent,
+    ToaInsightSharingComponent,
+    ToaJigsawTeachingComponent,
+    ToaPeerAccountabilityComponent,
+    ToaPeerFeedbackComponent,
+    ToaQnaSupportForumComponent,
+    ToaRolePlayDiscussionComponent,
+    ToaStructuredDebateComponent,
+    ToaStudyGroupComponent,
+    ToaTopicDiscussionComponent,
+    PonderProveUnansweredQuestionsComponent,
+    PonderProveQuizComponent,
+    PonderProveExamComponent,
+    PonderPresentationComponent,
+    PonderProveProjectComponent,
+    PonderProveEssayComponent,
+    PonderProveWorksheetWorkbookComponent,
+    PonderProvePortfolioComponent,
+    PonderProveReflectiveWriteUpComponent
   ],
   providers: [
     LtiParamsService
