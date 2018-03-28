@@ -33,42 +33,6 @@
                 <option disabled selected value>Select a template</option>
                 <option *ngFor="let template of templates"
                         [value]="template">{{template | capitalize}}</option>
-                <!-- <option value="2">Prepare - Read/Watch/Listen</option>
-                <option value="3">Prepare - Read/Watch/Listen (Instructions in another activity)</option>
-                <option value="4">Prepare - Pre-Assesment</option>
-                <option value="5">Prepare - Interview</option>
-                <option value="6">Prepare - Concept Matching</option>
-                <option value="7">Prepare - Note Taking</option>
-                <option value="8">Prepare - Information Gathering</option>
-                <option value="9">Prepare - Scholarly Research</option>
-                <option value="10">Prepare - Learning Contract</option>
-                <option value="11">Prepare - Project Plan</option>
-                <option value="12">Prepare - Sign Up</option>
-                <option value="13">Prepare - Quiz Writing</option>
-                <option value="14">TOA - Presentation</option>
-                <option value="15">TOA - Case Study</option>
-                <option value="16">TOA - Field Experience</option>
-                <option value="17">TOA - Group Problem Solving</option>
-                <option value="18">TOA - Group Project</option>
-                <option value="19">TOA - Icebreaker</option>
-                <option value="20">TOA - Insight Sharing</option>
-                <option value="21">TOA - Jigsaw Teaching</option>
-                <option value="22">TOA - Peer Accountability</option>
-                <option value="23">TOA - Peer Feedback</option>
-                <option value="24">TOA - Q&amp;A/Support Forum</option>
-                <option value="25">TOA - Role Play Discussion</option>
-                <option value="26">TOA - Structured Debate</option>
-                <option value="27">TOA - Study Group</option>
-                <option value="28">TOA - Topic Discussion</option>
-                <option value="38">Ponder/Prove - Reflective Write-Up</option>
-                <option value="29">Ponder/Prove - Unanswered Questions</option>
-                <option value="30">Ponder/Prove - Quiz</option>
-                <option value="31">Ponder/Prove - Exam</option>
-                <option value="32">Ponder/Prove - Presentation</option>
-                <option value="33">Ponder/Prove - Project</option>
-                <option value="34">Ponder/Prove - Essay</option>
-                <option value="35">Ponder/Prove - Worksheet-Workbook</option>
-                <option value="36">Ponder/Prove - Portfolio</option> -->
             </select>
             <br>
             <a target="_blank" href="https://docs.google.com/document/d/1ZoDam0yGbEkZX9i1o1ognWJFp6Jqh9IP6eeyOR23oj4/">View docs</a>
@@ -81,9 +45,44 @@
             </div>
             <div id="orgTemplateOut">
                 <p *ngIf="!selectedTemplate">Please select an option to the left</p>
-                <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'"
-                                      [courseClass]="courseClass"></app-generic-activity>
-                <app-generic-quiz *ngIf="selectedTemplate == 'genericQuiz'"></app-generic-quiz>
+                <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'" [courseClass]="courseClass"></app-generic-activity>
+                <app-generic-quiz *ngIf="selectedTemplate == 'genericQuiz'" [courseClass]="courseClass"></app-generic-quiz>
+                <app-prepare-rwl *ngIf="selectedTemplate == 'prepareReadWatchListen'" [courseClass]="courseClass"></app-prepare-rwl>
+                <app-prepare-rwl-instructions *ngIf="selectedTemplate == 'prepareReadWatchListenInstructions'" [courseClass]="courseClass"></app-prepare-rwl-instructions>
+                <app-prepare-pre-assesment *ngIf="selectedTemplate == 'preparePreAssesment'" [courseClass]="courseClass"></app-prepare-pre-assesment>
+                <app-prepare-interview *ngIf="selectedTemplate == 'prepareInterview'" [courseClass]="courseClass"></app-prepare-interview>
+                <app-prepare-concept-matching *ngIf="selectedTemplate == 'prepareConceptMatching'" [courseClass]="courseClass"></app-prepare-concept-matching>
+                <app-prepare-note-taking *ngIf="selectedTemplate == 'prepareNoteTaking'" [courseClass]="courseClass"></app-prepare-note-taking>
+                <app-prepare-info-gathering *ngIf="selectedTemplate == 'prepareInformationGathering'" [courseClass]="courseClass"></app-prepare-info-gathering>
+                <app-prepare-scholarly-research *ngIf="selectedTemplate == 'prepareScholarlyResearch'" [courseClass]="courseClass"></app-prepare-scholarly-research>
+                <app-prepare-learning-contract *ngIf="selectedTemplate == 'prepareLearningContract'" [courseClass]="courseClass"></app-prepare-learning-contract>
+                <app-prepare-project-plan *ngIf="selectedTemplate == 'prepareProjectPlan'" [courseClass]="courseClass"></app-prepare-project-plan>
+                <app-prepare-sign-up *ngIf="selectedTemplate == 'prepareSignUp'" [courseClass]="courseClass"></app-prepare-sign-up>
+                <app-prepare-quiz-writing *ngIf="selectedTemplate == 'prepareQuizWriting'" [courseClass]="courseClass"></app-prepare-quiz-writing>
+                <app-toa-presentation *ngIf="selectedTemplate == 'toaPresentaion'" [courseClass]="courseClass"></app-toa-presentation>
+                <app-toa-case-study *ngIf="selectedTemplate == 'toaCaseStudy'" [courseClass]="courseClass"></app-toa-case-study>
+                <app-toa-field-experience *ngIf="selectedTemplate == 'toaFieldExperience'" [courseClass]="courseClass"></app-toa-field-experience>
+                <app-toa-group-problem-solving *ngIf="selectedTemplate == 'toaGroupProblemSolving'" [courseClass]="courseClass"></app-toa-group-problem-solving>
+                <app-toa-group-project *ngIf="selectedTemplate == 'toaGroupProject'" [courseClass]="courseClass"></app-toa-group-project>
+                <app-toa-icebreaker *ngIf="selectedTemplate == 'toaIcebreaker'" [courseClass]="courseClass"></app-toa-icebreaker>
+                <app-toa-insight-sharing *ngIf="selectedTemplate == 'toaInsightSharing'" [courseClass]="courseClass"></app-toa-insight-sharing>
+                <app-toa-jigsaw-teaching *ngIf="selectedTemplate == 'toaJigsawTeaching'" [courseClass]="courseClass"></app-toa-jigsaw-teaching>
+                <app-toa-peer-accountability *ngIf="selectedTemplate == 'toaPeerAccountability'" [courseClass]="courseClass"></app-toa-peer-accountability>
+                <app-toa-peer-feedback *ngIf="selectedTemplate == 'toaPeerFeedback'" [courseClass]="courseClass"></app-toa-peer-feedback>
+                <app-toa-qna-support-forum *ngIf="selectedTemplate == 'toaQ&amp;ASupportForum'" [courseClass]="courseClass"></app-toa-qna-support-forum>
+                <app-toa-role-play-discussion *ngIf="selectedTemplate == 'toaRolePlayDiscussion'" [courseClass]="courseClass"></app-toa-role-play-discussion>
+                <app-toa-structured-debate *ngIf="selectedTemplate == 'toaStructuredDebate'" [courseClass]="courseClass"></app-toa-structured-debate>
+                <app-toa-study-group *ngIf="selectedTemplate == 'toaStudyGroup'" [courseClass]="courseClass"></app-toa-study-group>
+                <app-toa-topic-discussion *ngIf="selectedTemplate == 'toaTopicDiscussion'" [courseClass]="courseClass"></app-toa-topic-discussion>
+                <app-ponder-prove-reflective-write-up *ngIf="selectedTemplate == 'ponderProveReflectiveWriteUp'" [courseClass]="courseClass"></app-ponder-prove-reflective-write-up>
+                <app-ponder-prove-unanswered-questions *ngIf="selectedTemplate == 'ponderProveUnansweredQuestions'" [courseClass]="courseClass"></app-ponder-prove-unanswered-questions>
+                <app-ponder-prove-quiz *ngIf="selectedTemplate == 'ponderProveQuiz'" [courseClass]="courseClass"></app-ponder-prove-quiz>
+                <app-ponder-prove-exam *ngIf="selectedTemplate == 'ponderProveExam'" [courseClass]="courseClass"></app-ponder-prove-exam>
+                <app-ponder-presentation *ngIf="selectedTemplate == 'ponderProvePresentation'" [courseClass]="courseClass"></app-ponder-presentation>
+                <app-ponder-prove-project *ngIf="selectedTemplate == 'ponderProveProject'" [courseClass]="courseClass"></app-ponder-prove-project>
+                <app-ponder-prove-essay *ngIf="selectedTemplate == 'ponderProveEssay'" [courseClass]="courseClass"></app-ponder-prove-essay>
+                <app-ponder-prove-worksheet-workbook *ngIf="selectedTemplate == 'ponderProveWorksheetWorkbook'" [courseClass]="courseClass"></app-ponder-prove-worksheet-workbook>
+                <app-ponder-prove-portfolio *ngIf="selectedTemplate == 'ponderProvePortfolio'" [courseClass]="courseClass"></app-ponder-prove-portfolio>
             </div>
         </div>
     </div>

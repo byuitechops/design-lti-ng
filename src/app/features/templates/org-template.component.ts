@@ -23,7 +23,14 @@ export class OrgTemplateComponent implements OnInit {
   'groupProject', 'iceBreaker', 'insightSharing', 'jigsawActivity', 'peerAccountability', 'peerFeedback',
   'rolePlayDiscussion', 'structuredDebate', 'studyGroup', 'supportForum', 'topicDiscussion'];
   bannerValuesPonder = ['assessment', 'demonstrateProficiency', 'practiceApply', 'presentation', 'reflection'];
-  templates: string[] = ['genericActivity', 'genericQuiz'];
+  templates: string[] = ['genericActivity', 'genericQuiz', 'prepareReadWatchListen', 'prepareReadWatchListenInstructions',
+  'preparePreAssesment', 'prepareInterview', 'prepareConceptMatching', 'prepareNoteTaking', 'prepareInformationGathering',
+  'prepareScholarlyResearch', 'prepareLearningContract', 'prepareProjectPlan', 'prepareSignUp', 'prepareQuizWriting',
+  'toaPresentaion', 'toaCaseStudy', 'toaFieldExperience', 'toaGroupProblemSolving', 'toaGroupProject', 'toaIcebreaker',
+  'toaInsightSharing', 'toaJigsawTeaching', 'toaPeerAccountability', 'toaPeerFeedback', 'toaQ&ASupportForum',
+  'toaRolePlayDiscussion', 'toaStructuredDebate', 'toaStudyGroup', 'toaTopicDiscussion', 'ponderProveReflectiveWriteUp',
+  'ponderProveUnansweredQuestions', 'ponderProveQuiz', 'ponderProveExam', 'ponderProvePresentation', 'ponderProveProject',
+  'ponderProveEssay', 'ponderProveWorksheetWorkbook', 'ponderProvePortfolio'];
 
   constructor() { }
 
