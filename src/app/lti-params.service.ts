@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, isDevMode } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Headers, RequestOptions } from '@angular/http';
@@ -7,17 +7,16 @@ import { LtiParams } from './lti-params';
 
 @Injectable()
 export class LtiParamsService {
-  address = 'https://localhost:1820';
+  address: string;
   ltiParams: LtiParams;
 
   constructor(private http: HttpClient) {
-  //   /* this.address = server.address(); */
-  //   if (process.env.url) {
-  //     this.address = process.env.url;
-  //   } else {
-  //     this.address = 'https://localhost:1820';
-  //   }
-  //   this.address += '/api/';
+    if (isDevMode()) {
+      this.address = 'https://localhost:1820';
+    } else {
+      this.address = 'https://byui-design-lti.herokuapp.com';
+    }
+
     this.http.get<LtiParams>(this.address + '/api')
     .subscribe(params => {
       this.ltiParams = params;
