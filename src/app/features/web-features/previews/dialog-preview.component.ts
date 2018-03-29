@@ -7,7 +7,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
   {{dialogContent ? dialogContent : "dialog"}}
 </div>
 <p>
-    <a id="link_1" class="Button" href="#dialog_for_link_1">
+    <a id="link_1" class="Button">
       {{dialogPrompt ? dialogPrompt : "prompt"}}
     </a>
 </p>
