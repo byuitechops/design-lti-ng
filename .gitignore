@@ -34,6 +34,7 @@ npm-debug.log
 testem.log
 /typings
 keysToolboxDev.txt
+changes.txt
 /crt
 
 # e2e
