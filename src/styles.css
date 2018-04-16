@@ -129,7 +129,6 @@ nav a.selected {
 .features>[id^="app"]>:last-child>div:last-child,
 #pageTwo .buttonWrapper {
     display: flex;
-    justify-content: flex-end;
     padding-bottom: 12px;
     border-bottom: #ccc solid 1px;
 }
