@@ -1,6 +1,6 @@
 <div id="pageOne" class="page visible">
   <nav>
-    <a [routerLink]="['.']" *ngFor="let feature of features"
+    <a class="local-nav" [routerLink]="['.']" *ngFor="let feature of features"
       fragment="app-{{feature}}">{{feature | capitalize}}</a>
   </nav>
 

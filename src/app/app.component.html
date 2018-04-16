@@ -1,11 +1,11 @@
 <div>
   <nav>
-    <a class="tab" [routerLink]="['/web-features']"
+    <a class="tab local-nav" [routerLink]="['/web-features']"
        [ngClass]="{'selected':selected === 'webFeatures'}"
        (click)="update('webFeatures')">
         <h4>Web Features</h4>
     </a>
-    <a class="tab" [routerLink]="['/page-templates']"
+    <a class="tab local-nav" [routerLink]="['/page-templates']"
        [ngClass]="{'selected':selected === 'pageTemplates'}"
        (click)="update('pageTemplates')">
         <h4>Activity Templates</h4>
