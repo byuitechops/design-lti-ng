@@ -76,6 +76,7 @@ import { PonderProveEssayComponent } from './templates/previews/ponder-prove-ess
 import { PonderProveWorksheetWorkbookComponent } from './templates/previews/ponder-prove-worksheet-workbook.component';
 import { PonderProvePortfolioComponent } from './templates/previews/ponder-prove-portfolio.component';
 import { PonderProveReflectiveWriteUpComponent } from './templates/previews/ponder-prove-reflective-write-up.component';
+import { PonderProveReportComponent } from './templates/previews/ponder-prove-report.component';
 
 
 @NgModule({
@@ -174,7 +175,8 @@ import { PonderProveReflectiveWriteUpComponent } from './templates/previews/pond
     PonderProveEssayComponent,
     PonderProveWorksheetWorkbookComponent,
     PonderProvePortfolioComponent,
-    PonderProveReflectiveWriteUpComponent
+    PonderProveReflectiveWriteUpComponent,
+    PonderProveReportComponent
   ],
   providers: [
     LtiParamsService
