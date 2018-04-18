@@ -66,6 +66,7 @@ nav {
     background: #0076c6;
     color: #fff;
     height: 40px;
+    text-decoration: none;
 }
 
 .tab:hover,
@@ -173,4 +174,8 @@ nav a.selected {
 
 .radio-label {
     padding-right: 10px;
+}
+
+.local-nav:link {
+    text-decoration: none;
 }
