@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
-import { HomePagePreviewComponent } from './previews/home-page-preview.component';
+import { HomePagePreviewComponent } from './previews/generic/home-page-preview.component';
 
 @Component({
   selector: 'app-home-page',

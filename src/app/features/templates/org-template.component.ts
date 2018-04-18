@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, ViewChild, EventEmitter } from '@angular/core';
-import { GenericActivityComponent } from './previews/generic-activity.component';
-import { GenericQuizComponent } from './previews/generic-quiz.component';
+import { GenericActivityComponent } from './previews/generic/generic-activity.component';
+import { GenericContentComponent } from './previews/generic/generic-content.component';
 
 @Component({
   selector: 'app-org-template',
@@ -13,7 +13,7 @@ export class OrgTemplateComponent implements OnInit {
 
   @Output() select: EventEmitter<string> = new EventEmitter();
   @ViewChild(GenericActivityComponent) activity: GenericActivityComponent;
-  @ViewChild(GenericQuizComponent) quiz: GenericQuizComponent;
+  @ViewChild(GenericContentComponent) quiz: GenericContentComponent;
 
   bannerInner: string;
   selectedBanner: string;

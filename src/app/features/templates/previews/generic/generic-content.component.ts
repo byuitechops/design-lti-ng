@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-generic-quiz',
-  templateUrl: './generic-quiz.component.html',
+  selector: 'app-generic-content',
+  templateUrl: './generic-content.component.html',
   styleUrls: []
 })
-export class GenericQuizComponent implements OnInit {
+export class GenericContentComponent implements OnInit {
 
   @Input() courseClass: string;
 

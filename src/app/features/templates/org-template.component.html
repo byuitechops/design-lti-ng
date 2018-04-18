@@ -46,7 +46,7 @@
             <div id="orgTemplateOut">
                 <p *ngIf="!selectedTemplate">Please select an option to the left</p>
                 <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'" [courseClass]="courseClass"></app-generic-activity>
-                <app-generic-quiz *ngIf="selectedTemplate == 'genericQuiz'" [courseClass]="courseClass"></app-generic-quiz>
+                <app-generic-content *ngIf="selectedTemplate == 'genericQuiz'" [courseClass]="courseClass"></app-generic-content>
                 <app-prepare-rwl *ngIf="selectedTemplate == 'prepareReadWatchListen'" [courseClass]="courseClass"></app-prepare-rwl>
                 <app-prepare-rwl-instructions *ngIf="selectedTemplate == 'prepareReadWatchListenInstructions'" [courseClass]="courseClass"></app-prepare-rwl-instructions>
                 <app-prepare-pre-assesment *ngIf="selectedTemplate == 'preparePreAssesment'" [courseClass]="courseClass"></app-prepare-pre-assesment>
