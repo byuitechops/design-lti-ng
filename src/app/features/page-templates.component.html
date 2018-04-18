@@ -1,13 +1,9 @@
 <div id="pageTwo" class="page visible">
     <nav>
-        <a [routerLink]="['.']" *ngFor="let template of templates"
-          fragment="app-{{template}}">{{template | capitalize}}</a>
+        <a [routerLink]="['.']" *ngFor="let nav of localNav"
+          fragment="app-{{nav}}">{{nav}}</a>
     </nav>
-    <!-- <nav>
-        <a href="#orgTemplate">Org Template</a>
-        <a href="#homeTemplate">Home Page</a>
-        <!--<a href="#templateSmall">Small Template</a>
-    </nav> -->
+
     <div class="templates">
         <app-org-template [courseClass]="courseClass"
                           (select)=updateFeature($event)
@@ -19,54 +15,6 @@
                        (select)="updateFeature($event)"
                        id="app-{{templates[1]}}">
         </app-home-page>
-
-        <!--<div class="row" id="templateSmall">
-            <div class="option">
-                            <h4>Select options:</h4>
-                <a class="Button btn btn-primary" href="#" onclick="respond('templateSmall')">Insert Page Template</a>
-            </div>
-            <div class="preview" id="templateSmallOut">
-                            <h4>Preview:</h4>
-                <div class="byui {{courseClass}}">
-                    <div id="header">
-                        <img src="https://byui.instructure.com/courses/773/files/129575/preview" alt="Banner" width="3000" height="272" data-api-endpoint="https://byui.instructure.com/api/v1/courses/773/files/129575" data-api-returntype="File" />
-                    </div>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <p>*As a note, The editor does not use heading 1, as the page title occupies that role.
-                        <br />Congratulations on making it to week 1! There hasn't been a lot required of you up to this point, in fact, nothing!</p>
-                    <h2 class="activity readings">Readings</h2>
-                    <p>
-                        <a class="Button Button--primary" href="#">Primary Button</a>
-                    </p>
-                    <p>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            <span class="byui-popover" title="Put your desired text here." data-tooltip="{&quot;tooltipClass&quot;:&quot;popover popover-padded&quot;, &quot;position&quot;:&quot;right&quot;}">pop-up</span> eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        <span class="pad-box-mini border border-trbl border-round right quarter">
-                                <em>This is a callout box which can be used to emphasize text.</em>
-                            </span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-                    </p>
-                    <p>
-                        <span>
-                            <img id="demoImage" class="left quarter" style="max-width: 600px;" src="https://content.byui.edu/file/e7de5943-5a1e-4a64-bbea-ab36a5e21d44/21/McKayLibrary.jpg"
-                                alt="McKay Library" />
-                            <span id="demoCaption" class="caption">Insert Caption Text Here</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </span>
-                    </p>
-                    <p>
-                        <span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                            id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.</span>
-                    </p>
-                    <div id="this_page_1" class="accordion ui-accordion ui-widget ui-helper-reset" role="tablist">
-                        <h3 id="ui-id-1" class="ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" aria-controls="ui-id-2" aria-expanded="false" aria-selected="false">Example Dropdown</h3>
-                        <div id="ui-id-2" class="ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" style="display: none;" role="tabpanel" aria-labelledby="ui-id-1" aria-hidden="true">This is the content</div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
     </div>
 </div>
 
