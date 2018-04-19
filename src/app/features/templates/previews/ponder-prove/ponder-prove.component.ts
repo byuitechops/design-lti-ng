@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-ponder-prove-report',
-  templateUrl: './ponder-prove-report.component.html',
+  selector: 'app-ponder-prove',
+  templateUrl: './ponder-prove.component.html',
   styles: []
 })
-export class PonderProveReportComponent implements OnInit {
+export class PonderProveComponent implements OnInit {
 
   @Input() courseClass: string;
 

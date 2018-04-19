@@ -77,6 +77,15 @@ import { PonderProveWorksheetWorkbookComponent } from './templates/previews/pond
 import { PonderProvePortfolioComponent } from './templates/previews/ponder-prove/ponder-prove-portfolio.component';
 import { PonderProveReflectiveWriteUpComponent } from './templates/previews/ponder-prove/ponder-prove-reflective-write-up.component';
 import { PonderProveReportComponent } from './templates/previews/ponder-prove/ponder-prove-report.component';
+import { ExerciseComponent } from './templates/previews/generic/exercise.component';
+import { IntroductionComponent } from './templates/previews/generic/introduction.component';
+import { PracticeComponent } from './templates/previews/generic/practice.component';
+import { StudyComponent } from './templates/previews/generic/study.component';
+import { TeachingNotesComponent } from './templates/previews/generic/teaching-notes.component';
+import { PonderProveComponent } from './templates/previews/ponder-prove/ponder-prove.component';
+import { PrepareComponent } from './templates/previews/prepare/prepare.component';
+import { TeachOneAnotherComponent } from './templates/previews/teach-one-another/teach-one-another.component';
+import { AccountabilityQuizComponent } from './templates/previews/generic/accountability-quiz.component';
 
 
 @NgModule({
@@ -176,7 +185,16 @@ import { PonderProveReportComponent } from './templates/previews/ponder-prove/po
     PonderProveWorksheetWorkbookComponent,
     PonderProvePortfolioComponent,
     PonderProveReflectiveWriteUpComponent,
-    PonderProveReportComponent
+    PonderProveReportComponent,
+    ExerciseComponent,
+    IntroductionComponent,
+    PracticeComponent,
+    StudyComponent,
+    TeachingNotesComponent,
+    PonderProveComponent,
+    PrepareComponent,
+    TeachOneAnotherComponent,
+    AccountabilityQuizComponent
   ],
   providers: [
     LtiParamsService

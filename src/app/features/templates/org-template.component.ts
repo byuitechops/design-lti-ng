@@ -23,14 +23,14 @@ export class OrgTemplateComponent implements OnInit {
   'groupProject', 'iceBreaker', 'insightSharing', 'jigsawActivity', 'peerAccountability', 'peerFeedback',
   'rolePlayDiscussion', 'structuredDebate', 'studyGroup', 'supportForum', 'topicDiscussion'];
   bannerValuesPonder = ['assessment', 'demonstrateProficiency', 'practiceApply', 'presentation', 'reflection'];
-  templates: string[] = ['genericActivity', 'genericQuiz', 'prepareReadWatchListen', 'prepareReadWatchListenInstructions',
-  'preparePreAssesment', 'prepareInterview', 'prepareConceptMatching', 'prepareNoteTaking', 'prepareInformationGathering',
-  'prepareScholarlyResearch', 'prepareLearningContract', 'prepareProjectPlan', 'prepareSignUp', 'prepareQuizWriting',
-  'toaPresentaion', 'toaCaseStudy', 'toaFieldExperience', 'toaGroupProblemSolving', 'toaGroupProject', 'toaIcebreaker',
-  'toaInsightSharing', 'toaJigsawTeaching', 'toaPeerAccountability', 'toaPeerFeedback', 'toaQ&ASupportForum',
-  'toaRolePlayDiscussion', 'toaStructuredDebate', 'toaStudyGroup', 'toaTopicDiscussion', 'ponderProveReflectiveWriteUp',
-  'ponderProveUnansweredQuestions', 'ponderProveQuiz', 'ponderProveExam', 'ponderProvePresentation', 'ponderProveProject',
-  'ponderProveEssay', 'ponderProveWorksheetWorkbook', 'ponderProvePortfolio'];
+  templates: string[] = ['genericActivity', 'genericContent', 'teachingNotes', 'introduction',
+  'conceptMapping', 'interview', 'learningContract', 'noteTaking', 'practice',
+  'prepare', 'pretest', 'projectPlan', 'quizWriting', 'research',
+  'signUp', 'study', 'caseStudy', 'fieldExperience', 'groupProblemSolving', 'groupProject',
+  'iceBreaker', 'insightSharing', 'jigsawTeaching', 'peerAccountability', 'peerFeedback',
+  'presentation', 'q&ASupportForum', 'rolePlay', 'structuredDebate', 'studyGroup',
+  'teachOneAnother', 'topicDiscussion', 'accountabilityQuiz', 'exam', 'exercise',
+  'paperEssay', 'ponderProve', 'portfolio', 'postTest', 'project', 'quiz', 'reflection', 'report', 'worksheet'];
 
   constructor() { }
 
