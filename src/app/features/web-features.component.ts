@@ -25,12 +25,12 @@ export class WebFeaturesComponent implements AfterViewInit {
   private fragment: string;
 
   // add new feature components to this array
-  featureTypes = [ButtonComponent, CalloutComponent,
+  featureTypes = [AccordionComponent, ButtonComponent, CalloutComponent,
     ColumnsComponent, DefinitionComponent, DialogComponent, ImageComponent,
     PopoverComponent, TableComponent];
 
   // and the name of the component here as a string. Make sure it's in the same order as above
-  features: string[] = ['button', 'callout',
+  features: string[] = ['accordion', 'button', 'callout',
   'columns', 'definition', 'dialog', 'image', 'popover', 'table'];
 
   returnUrl: string;
