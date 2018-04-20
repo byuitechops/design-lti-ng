@@ -23,14 +23,14 @@ export class OrgTemplateComponent implements OnInit {
   'groupProject', 'iceBreaker', 'insightSharing', 'jigsawActivity', 'peerAccountability', 'peerFeedback',
   'rolePlayDiscussion', 'structuredDebate', 'studyGroup', 'supportForum', 'topicDiscussion'];
   bannerValuesPonder = ['assessment', 'demonstrateProficiency', 'practiceApply', 'presentation', 'reflection'];
-  templates: string[] = ['genericActivity', 'genericContent', 'teachingNotes', 'introduction',
-  'conceptMapping', 'interview', 'learningContract', 'noteTaking', 'practice',
-  'prepare', 'pretest', 'projectPlan', 'quizWriting', 'research',
-  'signUp', 'study', 'caseStudy', 'fieldExperience', 'groupProblemSolving', 'groupProject',
-  'iceBreaker', 'insightSharing', 'jigsawTeaching', 'peerAccountability', 'peerFeedback',
-  'presentation', 'q&ASupportForum', 'rolePlay', 'structuredDebate', 'studyGroup',
-  'teachOneAnother', 'topicDiscussion', 'accountabilityQuiz', 'exam', 'exercise',
-  'paperEssay', 'ponderProve', 'portfolio', 'postTest', 'project', 'quiz', 'reflection', 'report', 'worksheet'];
+  genericTemplates: string[] = ['genericActivity', 'genericContent', 'teachingNotes', 'introduction'];
+  prepareTemplates: string[] = ['conceptMapping', 'interview', 'learningContract', 'noteTaking', 'practice', 'prepare',
+  'pretest', 'projectPlan', 'quizWriting', 'research', 'signUp', 'study'];
+  toaTemplates: string[] = ['caseStudy', 'fieldExperience', 'groupProblemSolving', 'groupProject', 'iceBreaker', 'insightSharing',
+  'jigsawTeaching', 'peerAccountability', 'peerFeedback', 'presentation', 'q&ASupportForum', 'rolePlay', 'structuredDebate', 'studyGroup',
+  'teachOneAnother', 'topicDiscussion'];
+  ponderProveTemplates: string[] = ['accountabilityQuiz', 'exam', 'exercise', 'paperEssay', 'ponderProve', 'portfolio', 'postTest',
+  'project', 'quiz', 'reflection', 'report', 'worksheet'];
 
   constructor() { }
 

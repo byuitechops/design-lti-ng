@@ -2,47 +2,31 @@
     <div class="row">
         <div class="option">
             <h4>Select options:</h4>
-                <label for="avtivitySelected2" class="templateLabel">Banner:</label>
-                <select (change)="updateBanner($event.target.value)" id="activitySelected2">
-                    <optgroup label="Prepare">
-                        <option *ngFor="let title of bannerValuesPrepare"
-                                [value]="'prepare ' + title">
-                                {{title | capitalize}}
-                        </option>
-                    </optgroup>
-                    <optgroup label="Teach One Another">
-                        <option *ngFor="let title of bannerValuesTeach"
-                                [value]="'teach ' + title">
-                                {{title | capitalize}}
-                        </option>
-                    </optgroup>
-                    <optgroup label="Ponder and Prove">
-                        <option *ngFor="let title of bannerValuesPonder"
-                                [value]="'ponder ' + title">
-                                {{title | capitalize}}
-                        </option>
-                    </optgroup>
-                    <optgroup label="Other">
-                        <option value="other">Other</option>
-                        <option value="None">None</option>
-                    </optgroup>
-                </select>
-            <br>
             <label for="selectTemplate" class="templateLabel">Page Template:</label>
             <select (change)="updateTemplate($event.target.value)" id="selectTemplate">
                 <option disabled selected value>Select a template</option>
-                <option *ngFor="let template of templates"
-                        [value]="template">{{template | capitalize}}</option>
+                <optgroup label="Generic">
+                    <option *ngFor="let template of genericTemplates"
+                    [value]="template">{{template | capitalize}}</option>
+                </optgroup>
+                <optgroup label="Prepare">
+                    <option *ngFor="let template of prepareTemplates"
+                    [value]="template">{{template | capitalize}}</option>
+                </optgroup>
+                <optgroup label="TOA">
+                    <option *ngFor="let template of toaTemplates"
+                    [value]="template">{{template | capitalize}}</option>
+                </optgroup>
+                <optgroup label="Ponder/Prove">
+                  <option *ngFor="let template of ponderProveTemplates"
+                    [value]="template">{{template | capitalize}}</option>
+                </optgroup>
             </select>
             <br>
             <a target="_blank" href="https://docs.google.com/document/d/1ZoDam0yGbEkZX9i1o1ognWJFp6Jqh9IP6eeyOR23oj4/">View docs</a>
         </div>
         <div class="preview">
             <h4>Preview:</h4>
-            <div class="byui">
-                <h2 *ngIf="selectedBanner"
-                    class="activity {{selectedBanner}}">{{bannerInner | capitalize}}</h2>
-            </div>
             <div id="orgTemplateOut">
                 <p *ngIf="!selectedTemplate">Please select an option to the left</p>
                 <app-generic-activity *ngIf="selectedTemplate == 'genericActivity'" [courseClass]="courseClass"></app-generic-activity>
