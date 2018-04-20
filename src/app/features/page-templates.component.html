@@ -1,25 +1,86 @@
 <div id="pageTwo" class="page visible">
-    <nav>
-        <a [routerLink]="['.']" *ngFor="let nav of localNav"
-          fragment="app-{{nav}}">{{nav}}</a>
-    </nav>
+  <nav>
+    <a [routerLink]="['.']" *ngFor="let nav of templates"
+        fragment="app-{{nav}}">{{nav | capitalize}}</a>
+  </nav>
+  <!-- <nav>
+    <a pageScroll href="generic">Generic</a>
+    <a pageScroll href="prepare">Prepare</a>
+    <a pageScroll href="toa">TOA</a>
+    <a pageScroll href="ponderProve">Ponder/Prove</a>
 
+  </nav> -->
+  <br />
+<!--
     <div class="templates">
-        <app-org-template [courseClass]="courseClass"
-                          (select)=updateFeature($event)
-                          id="app-{{templates[0]}}">
-        </app-org-template>
-        <app-home-page [courseClass]="courseClass"
-                       [courseId]="courseId"
-                       [courseName]="courseName"
-                       (select)="updateFeature($event)"
-                       id="app-{{templates[1]}}">
-        </app-home-page>
-    </div>
+      <div id="generic">
+        <h2>Generic</h2>
+
+        <div class="row">
+          <div class="option">
+            <h2>Generic Activity</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-generic-activity [courseClass]="courseClass"></app-generic-activity>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Generic Content</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-generic-content [courseClass]="courseClass"></app-generic-content>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="templates" id="prepare">
+    <h2>Prepare</h2>
+  </div>
+  <div class="templates" id="toa">
+    <h2>Teach One Another</h2>
+  </div>
+  <div class="templates" id="ponderProve">
+    <h2>Ponder/Prove</h2>
+  </div> -->
+
+  <app-org-template [courseClass]="courseClass"
+                      (select)=updateFeature($event)
+                      id="app-{{templates[0]}}">
+  </app-org-template>
+  <app-home-page [courseClass]="courseClass"
+                    [courseId]="courseId"
+                    [courseName]="courseName"
+                    (select)="updateFeature($event)"
+                    id="app-{{templates[1]}}">
+  </app-home-page>
+
 </div>
 
 <form method="post" action="{{returnUrl}}" id="submit">
-    <input type="hidden" name="lti_message_type" value="ContentItemSelection" />
-    <input type="hidden" name="lti_version" value="LTI-1p0" />
-    <input id="contentItems" type="hidden" name="content_items" value="{{contentItemsJson}}" />
+  <input type="hidden" name="lti_message_type" value="ContentItemSelection" />
+  <input type="hidden" name="lti_version" value="LTI-1p0" />
+  <input id="contentItems" type="hidden" name="content_items" value="{{contentItemsJson}}" />
 </form>
