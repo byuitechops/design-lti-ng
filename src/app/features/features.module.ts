@@ -86,6 +86,7 @@ import { PonderProveComponent } from './templates/previews/ponder-prove/ponder-p
 import { PrepareComponent } from './templates/previews/prepare/prepare.component';
 import { TeachOneAnotherComponent } from './templates/previews/teach-one-another/teach-one-another.component';
 import { AccountabilityQuizComponent } from './templates/previews/generic/accountability-quiz.component';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 
 @NgModule({
@@ -108,7 +109,8 @@ import { AccountabilityQuizComponent } from './templates/previews/generic/accoun
       VideoComponent,
       ImageCarouselComponent,
       PopoverComponent,
-      TableComponent])
+      TableComponent]),
+    NgxPageScrollModule
   ],
   exports: [
     // WebFeaturesComponent
