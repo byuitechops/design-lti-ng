@@ -116,8 +116,12 @@ nav a.selected {
     margin-left:10px;
 }
 
-.features>[id^="app"]>:last-child,
-#pageTwo>div {
+.features>[id^="app"]>:last-child {
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 10px;
+}
+
+.features>div>:last-child {
     border-bottom: #ccc solid 1px;
 }
 
