@@ -8,7 +8,7 @@ import { LtiParamsService } from '../lti-params.service';
 })
 export class PageTemplatesComponent implements OnInit {
 
-  localNav: string[] = ['Generic', 'Prepare', 'TOA', 'Ponder/Prove'];
+  localNav: string[] = ['Generic', 'Prepare', 'TOA', 'PonderProve'];
 
   templates: string[] = ['orgTemplate', 'homeTemplate'];
 
