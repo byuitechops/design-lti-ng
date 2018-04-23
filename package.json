@@ -2,7 +2,7 @@
   "name": "design-lti-ng",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "bin/www.js",
+  "main": "bin/www",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 1830 -o",
@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "restart": "nodemon -e html,css,js,ts ./bin/www"
+    "restart": "nodemon -e html,css,js,ts ./bin/www",
+    "postinstall": "ng build --prod"
   },
   "engines": {
     "node": "~9.7.1",
