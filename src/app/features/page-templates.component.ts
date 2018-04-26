@@ -6,7 +6,7 @@ import { LtiParamsService } from '../lti-params.service';
 @Component({
   selector: 'app-page-templates',
   templateUrl: './page-templates.component.html',
-  styleUrls: []
+  styleUrls: ['./page-templates.component.css']
 })
 export class PageTemplatesComponent implements OnInit {
 
@@ -32,6 +32,11 @@ export class PageTemplatesComponent implements OnInit {
   courseClass: string;
   returnUrl: string;
 
+  genericActive = false;
+  prepareActive = false;
+  toaActive = false;
+  proveActive = false;
+
   constructor(private _ltiParamsService: LtiParamsService) {
     PageScrollConfig.defaultScrollOffset = 80;
     PageScrollConfig.defaultDuration = 0;
@@ -48,6 +53,19 @@ export class PageTemplatesComponent implements OnInit {
     // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
     form.submit();
+  }
+
+  toggleGeneric(): void {
+    this.genericActive = !this.genericActive;
+  }
+  togglePrepare(): void {
+    this.prepareActive = !this.prepareActive;
+  }
+  toggleToa(): void {
+    this.toaActive = !this.toaActive;
+  }
+  toggleProve(): void {
+    this.proveActive = !this.proveActive;
   }
 
   ngOnInit(): void {
