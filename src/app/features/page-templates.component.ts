@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { PageScrollConfig } from 'ngx-page-scroll';
+
 import { LtiParamsService } from '../lti-params.service';
 
 @Component({
@@ -30,7 +32,10 @@ export class PageTemplatesComponent implements OnInit {
   courseClass: string;
   returnUrl: string;
 
-  constructor(private _ltiParamsService: LtiParamsService) { }
+  constructor(private _ltiParamsService: LtiParamsService) {
+    PageScrollConfig.defaultScrollOffset = 80;
+    PageScrollConfig.defaultDuration = 0;
+  }
 
   updateFeature(feature) {
     // insert the html string to the content items

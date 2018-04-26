@@ -3,18 +3,17 @@
     <a [routerLink]="['.']" *ngFor="let nav of templates"
         fragment="app-{{nav}}">{{nav | capitalize}}</a>
   </nav>
-  <!-- <nav>
-    <a pageScroll href="generic">Generic</a>
-    <a pageScroll href="prepare">Prepare</a>
-    <a pageScroll href="toa">TOA</a>
-    <a pageScroll href="ponderProve">Ponder/Prove</a>
-
-  </nav> -->
+  <nav>
+    <a pageScroll href="#generic">Generic</a>
+    <a pageScroll href="#prepare">Prepare</a>
+    <a pageScroll href="#toa">TOA</a>
+    <a pageScroll href="#ponderProve">Ponder/Prove</a>
+  </nav>
   <br />
-<!--
-    <div class="templates">
-      <div id="generic">
-        <h2>Generic</h2>
+
+  <div class="templates">
+    <div id="generic">
+        <h2 class="templateSectionHeader">Generic</h2>
 
         <div class="row">
           <div class="option">
@@ -52,21 +51,782 @@
           <a class="Button btn btn-primary">Insert</a>
         </div>
 
+        <div class="row">
+          <div class="option">
+            <h2>Teaching Notes</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-teaching-notes [courseClass]="courseClass"></app-teaching-notes>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Introduction</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-introduction [courseClass]="courseClass"></app-introduction>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
       </div>
 
+      <div class="templates" id="prepare">
+        <h2 class="templateSectionHeader">Prepare</h2>
+
+        <div class="row">
+          <div class="option">
+            <h2>Concept Mapping</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-concept-matching [courseClass]="courseClass"></app-prepare-concept-matching>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Interview</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-interview [courseClass]="courseClass"></app-prepare-interview>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Learning Contract</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-learning-contract [courseClass]="courseClass"></app-prepare-learning-contract>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Note Taking</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-note-taking [courseClass]="courseClass"></app-prepare-note-taking>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Practice</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-practice [courseClass]="courseClass"></app-practice>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Prepare</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare [courseClass]="courseClass"></app-prepare>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Pretest</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-pre-assesment [courseClass]="courseClass"></app-prepare-pre-assesment>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Project Plan</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-project-plan [courseClass]="courseClass"></app-prepare-project-plan>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Quiz Writing</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-quiz-writing [courseClass]="courseClass"></app-prepare-quiz-writing>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Research</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-scholarly-research [courseClass]="courseClass"></app-prepare-scholarly-research>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Sign Up</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-sign-up [courseClass]="courseClass"></app-prepare-sign-up>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Study</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-prepare-sign-up [courseClass]="courseClass"></app-prepare-sign-up>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+      </div>
+
+      <div class="templates" id="toa">
+        <h2 class="templateSectionHeader">Teach One Another</h2>
+
+        <div class="row">
+          <div class="option">
+            <h2>Case Study</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-case-study [courseClass]="courseClass"></app-toa-case-study>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Field Experience</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-field-experience [courseClass]="courseClass"></app-toa-field-experience>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Group Problem Solving</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-group-problem-solving [courseClass]="courseClass"></app-toa-group-problem-solving>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Group Project</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-group-project [courseClass]="courseClass"></app-toa-group-project>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Ice Breaker</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-icebreaker [courseClass]="courseClass"></app-toa-icebreaker>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Inisght Sharing</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-insight-sharing [courseClass]="courseClass"></app-toa-insight-sharing>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Jigsaw Teaching</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-jigsaw-teaching [courseClass]="courseClass"></app-toa-jigsaw-teaching>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Peer Accountability</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-peer-accountability [courseClass]="courseClass"></app-toa-peer-accountability>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Peer Feedback</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-peer-feedback [courseClass]="courseClass"></app-toa-peer-feedback>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Presentation</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-presentation [courseClass]="courseClass"></app-toa-presentation>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Q&amp;A Support Forum</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-qna-support-forum [courseClass]="courseClass"></app-toa-qna-support-forum>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Role Play</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-role-play-discussion [courseClass]="courseClass"></app-toa-role-play-discussion>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Structured Debate</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-structured-debate [courseClass]="courseClass"></app-toa-structured-debate>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Study Group</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-study-group [courseClass]="courseClass"></app-toa-study-group>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Teach One Another</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-teach-one-another [courseClass]="courseClass"></app-teach-one-another>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Topic Discussion</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-toa-topic-discussion [courseClass]="courseClass"></app-toa-topic-discussion>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+      </div>
+
+      <div class="templates" id="ponderProve">
+        <h2 class="templateSectionHeader">Ponder/Prove</h2>
+
+        <div class="row">
+          <div class="option">
+            <h2>Accountability Quiz</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-accountability-quiz [courseClass]="courseClass"></app-accountability-quiz>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Exam</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-exam [courseClass]="courseClass"></app-ponder-prove-exam>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Exercise</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-exercise [courseClass]="courseClass"></app-exercise>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Paper/Essay</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-essay [courseClass]="courseClass"></app-ponder-prove-essay>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Ponder Prove</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove [courseClass]="courseClass"></app-ponder-prove>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Portfolio</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-portfolio [courseClass]="courseClass"></app-ponder-prove-portfolio>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Post-Test</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-unanswered-questions [courseClass]="courseClass"></app-ponder-prove-unanswered-questions>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Project</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-project [courseClass]="courseClass"></app-ponder-prove-project>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Quiz</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-quiz [courseClass]="courseClass"></app-ponder-prove-quiz>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Reflection</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-reflective-write-up [courseClass]="courseClass"></app-ponder-prove-reflective-write-up>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Report</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-report [courseClass]="courseClass"></app-ponder-prove-report>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
+            <h2>Worksheet</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-ponder-prove-worksheet-workbook [courseClass]="courseClass"></app-ponder-prove-worksheet-workbook>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+
+      </div>
   </div>
 
-  <div class="templates" id="prepare">
-    <h2>Prepare</h2>
-  </div>
-  <div class="templates" id="toa">
-    <h2>Teach One Another</h2>
-  </div>
-  <div class="templates" id="ponderProve">
-    <h2>Ponder/Prove</h2>
-  </div> -->
 
-  <app-org-template [courseClass]="courseClass"
+
+  <!-- <app-org-template [courseClass]="courseClass"
                       (select)=updateFeature($event)
                       id="app-{{templates[0]}}">
   </app-org-template>
@@ -75,7 +835,7 @@
                     [courseName]="courseName"
                     (select)="updateFeature($event)"
                     id="app-{{templates[1]}}">
-  </app-home-page>
+  </app-home-page> -->
 
 </div>
 
