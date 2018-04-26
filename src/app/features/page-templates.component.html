@@ -53,6 +53,28 @@
 
         <div class="row">
           <div class="option">
+            <h2>Home Page</h2>
+            <div>
+              <p>Guidelines</p>
+            </div>
+          </div>
+          <div>
+            <div class="preview" id="buttonOut">
+              <h4>Preview:</h4>
+              <app-home-page-preview
+                    [courseClass]="courseClass"
+                    [courseId]="courseId"
+                    [courseName]="courseName">
+              </app-home-page-preview>
+            </div>
+          </div>
+        </div>
+        <div class="buttonWrapper">
+          <a class="Button btn btn-primary">Insert</a>
+        </div>
+
+        <div class="row">
+          <div class="option">
             <h2>Teaching Notes</h2>
             <div>
               <p>Guidelines</p>
