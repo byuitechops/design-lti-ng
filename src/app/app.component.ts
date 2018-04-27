@@ -8,7 +8,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent {
   title = 'app';
-  selected = 'webFeatures';
+  selected = 'pageTemplates';
 
   _headingText: string;
   get headingText(): string {
