@@ -103,10 +103,6 @@ nav {
     color: white;
 }
 
-nav a.selected {
-    background-color: #004d82;
-}
-
 .features {
     margin-top: 15px;
 }
