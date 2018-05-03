@@ -25,11 +25,48 @@
             <div>
               <p>Guidelines</p>
             </div>
+            <input type="checkbox"
+              [checked]="genericActivityCode"
+              (change)="genericActivityCode = !genericActivityCode">
+            <label>Show as HTML</label>
           </div>
           <div>
             <div class="preview" id="buttonOut">
               <h4>Preview:</h4>
-              <app-generic-activity [courseClass]="courseClass"></app-generic-activity>
+              <app-generic-activity *ngIf="!genericActivityCode" [courseClass]="courseClass"></app-generic-activity>
+              <pre *ngIf="genericActivityCode">
+  &lt;div class="byui {{courseClass}}">
+      &lt;div class="overview">
+          &lt;h2>Overview&lt;/h2>
+          &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+          &lt;ul>
+              &lt;li>
+                  &lt;strong>Task: &lt;/strong>[Specify actions and
+                  &lt;em>emphasize main actions&lt;/em>.]&lt;/li>
+              &lt;li>
+                  &lt;strong>Purpose:&lt;/strong> [Explain purpose and value of activity.]&lt;/li>
+              &lt;li>
+                  &lt;strong>Instructor:&lt;/strong> [Describe relevant instructor role in activity.]&lt;/li>
+          &lt;/ul>
+      &lt;/div>
+      &lt;div class="instructions">
+          &lt;h2>Instructions&lt;/h2>
+          &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+          &lt;ol>
+              &lt;li>[Indicate any prescribed method or steps for completing activity]&lt;/li>
+              &lt;li>[Include any unique conditions, time constraints, or submission requirements]&lt;/li>
+              &lt;li>[List any tools or resources needed]&lt;/li>
+              &lt;li>[Ensure that any grading criteria listed matches the rubric (if used)]&lt;/li>
+          &lt;/ol>
+      &lt;/div>
+      &lt;div class="custom">
+          &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+          &lt;ul>
+              &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+          &lt;/ul>
+      &lt;/div>
+  &lt;/div>
+              </pre>
             </div>
           </div>
         </div>
@@ -43,11 +80,47 @@
             <div>
               <p>Guidelines</p>
             </div>
+            <input type="checkbox"
+                [checked]="genericContentCode"
+                (change)="genericContentCode = !genericContentCode">
+            <label>Show as HTML</label>
           </div>
           <div>
             <div class="preview" id="buttonOut">
               <h4>Preview:</h4>
-              <app-generic-content [courseClass]="courseClass"></app-generic-content>
+              <app-generic-content *ngIf="!genericContentCode" [courseClass]="courseClass"></app-generic-content>
+              <pre *ngIf="genericContentCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="content">
+        &lt;p>
+            &lt;em>[For Designers: Review these factors for determining if activity-specific content should be separated to
+                a single content page or remain on the activity page. Delete this text when finished.]&lt;/em>
+        &lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;em>[Screen Real Estate - Does content take up a lot of screen real estate?]&lt;/em>
+            &lt;/li>
+            &lt;li>
+                &lt;em>[Time to Consume - Will content take a long time for students to consume?]&lt;/em>
+            &lt;/li>
+            &lt;li>
+                &lt;em>[Number of Items - Are there a significant number of content items?]&lt;/em>
+            &lt;/li>
+            &lt;li>
+                &lt;em>[Scope of Use - Will content be used in multiple activities across week/course?]&lt;/em>
+            &lt;/li>
+            &lt;li>
+                &lt;em>[Maintainability - Is it anticipated that ongoing maintenance of content will be high?]&lt;/em>
+            &lt;/li>
+        &lt;/ul>
+        &lt;p>
+            &lt;em>[Reminder: When creating a separate content page, the page can either be included in the module view or linked
+                to a Study activity page and hidden from the module view.]&lt;/em>
+        &lt;/p>
+        &lt;p>[Content goes here.]&lt;/p>
+    &lt;/div>
+&lt;/div>
+              </pre>
             </div>
           </div>
         </div>
@@ -61,15 +134,57 @@
             <div>
               <p>Guidelines</p>
             </div>
+            <input type="checkbox"
+                [checked]="homePageCode"
+                (change)="homePageCode = !homePageCode">
+            <label>Show as HTML</label>
           </div>
           <div>
             <div class="preview" id="buttonOut">
               <h4>Preview:</h4>
-              <app-home-page-preview
+              <app-home-page-preview *ngIf="!homePageCode"
                     [courseClass]="courseClass"
                     [courseId]="courseId"
                     [courseName]="courseName">
               </app-home-page-preview>
+              <pre *ngIf="homePageCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="welcome">
+        &lt;img src="https://byui.instructure.com/courses/{{courseId}}/file_contents/course%20files/Web%20Files/homeImage.jpg">
+        &lt;h2>Welcome to {{ courseName }}&lt;/h2>
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+    &lt;/div>
+    &lt;div id="navigation">
+        &lt;div class="steps">
+            &lt;a id="start" class="Button Button--primary" href="#">Start Here&lt;/a>
+            &lt;a id="instructor" class="Button Button--primary" href="#">Your Instructor&lt;/a>
+            &lt;a id="syllabus" class="Button Button--primary" href="#">Syllabus&lt;/a>
+            &lt;a id="resources" class="Button Button--primary" href="#">Additional Resources&lt;/a>
+        &lt;/div>
+        &lt;h2>Weeks&lt;/h2>
+        &lt;div class="lessons">
+            &lt;div>
+                &lt;a>1&lt;/a>
+                &lt;a>2&lt;/a>
+                &lt;a>3&lt;/a>
+                &lt;a>4&lt;/a>
+                &lt;a>5&lt;/a>
+                &lt;a>6&lt;/a>
+                &lt;a>7&lt;/a>
+            &lt;/div>
+            &lt;div>
+                &lt;a>8&lt;/a>
+                &lt;a>9&lt;/a>
+                &lt;a>10&lt;/a>
+                &lt;a>11&lt;/a>
+                &lt;a>12&lt;/a>
+                &lt;a>13&lt;/a>
+                &lt;a>14&lt;/a>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+              </pre>
             </div>
           </div>
         </div>
@@ -434,7 +549,7 @@
 
       <div class="row">
         <div class="option">
-          <h2>Inisght Sharing</h2>
+          <h2>Insight Sharing</h2>
           <div>
             <p>Guidelines</p>
           </div>

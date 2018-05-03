@@ -18,9 +18,9 @@ import { FeaturesModule } from './features/features.module';
     HttpClientModule,
     FeaturesModule,
     RouterModule.forRoot([
-      { path: 'web-features', component: WebFeaturesComponent },
-      { path: '', redirectTo: 'web-features', pathMatch: 'full' },
-      { path: '**', redirectTo: 'web-features', pathMatch: 'full' }
+      { path: 'page-templates', component: WebFeaturesComponent },
+      { path: '', redirectTo: 'page-templates', pathMatch: 'full' },
+      { path: '**', redirectTo: 'page-templates', pathMatch: 'full' }
     ]),
   ],
   exports: [
