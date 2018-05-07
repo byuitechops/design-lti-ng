@@ -79,8 +79,8 @@ import { PonderProveReflectiveWriteUpComponent } from './templates/previews/pond
 import { PonderProveReportComponent } from './templates/previews/ponder-prove/ponder-prove-report.component';
 import { ExerciseComponent } from './templates/previews/generic/exercise.component';
 import { IntroductionComponent } from './templates/previews/generic/introduction.component';
-import { PracticeComponent } from './templates/previews/generic/practice.component';
-import { StudyComponent } from './templates/previews/generic/study.component';
+import { PracticeComponent } from './templates/previews/prepare/practice.component';
+import { StudyComponent } from './templates/previews/prepare/study.component';
 import { TeachingNotesComponent } from './templates/previews/generic/teaching-notes.component';
 import { PonderProveComponent } from './templates/previews/ponder-prove/ponder-prove.component';
 import { PrepareComponent } from './templates/previews/prepare/prepare.component';

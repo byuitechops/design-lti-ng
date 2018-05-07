@@ -61,7 +61,7 @@ export class PageTemplatesComponent implements OnInit {
   groupProblemSolvingCode = false;
   groupProjectCode = false;
   iceBreakerCode = false;
-  insightSharingCode = false ;
+  insightSharingCode = false;
   jigsawTeachingCode = false;
   peerAccountabilityCode = false;
   peerFeedbackCode = false;
