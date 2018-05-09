@@ -2309,7 +2309,7 @@
           </div>
           <input type="checkbox"
               [checked]="accountabilityQuizCode"
-              (change)="accountabilityQuizCode = !accountabilitQuizCode">
+              (change)="accountabilityQuizCode = !accountabilityQuizCode">
           <label>Show as HTML</label>
         </div>
         <div>
@@ -2631,7 +2631,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-portfolio ngIf="!portfolioCode"[courseClass]="courseClass"></app-ponder-prove-portfolio>
+            <app-ponder-prove-portfolio *ngIf="!portfolioCode"[courseClass]="courseClass"></app-ponder-prove-portfolio>
             <pre *ngIf="portfolioCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
