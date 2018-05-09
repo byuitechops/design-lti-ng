@@ -455,7 +455,7 @@
             &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
         &lt;/ul>
     &lt;/div>
-&lt;/div>            
+&lt;/div>
             </pre>
           </div>
         </div>
@@ -1575,7 +1575,7 @@
           <div>
             <p>Guidelines</p>
           </div>
-          <input type="checkbox" 
+          <input type="checkbox"
             [checked]="jigsawTeachingCode"
             (change)="jigsawTeachingCode = !jigsawTeachingCode">
           <label>Show as HTML</label>
@@ -1585,7 +1585,59 @@
             <h4>Preview:</h4>
             <app-toa-jigsaw-teaching *ngIf="!jigsawTeachingCode"[courseClass]="courseClass"></app-toa-jigsaw-teaching>
             <pre *ngIf="jigsawTeachingCode">
-
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task: &lt;/strong>
+                &lt;em>Within your group, research&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> topic component
+                &lt;strong>]&lt;/strong> to create a clearer picture of [specify the topic].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Group members should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify any readings, key questions or principles, or other guidelines to direct research.]&lt;/li>
+                    &lt;li>[Specify timeline for each portion of activity]&lt;/li>
+                    &lt;li>[Indicate how groups are organized and size]&lt;/li>
+                    &lt;li>[Indicate whether topics can be chosen by groups, usually from a preset list, or are assigned from
+                        a preset list]&lt;/li>
+                    &lt;li>[Indicate that group &ldquo;experts&rdquo; have to meet with other group &ldquo;experts&rdquo; in
+                        the same topic to research and discuss about it]&lt;/li>
+                    &lt;li>[Specify process, readings, expectations, timeline, and deliverables for &ldquo;experts&rdquo; to
+                        take back to their respective groups]&lt;/li>
+                    &lt;li>[Specify process, readings, expectations, timeline, and deliverables within peer groups]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group members should utilize the appropriate tool(s) for collaboration and presenting]
+                &lt;ol>
+                    &lt;li>[Indicate tools for collaboration, sharing and future presenting]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group members should demonstrate clear understanding of topic(s)]
+                &lt;ol>
+                    &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group members should adhere to the submission requirements]
+                &lt;ol>
+                    &lt;li>[Include all grading criteria across the multiple steps as well as how individuals and/or groups
+                        will be assessed]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+&lt;/div>
             </pre>
           </div>
         </div>
@@ -1600,11 +1652,59 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+            [checked]="peerAccountabilityCode"
+            (change)="peerAccountabilityCode = !peerAccountabilityCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-peer-accountability [courseClass]="courseClass"></app-toa-peer-accountability>
+            <app-toa-peer-accountability *ngIf="!peerAccountabilityCode"[courseClass]="courseClass"></app-toa-peer-accountability>
+            <pre *ngIf="!peerAccountabilityCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Work with your accountability partner on&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> topic/assignment/expectations].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Student pairs should report to one another using the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify format and scope of reporting; e.g., learning contracts, peer reading checks, milestone
+                        reports, peer tutoring, performance feedback, etc.]&lt;/li>
+                    &lt;li>[Specify time frame and/or specific assignments to include for peer accountability]&lt;/li>
+                    &lt;li>[Specify if instructor should be included in accountability checks]&lt;/li>
+                    &lt;li>[Specify if there are any summative reports or peer evaluations due to instructor]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Student pairs should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Specify if any tools are required, especially if outside I-Learn]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1618,11 +1718,65 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="peerFeedbackCode"
+              (change)="peerFeedbackCode = !peerFeedbackCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-peer-feedback [courseClass]="courseClass"></app-toa-peer-feedback>
+            <app-toa-peer-feedback *ngIf="!peerFeedbackCode"[courseClass]="courseClass"></app-toa-peer-feedback>
+            <pre *ngIf="peerFeedbackCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Provide &lt;/em>and
+                &lt;em> receive feedback on&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> artifact].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Feedback offered to peers should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Include rubric specifying what meaningful feedback should address and include]&lt;/li>
+                    &lt;li>[Indicate timeline for feedback, especially if requiring multiple reviews and revisions; e.g. in
+                        preparing a final product]&lt;/li>
+                    &lt;li>[Indicate peer group organization]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Feedback offered to peers should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate any tool being used, especially if outside I-Learn]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Feedback offered to peers should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Indicate if projects are to be reviewed individually or by groups]&lt;/li>
+                    &lt;li>[Indicate if there is a requirement for reporting feedback; e.g., in a subsequent quiz or email]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1636,11 +1790,71 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="presentationCode"
+              (change)="presentationCode = !presentationCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-presentation [courseClass]="courseClass"></app-toa-presentation>
+            <app-toa-presentation *ngIf="!presentationCode"[courseClass]="courseClass"></app-toa-presentation>
+            <pre *ngIf="presentationCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Create &lt;/em>a
+        &lt;em> presentation on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> what must be presented], for [indicate the audience] in [#] [minutes/slides] or less.&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Presentation should adhere to a prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+          &lt;li>[Indicate required documents to include]&lt;/li>
+          &lt;li>[Indicate any requirements for visuals; if so, provide resources to find free/open images]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Presentation should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool that students will use and how they will present, with optional tutorials to utilize].&lt;/li>
+          &lt;li>[If using a slide deck, specify if there is a required number of slides].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Presentation should show clear understanding of topic(s)]
+        &lt;ol>
+          &lt;li>[Indicate any high-level topics to cover].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Presentation should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[If group presentation, then include expectations of members as well as criteria for grading individuals and
+            groups]&lt;/li>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed and/or peer feedback is solicited]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1654,11 +1868,62 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="qnaSupportForumCode"
+              (change)="qnaSupportForumCode = !qnaSupportForumCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-qna-support-forum [courseClass]="courseClass"></app-toa-qna-support-forum>
+            <app-toa-qna-support-forum *ngIf="!qnaSupportForumCode"[courseClass]="courseClass"></app-toa-qna-support-forum>
+            <pre *ngIf="qnaSupportForumCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Post any course-related questions on&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> forum type; e.g., Office Hours, Notes from Instructor, etc.]&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[If posting a question, students should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate if a specific process should be followed; e.g. forward questions to a partner first, then a group,
+            then the class if still unanswered]&lt;/li>
+          &lt;li>[Consider emphasizing that, where appropriate, students should include screenshots]&lt;/li>
+          &lt;li>[If a forum is time bound, indicate the time frame]&lt;/li>
+          &lt;li>[Emphasize the timeframe in which an instructor will respond to a question; e.g. instructors won&rsquo;t respond
+            for 24 hrs to give students a chance to answer each other]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[If posting a question, students should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the location of the forum (if using I-Learn)&mdash;emphasizing if it is course-wide, module specific,
+            or activity specific]&lt;/li>
+          &lt;li>[Indicate any external tools being used for forums, if any]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1672,11 +1937,69 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="rolePlayCode"
+              (change)="rolePlayCode = !rolePlayCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-role-play-discussion [courseClass]="courseClass"></app-toa-role-play-discussion>
+            <app-toa-role-play-discussion *ngIf="!rolePlayCode"[courseClass]="courseClass"></app-toa-role-play-discussion>
+            <pre *ngIf="rolePlayCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Role play&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> role(s) to perform] so that [indicate what skill(s) or topic(s) will be applied].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Students should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate to students what about their roles they need to understand]&lt;/li>
+          &lt;li>[Indicate any resources or readings to help them research their roles]&lt;/li>
+          &lt;li>[Indicate the format and timeframe; e.g. role-based discussion, debate, group debate, simulation, negotiations,
+            variation of a jigsaw activity, etc.]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate any tools used for discussion, especially if outside of I-Learn and synchronous]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students should demonstrate clear understanding of the topic(s)]
+        &lt;ol>
+          &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students must adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Indicate any unique submission requirements]&lt;/li>
+          &lt;li>[Indicate any other grading criteria not previously specified]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1690,11 +2013,62 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="structuredDebateCode"
+              (change)="structuredDebateCode = !structuredDebateCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-structured-debate [courseClass]="courseClass"></app-toa-structured-debate>
+            <app-toa-structured-debate *ngIf="!structuredDebateCode"[courseClass]="courseClass"></app-toa-structured-debate>
+            <pre *ngIf="structuredDebateCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Discuss &lt;/em>and
+        &lt;em> present your position on&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> topic(s)] for [indicate the audience].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Students should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate whether position is assigned or chosen]&lt;/li>
+          &lt;li>[Indicate any preparatory readings or resources to help students become better informed]&lt;/li>
+          &lt;li>[Specify any requirements when presenting a side of an argument]&lt;/li>
+          &lt;li>[Specify any requirements when responding to an opposing side of an argument, including showing respect and courtesy]&lt;/li>
+          &lt;li>[Specify style of debate; e.g., political debate over candidates, historical debate over historical topics, case
+            study debate over alternative decisions, etc.]&lt;/li>
+          &lt;li>[Indicate size and timeline of debates; e.g., groups are pre-assigned a position in which to research and collaborate
+            in a class-wide debate, or groups are divided into two teams that collaborate in group-wide debate]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Specify whether it is asynchronous or synchronous as well as what tools will be used]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Indicate any other grading criteria not previously specified]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1708,11 +2082,66 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="studyGroupCode"
+              (change)="studyGroupCode = !studyGroupCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-study-group [courseClass]="courseClass"></app-toa-study-group>
+            <app-toa-study-group *ngIf="!studyGroupCode"[courseClass]="courseClass"></app-toa-study-group>
+            <pre *ngIf="studyGroupCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Within your group, study &lt;/em>and
+        &lt;em> review&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> specific topic(s) to be studied].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Study groups should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Specify any assigned activities; e.g. complete group assignments, study for assessments, create topic definitions
+            document, etc.]&lt;/li>
+          &lt;li>[Specify any upfront expectations and instructions on how the group should function and what will be the outcome
+            of the group&rsquo;s efforts]&lt;/li>
+          &lt;li>[Indicate the timeline for this activity]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Study groups should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Provide any needed resources or tools to help facilitate group study and collaboration; if possible, provide
+            several recommendations for both asynchronous and synchronous tools]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Study groups should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[If graded, specify how individuals and/or groups will be assessed through a rubric]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1726,11 +2155,67 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="toaCode"
+              (change)="toaCode = !toaCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-teach-one-another [courseClass]="courseClass"></app-teach-one-another>
+            <app-teach-one-another *ngIf="!toaCode"[courseClass]="courseClass"></app-teach-one-another>
+            <pre *ngIf="toaCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Teach one another&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> topic(s)].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Students should teach one another according to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate how students will teach one another]&lt;/li>
+          &lt;li>[Indicate teaching guidelines; e.g., frequency, quantity, quality, and nature of interactions&mdash;included
+            in a rubric, if needed]&lt;/li>
+          &lt;li>[Indicate if students need to generate a topic to post and respond to in class or groups]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Student should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate if conducted asynchronously or synchronously; specify if done through I-Learn or using an external
+            tool]
+          &lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Student should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Indicate timeline for teaching one another]&lt;/li>
+          &lt;li>[Indicate whether students need to submit anything to the instructor in addition to their teach one another efforts]
+          &lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1744,11 +2229,67 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="topicDiscussionCode"
+              (change)="topicDiscussionCode = !topicDiscussionCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-topic-discussion [courseClass]="courseClass"></app-toa-topic-discussion>
+            <app-toa-topic-discussion *ngIf="!topicDiscussionCode"[courseClass]="courseClass"></app-toa-topic-discussion>
+            <pre *ngIf="topicDiscussionCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Contribute to a discussion on&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> topic(s)].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Topic Discussion should follow the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate who will moderate discussion]&lt;/li>
+          &lt;li>[Indicate posting guidelines; e.g. frequency, quantity, quality, and nature of interactions&mdash;included in
+            a rubric, if needed]&lt;/li>
+          &lt;li>[Indicate if students need to generate a topic to post and respond to in class or groups]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Topic Discussion should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate if conducted asynchronously or synchronously; specify if done through I-Learn or using an external
+            tool]
+          &lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Topic Discussion should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Indicate timeline for posting and responding to posts, if both are required]&lt;/li>
+          &lt;li>[Indicate whether students need to submit anything to the instructor in addition to their participation in the
+            discussions]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1766,11 +2307,38 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="accountabilityQuizCode"
+              (change)="accountabilityQuizCode = !accountabilitQuizCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-accountability-quiz [courseClass]="courseClass"></app-accountability-quiz>
+            <app-accountability-quiz *ngIf="!accountabilityQuizCode"[courseClass]="courseClass"></app-accountability-quiz>
+            <pre *ngIf="accountabilityQuizCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="quizOverview">
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Account for your efforts on&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> activities].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+        &lt;h3>[Conditions/Readings/Notes (Optional)]&lt;/h3>
+        &lt;ul>
+            &lt;li>[Indicate whether it is open-book/note OR closed-book/note]&lt;/li>
+            &lt;li>[Explain when students will see correct answers]&lt;/li>
+            &lt;li>[Include any required link(s) to prior readings]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1784,11 +2352,38 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="examCode"
+              (change)="examCode = !examCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-exam [courseClass]="courseClass"></app-ponder-prove-exam>
+            <app-ponder-prove-exam *ngIf="!examCode"[courseClass]="courseClass"></app-ponder-prove-exam>
+            <pre *ngIf="examCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="quizOverview">
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Complete an exam on&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> topic(s).&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+        &lt;h3>[Conditions/Readings/Notes (Optional)]&lt;/h3>
+        &lt;ul>
+            &lt;li>[Indicate whether it is open-book/note OR closed-book/note]&lt;/li>
+            &lt;li>[Explain when students will see correct answers]&lt;/li>
+            &lt;li>[Include any required link(s) to prior readings]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1802,11 +2397,65 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="exerciseCode"
+              (change)="exerciseCode = !exerciseCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-exercise [courseClass]="courseClass"></app-exercise>
+            <app-exercise *ngIf="!exerciseCode"[courseClass]="courseClass"></app-exercise>
+            <pre *ngIf="exerciseCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Complete an exercise on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> topic(s) or skill(s)].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Exercise should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate specific topic(s) or skill(s) are being covered]&lt;/li>
+          &lt;li>[Indicate required steps to complete&mdash;particularly what deliverables are expected]&lt;/li>
+          &lt;li>[Indicate any textbooks, documents, or other resources needed to help complete]&lt;/li>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Exercise should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Exercise should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+            are multiple deliverables]&lt;/li>
+          &lt;li>[If group exercise, then include expectations of members as well as criteria for grading individuals and groups]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1820,11 +2469,73 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="paperEssayCode"
+              (change)="paperEssayCode = !paperEssayCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-essay [courseClass]="courseClass"></app-ponder-prove-essay>
+            <app-ponder-prove-essay *ngIf="!paperEssayCode"[courseClass]="courseClass"></app-ponder-prove-essay>
+            <pre *ngIf="paperEssayCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Write a paper&lt;/em> that
+                &lt;em>[reviews, argues, explains, etc.]&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> topic(s)] for [indicate the audience].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Paper/Essay should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Indicate required steps to complete&mdash;particularly if multiple documents/deliverables are required]&lt;/li>
+                    &lt;li>[Indicate any resources, documents, or databases needed to help complete]&lt;/li>
+                    &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+                    &lt;li>[Indicate any citation or style guide requirement]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Paper/Essay should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Paper/Essay should show clear understanding of topic(s)]
+                &lt;ol>
+                    &lt;li>[Indicate specific topics to cover and, if needed, when].&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Paper/Essay should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited,
+                        or if there are multiple deliverables]&lt;/li>
+                    &lt;li>[If group essay, then include expectations of members as well as criteria for grading individuals
+                        and groups]
+                    &lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1838,11 +2549,67 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="ponderProveCode"
+              (change)="ponderProveCode = !ponderProveCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove [courseClass]="courseClass"></app-ponder-prove>
+            <app-ponder-prove *ngIf="!ponderProveCode"[courseClass]="courseClass"></app-ponder-prove>
+            <pre *ngIf="ponderProveCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong> [
+        &lt;em>Ponder &lt;/em>or
+        &lt;em>Prove&lt;/em>] [describe and
+        &lt;em>highlight&lt;/em> topic or competency].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Ponder/Prove should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate topics or competencies that students will ponder or prove]&lt;/li>
+          &lt;li>[Indicate required steps to complete&mdash;particularly, any necessary deliverables]&lt;/li>
+          &lt;li>[Indicate any needed or useful resources]&lt;/li>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Ponder/Prove should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Ponder/Prove should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+            are multiple deliverables]&lt;/li>
+          &lt;li>[If group work, then include expectations of members as well as criteria for grading individuals and groups]
+          &lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1856,11 +2623,74 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="portfolioCode"
+              (change)="portfolioCode = !portfolioCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-portfolio [courseClass]="courseClass"></app-ponder-prove-portfolio>
+            <app-ponder-prove-portfolio ngIf="!portfolioCode"[courseClass]="courseClass"></app-ponder-prove-portfolio>
+            <pre *ngIf="portfolioCode">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Create a portfolio of&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> what must be showcased].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Portfolio should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Indicate required steps to complete&mdash;particularly, what previous artifacts should be included]&lt;/li>
+                    &lt;li>[Indicate any needed or useful resources, particularly those that may have been previously used to
+                        create artifacts]
+                    &lt;/li>
+                    &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+                    &lt;li>[Indicate any citation or style guide requirement, if any]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Portfolio should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate the tool, if any, that students will use and how they will use it]&lt;/li>
+                    &lt;li>[If using a slide deck, specify if there is a required number of slides]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Portfolio should show clear understanding/competency of topic(s)/skill(s)]
+                &lt;ol>
+                    &lt;li>[Indicate specific topics/skills that should be reflected]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Portfolio should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited,
+                        or if there are multiple deliverables]&lt;/li>
+                    &lt;li>[If group portfolio, then include expectations of members as well as criteria for grading individuals
+                        and groups]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1874,11 +2704,38 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="postTestCode"
+              (change)="postTestCode = !postTestCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-unanswered-questions [courseClass]="courseClass"></app-ponder-prove-unanswered-questions>
+            <app-ponder-prove-unanswered-questions *ngIf="!postTestCode"[courseClass]="courseClass"></app-ponder-prove-unanswered-questions>
+            <pre *ngIf="postTestCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="quizOverview">
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Complete a post-test on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> what must be understood].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+    &lt;h3>[Conditions/Readings/Notes (Optional)]&lt;/h3>
+    &lt;ul>
+      &lt;li>[Indicate whether it is open-book/note OR closed-book/note]&lt;/li>
+      &lt;li>[Explain when students will see correct answers]&lt;/li>
+      &lt;li>[Include any required link(s) to prior readings]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1892,11 +2749,72 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="projectCode"
+              (change)="projectCode = !projectCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-project [courseClass]="courseClass"></app-ponder-prove-project>
+            <app-ponder-prove-project *ngIf="!projectCode"[courseClass]="courseClass"></app-ponder-prove-project>
+            <pre *ngIf="projectCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Complete a project on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> what must be completed] for [indicate audience].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Project should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate required steps to complete&mdash;particularly if multiple documents/deliverables are required]&lt;/li>
+          &lt;li>[Indicate any resources, documents, or artifacts needed to help complete]&lt;/li>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+          &lt;li>[Indicate any citation or style guide requirement, if any]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Project should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool, if any, that students will use and how they will use it]&lt;/li>
+          &lt;li>[If using a slide deck, specify if there is a required number of slides]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Project should show clear understanding/competency of topic(s)/skill(s)]
+        &lt;ol>
+          &lt;li>[Indicate specific topics/skills that should be reflected]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Project should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+            are multiple deliverables]&lt;/li>
+          &lt;li>[If group project, then include expectations of members as well as criteria for grading individuals and groups]
+          &lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1910,11 +2828,38 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="quizCode"
+              (change)="quizCode = !quizCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-quiz [courseClass]="courseClass"></app-ponder-prove-quiz>
+            <app-ponder-prove-quiz *ngIf="!quizCode"[courseClass]="courseClass"></app-ponder-prove-quiz>
+            <pre *ngIf="quizCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="quizOverview">
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Complete a quiz on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> topic(s) to be assessed].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+    &lt;h3>[Conditions/Readings/Notes (Optional)]&lt;/h3>
+    &lt;ul>
+      &lt;li>[Indicate whether it is open-book/note OR closed-book/note]&lt;/li>
+      &lt;li>[Explain when students will see correct answers]&lt;/li>
+      &lt;li>[Include any required link(s) to prior readings]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1928,11 +2873,69 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="reflectionCode"
+              (change)="reflectionCode = !reflectionCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-reflective-write-up [courseClass]="courseClass"></app-ponder-prove-reflective-write-up>
+            <app-ponder-prove-reflective-write-up *ngIf="!reflectionCode" [courseClass]="courseClass"></app-ponder-prove-reflective-write-up>
+            <pre *ngIf="reflectionCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Write a reflection on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> what to reflect on] for [indicate the audience].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Reflection should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate required steps to complete&mdash;particularly if multiple documents/deliverables are required]&lt;/li>
+          &lt;li>[Indicate any resources, documents, or artifacts needed to help complete]&lt;/li>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Reflection should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Reflection should show thoughtful reflection of topic(s)]
+        &lt;ol>
+          &lt;li>[Indicate any previous topics, activities, or behaviors that should be reflected].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Reflection should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+            are multiple deliverables]&lt;/li>
+          &lt;li>[Indicate page or word limits]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1946,11 +2949,65 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="reportCode"
+              (change)="reportCode = !reportCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-report [courseClass]="courseClass"></app-ponder-prove-report>
+            <app-ponder-prove-report *ngIf="!reportCode"[courseClass]="courseClass"></app-ponder-prove-report>
+            <pre *ngIf="reportCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Submit a report on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> what to report on] for [indicate the audience].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Report should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate any previous topics, activities, or major projects that should be report on].&lt;/li>
+          &lt;li>[Indicate required steps to complete&mdash;particularly if multiple documents/deliverables are required]&lt;/li>
+          &lt;li>[Indicate any resources, documents, or artifacts needed to help complete]&lt;/li>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Report should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Report should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+            are multiple deliverables]&lt;/li>
+          &lt;li>Indicate format of report, size or time limit restrictions, and intended audience]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>
@@ -1964,11 +3021,70 @@
           <div>
             <p>Guidelines</p>
           </div>
+          <input type="checkbox"
+              [checked]="worksheetCode"
+              (change)="worksheetCode = !worksheetCode">
+          <label>Show as HTML</label>
         </div>
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-worksheet-workbook [courseClass]="courseClass"></app-ponder-prove-worksheet-workbook>
+            <app-ponder-prove-worksheet-workbook *ngIf="!worksheetCode"[courseClass]="courseClass"></app-ponder-prove-worksheet-workbook>
+            <pre *ngIf="worksheetCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Complete a worksheet on&lt;/em> [describe and
+        &lt;em>highlight&lt;/em> topic(s)].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Worksheet should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate required steps to complete&mdash;particularly if multiple documents/deliverables are required]&lt;/li>
+          &lt;li>[Indicate any resources, documents, or databases needed to help complete]&lt;/li>
+          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Worksheet should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Worksheet should show clear understanding of topic(s)]
+        &lt;ol>
+          &lt;li>[Indicate specific topics to cover and, if needed, when].&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Worksheet should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+            are multiple deliverables]&lt;/li>
+          &lt;li>[If group worksheet/workbook, then include expectations of members as well as criteria for grading individuals
+            and groups]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+            </pre>
           </div>
         </div>
       </div>

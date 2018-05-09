@@ -85,7 +85,7 @@ export class PageTemplatesComponent implements OnInit {
   reflectionCode = false;
   reportCode = false;
   worksheetCode = false;
-  
+
   constructor(private _ltiParamsService: LtiParamsService) {
     PageScrollConfig.defaultScrollOffset = 80;
     PageScrollConfig.defaultDuration = 0;

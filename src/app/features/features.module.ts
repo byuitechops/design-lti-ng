@@ -77,7 +77,7 @@ import { PonderProveWorksheetWorkbookComponent } from './templates/previews/pond
 import { PonderProvePortfolioComponent } from './templates/previews/ponder-prove/ponder-prove-portfolio.component';
 import { PonderProveReflectiveWriteUpComponent } from './templates/previews/ponder-prove/ponder-prove-reflective-write-up.component';
 import { PonderProveReportComponent } from './templates/previews/ponder-prove/ponder-prove-report.component';
-import { ExerciseComponent } from './templates/previews/generic/exercise.component';
+import { ExerciseComponent } from './templates/previews/ponder-prove/exercise.component';
 import { IntroductionComponent } from './templates/previews/generic/introduction.component';
 import { PracticeComponent } from './templates/previews/prepare/practice.component';
 import { StudyComponent } from './templates/previews/prepare/study.component';
@@ -85,7 +85,7 @@ import { TeachingNotesComponent } from './templates/previews/generic/teaching-no
 import { PonderProveComponent } from './templates/previews/ponder-prove/ponder-prove.component';
 import { PrepareComponent } from './templates/previews/prepare/prepare.component';
 import { TeachOneAnotherComponent } from './templates/previews/teach-one-another/teach-one-another.component';
-import { AccountabilityQuizComponent } from './templates/previews/generic/accountability-quiz.component';
+import { AccountabilityQuizComponent } from './templates/previews/ponder-prove/accountability-quiz.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 
