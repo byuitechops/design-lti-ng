@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="option">
+    <h2>Home Page</h2>
+    <div>
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-home-page-preview *ngIf="!showAsHtml" [courseClass]="courseClass" [courseId]="courseId" [courseName]="courseName">
+      </app-home-page-preview>
+      <pre *ngIf="showAsHtml">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="welcome">
+    &lt;img src="https://byui.instructure.com/courses/{{courseId}}/file_contents/course%20files/Web%20Files/homeImage.jpg">
+    &lt;h2>Welcome to {{ courseName }}&lt;/h2>
+    &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+  &lt;/div>
+  &lt;div id="navigation">
+    &lt;div class="steps">
+        &lt;a id="start" class="Button Button--primary" href="#">Start Here&lt;/a>
+        &lt;a id="instructor" class="Button Button--primary" href="#">Your Instructor&lt;/a>
+        &lt;a id="syllabus" class="Button Button--primary" href="#">Syllabus&lt;/a>
+        &lt;a id="resources" class="Button Button--primary" href="#">Additional Resources&lt;/a>
+    &lt;/div>
+    &lt;h2>Weeks&lt;/h2>
+    &lt;div class="lessons">
+        &lt;div>
+            &lt;a>1&lt;/a>
+            &lt;a>2&lt;/a>
+            &lt;a>3&lt;/a>
+            &lt;a>4&lt;/a>
+            &lt;a>5&lt;/a>
+            &lt;a>6&lt;/a>
+            &lt;a>7&lt;/a>
+        &lt;/div>
+        &lt;div>
+            &lt;a>8&lt;/a>
+            &lt;a>9&lt;/a>
+            &lt;a>10&lt;/a>
+            &lt;a>11&lt;/a>
+            &lt;a>12&lt;/a>
+            &lt;a>13&lt;/a>
+            &lt;a>14&lt;/a>
+        &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+        </pre>
+    </div>
+  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>

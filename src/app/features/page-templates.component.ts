@@ -1,7 +1,9 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { PageScrollConfig } from 'ngx-page-scroll';
 
 import { LtiParamsService } from '../lti-params.service';
+import { GenericActivityComponent } from './templates/previews/generic/generic-activity.component';
+import { GenericContentComponent } from './templates/previews/generic/generic-content.component';
 
 @Component({
   selector: 'app-page-templates',
@@ -37,7 +39,6 @@ export class PageTemplatesComponent implements OnInit {
   toaActive = false;
   proveActive = false;
 
-  genericActivityCode = false;
   genericContentCode = false;
   homePageCode = false;
   teachingNotesCode = false;
@@ -86,11 +87,13 @@ export class PageTemplatesComponent implements OnInit {
   reportCode = false;
   worksheetCode = false;
 
+  @ViewChild(GenericContentComponent) genericContent: GenericContentComponent;
+  
   constructor(private _ltiParamsService: LtiParamsService) {
     PageScrollConfig.defaultScrollOffset = 80;
     PageScrollConfig.defaultDuration = 0;
   }
-
+  
   updateFeature(feature) {
     // insert the html string to the content items
     this.contentItems['@graph'][0].text = feature;
@@ -101,7 +104,7 @@ export class PageTemplatesComponent implements OnInit {
     console.log(this.contentItemsJson);
     // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
-    form.submit();
+    // form.submit();
   }
 
   toggleGeneric(): void {

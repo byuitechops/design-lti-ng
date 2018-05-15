@@ -15,377 +15,20 @@
     <button id="generic" class="accordion-header" [ngClass]="{'active':genericActive}" (click)="toggleGeneric()">
       Generic
     </button>
+
     <div class="panel" [ngClass]="{'panel-active':genericActive}">
-      <div class="row">
-        <div class="option">
-          <h2>Generic Activity</h2>
-          <div>
-            <p>Guidelines</p>
-          </div>
-          <input type="checkbox" [checked]="genericActivityCode" (change)="genericActivityCode = !genericActivityCode">
-          <label>Show as HTML</label>
-        </div>
-        <div>
-          <div class="preview" id="buttonOut">
-            <h4>Preview:
-            </h4>
-            <app-generic-activity *ngIf="!genericActivityCode" [courseClass]="courseClass"></app-generic-activity>
-            <pre *ngIf="genericActivityCode">
-  &lt;div class="byui {{courseClass}}">
-      &lt;div class="overview">
-          &lt;h2>Overview&lt;/h2>
-          &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-          &lt;ul>
-              &lt;li>
-                  &lt;strong>Task: &lt;/strong>[Specify actions and
-                  &lt;em>emphasize main actions&lt;/em>.]&lt;/li>
-              &lt;li>
-                  &lt;strong>Purpose:&lt;/strong> [Explain purpose and value of activity.]&lt;/li>
-              &lt;li>
-                  &lt;strong>Instructor:&lt;/strong> [Describe relevant instructor role in activity.]&lt;/li>
-          &lt;/ul>
-      &lt;/div>
-      &lt;div class="instructions">
-          &lt;h2>Instructions&lt;/h2>
-          &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-          &lt;ol>
-              &lt;li>[Indicate any prescribed method or steps for completing activity]&lt;/li>
-              &lt;li>[Include any unique conditions, time constraints, or submission requirements]&lt;/li>
-              &lt;li>[List any tools or resources needed]&lt;/li>
-              &lt;li>[Ensure that any grading criteria listed matches the rubric (if used)]&lt;/li>
-          &lt;/ol>
-      &lt;/div>
-      &lt;div class="custom">
-          &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-          &lt;ul>
-              &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-          &lt;/ul>
-      &lt;/div>
-  &lt;/div>
-              </pre>
-          </div>
-        </div>
-      </div>
-      <div class="buttonWrapper">
-        <a class="Button btn btn-primary">Insert</a>
-      </div>
-
-      <div class="row">
-        <div class="option">
-          <h2>Generic Content</h2>
-          <div>
-            <p>Guidelines</p>
-          </div>
-          <input type="checkbox" [checked]="genericContentCode" (change)="genericContentCode = !genericContentCode">
-          <label>Show as HTML</label>
-        </div>
-        <div>
-          <div class="preview" id="buttonOut">
-            <h4>Preview:</h4>
-            <app-generic-content *ngIf="!genericContentCode" [courseClass]="courseClass"></app-generic-content>
-            <pre *ngIf="genericContentCode">
-&lt;div class="byui {{courseClass}}">
-    &lt;div class="content">
-        &lt;p>
-            &lt;em>[For Designers: Review these factors for determining if activity-specific content should be separated to
-                a single content page or remain on the activity page. Delete this text when finished.]&lt;/em>
-        &lt;/p>
-        &lt;ul>
-            &lt;li>
-                &lt;em>[Screen Real Estate - Does content take up a lot of screen real estate?]&lt;/em>
-            &lt;/li>
-            &lt;li>
-                &lt;em>[Time to Consume - Will content take a long time for students to consume?]&lt;/em>
-            &lt;/li>
-            &lt;li>
-                &lt;em>[Number of Items - Are there a significant number of content items?]&lt;/em>
-            &lt;/li>
-            &lt;li>
-                &lt;em>[Scope of Use - Will content be used in multiple activities across week/course?]&lt;/em>
-            &lt;/li>
-            &lt;li>
-                &lt;em>[Maintainability - Is it anticipated that ongoing maintenance of content will be high?]&lt;/em>
-            &lt;/li>
-        &lt;/ul>
-        &lt;p>
-            &lt;em>[Reminder: When creating a separate content page, the page can either be included in the module view or linked
-                to a Study activity page and hidden from the module view.]&lt;/em>
-        &lt;/p>
-        &lt;p>[Content goes here.]&lt;/p>
-    &lt;/div>
-&lt;/div>
-              </pre>
-          </div>
-        </div>
-      </div>
-      <div class="buttonWrapper">
-        <a class="Button btn btn-primary">Insert</a>
-      </div>
-
-      <div class="row">
-        <div class="option">
-          <h2>Home Page</h2>
-          <div>
-            <p>Guidelines</p>
-          </div>
-          <input type="checkbox" [checked]="homePageCode" (change)="homePageCode = !homePageCode">
-          <label>Show as HTML</label>
-        </div>
-        <div>
-          <div class="preview" id="buttonOut">
-            <h4>Preview:</h4>
-            <app-home-page-preview *ngIf="!homePageCode" [courseClass]="courseClass" [courseId]="courseId" [courseName]="courseName">
-            </app-home-page-preview>
-            <pre *ngIf="homePageCode">
-&lt;div class="byui {{courseClass}}">
-    &lt;div class="welcome">
-        &lt;img src="https://byui.instructure.com/courses/{{courseId}}/file_contents/course%20files/Web%20Files/homeImage.jpg">
-        &lt;h2>Welcome to {{ courseName }}&lt;/h2>
-        &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
-    &lt;/div>
-    &lt;div id="navigation">
-        &lt;div class="steps">
-            &lt;a id="start" class="Button Button--primary" href="#">Start Here&lt;/a>
-            &lt;a id="instructor" class="Button Button--primary" href="#">Your Instructor&lt;/a>
-            &lt;a id="syllabus" class="Button Button--primary" href="#">Syllabus&lt;/a>
-            &lt;a id="resources" class="Button Button--primary" href="#">Additional Resources&lt;/a>
-        &lt;/div>
-        &lt;h2>Weeks&lt;/h2>
-        &lt;div class="lessons">
-            &lt;div>
-                &lt;a>1&lt;/a>
-                &lt;a>2&lt;/a>
-                &lt;a>3&lt;/a>
-                &lt;a>4&lt;/a>
-                &lt;a>5&lt;/a>
-                &lt;a>6&lt;/a>
-                &lt;a>7&lt;/a>
-            &lt;/div>
-            &lt;div>
-                &lt;a>8&lt;/a>
-                &lt;a>9&lt;/a>
-                &lt;a>10&lt;/a>
-                &lt;a>11&lt;/a>
-                &lt;a>12&lt;/a>
-                &lt;a>13&lt;/a>
-                &lt;a>14&lt;/a>
-            &lt;/div>
-        &lt;/div>
-    &lt;/div>
-&lt;/div>
-              </pre>
-          </div>
-        </div>
-      </div>
-      <div class="buttonWrapper">
-        <a class="Button btn btn-primary">Insert</a>
-      </div>
-
-      <div class="row">
-        <div class="option">
-          <h2>Teaching Notes</h2>
-          <div>
-            <p>Guidelines</p>
-          </div>
-          <input type="checkbox" [checked]="teachingNotesCode" (change)="teachingNotesCode = !teachingNotesCode">
-          <label>Show as HTML</label>
-        </div>
-        <div>
-          <div class="preview" id="buttonOut">
-            <h4>Preview:</h4>
-            <app-teaching-notes *ngIf="!teachingNotesCode" [courseClass]="courseClass"></app-teaching-notes>
-            <pre *ngIf="teachingNotesCode">
-&lt;div class="byui {{courseClass}}">
-    &lt;div class="objectives">
-        &lt;h2>Week Objectives&lt;/h2>
-        &lt;ul>
-            &lt;li>[Objective statement 1]&lt;/li>
-            &lt;li>[Objective statement 2]&lt;/li>
-            &lt;li>[Objective statement 3]&lt;/li>
-            &lt;li>[etc.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="beforeTheWeekBegins">
-        &lt;h2>Before the Week Begins&lt;/h2>
-        &lt;ul>
-            &lt;li>Refer to the General Teaching Notes [link] or Course Map [link] as needed.&lt;/li>
-            &lt;li>Ensure your W[##] Announcement has been posted. (You may consider including a reminder that students can
-                utilize the Notes from Instructor discussion board to ask questions of you or others.)&lt;/li>
-            &lt;li>[Include any other relevant information for the instructor.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="duringTheWeek">
-        &lt;h2>During the Week&lt;/h2>
-        &lt;ul>
-            &lt;li>Monitor and answer any questions that may arise in the Notes from Instructor discussion board.&lt;/li>
-            &lt;li>Monitor and participate in [list any discussions taking place]. Help students focus on mastering the objectives
-                for this week. Ask guiding questions to extend and deepen student learning.&lt;/li>
-            &lt;li>[Include any other relevant monitoring/participation activities for the instructor.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="gradingFeedback">
-        &lt;h2>Grading/Feedback&lt;/h2>
-        &lt;ul>
-            &lt;li>[List all activities, indicate whether they are graded or auto-graded, and specify what level of feedback
-                is needed.]
-            &lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="lookingAhead">
-        &lt;h2>Looking Ahead&lt;/h2>
-        &lt;ul>
-            &lt;li>Please create and post your Announcement for W[##] by Friday of this week.&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-&lt;/div>
-              </pre>
-          </div>
-        </div>
-      </div>
-      <div class="buttonWrapper">
-        <a class="Button btn btn-primary">Insert</a>
-      </div>
-
-      <div class="row">
-        <div class="option">
-          <h2>Introduction</h2>
-          <div>
-            <p>Guidelines</p>
-          </div>
-          <input type="checkbox" [checked]="introductionCode" (change)="introductionCode = !introductionCode">
-          <label>Show as HTML</label>
-        </div>
-        <div>
-          <div class="preview" id="buttonOut">
-            <h4>Preview:</h4>
-            <app-introduction *ngIf="!introductionCode" [courseClass]="courseClass"></app-introduction>
-            <pre *ngIf="introductionCode">
-&lt;div class="byui {{courseClass}}">
-    &lt;div class="overview">
-        &lt;h2>Overview&lt;/h2>
-        &lt;p>Review the description below for a quick overview of this week&rsquo;s activities.&lt;/p>
-        &lt;ul>
-            &lt;li>
-                &lt;strong>Tasks: &lt;/strong>
-                &lt;em>Learn about&lt;/em> [emphasize
-                &lt;em>major&lt;/em>
-                &lt;em>topic&lt;/em>(s)], [emphasize
-                &lt;em>important&lt;/em>
-                &lt;em>activity&lt;/em> they shouldn&rsquo;t overlook], and [final activity of the week].&lt;/li>
-            &lt;li>
-                &lt;strong>Purpose:&lt;/strong> [Explain overall purpose and value behind the week&rsquo;s activities.]&lt;/li>
-            &lt;li>
-                &lt;strong>Instructor:&lt;/strong> [Describe instructor&rsquo;s high-level role for this week.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="objectives">
-        &lt;h2>Objectives&lt;/h2>
-        &lt;p>Review the objectives below to better understand the goals for this week&rsquo;s activities.&lt;/p>
-        &lt;ul>
-            &lt;li>[Objective statement 1]&lt;/li>
-            &lt;li>[Objective statement 2]&lt;/li>
-            &lt;li>[Objective statement 3]&lt;/li>
-            &lt;li>[etc.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="activities">
-        &lt;h2>Activities&lt;/h2>
-        &lt;p>Review the full list of activities below to understand what will be expected of you this week.&lt;/p>
-        &lt;ol>
-            &lt;li>[Activity 1 title - brief description of activity]&lt;/li>
-            &lt;li>[Activity 2 title - brief description of activity]&lt;/li>
-            &lt;li>[Activity 3 title - brief description of activity]&lt;/li>
-            &lt;li>[etc.]&lt;/li>
-        &lt;/ol>
-    &lt;/div>
-&lt;/div>
-              </pre>
-          </div>
-        </div>
-      </div>
-      <div class="buttonWrapper">
-        <a class="Button btn btn-primary">Insert</a>
-      </div>
-
+      <app-generic-activity-wrapper (select)="updateFeature($event)"></app-generic-activity-wrapper>
+      <app-generic-content-wrapper (select)="updateFeature($event)"></app-generic-content-wrapper>
+      <app-home-page-wrapper (select)="updateFeature($event)"></app-home-page-wrapper>
+      <app-teaching-notes-wrapper (select)="updateFeature($event)"></app-teaching-notes-wrapper>
+      <app-introduction-wrapper (select)="updateFeature($event)"></app-introduction-wrapper>
     </div>
+
     <button id="prepare" class="accordion-header" [ngClass]="{'active':prepareActive}" (click)="togglePrepare()">
       Prepare
     </button>
-    <div class="panel" [ngClass]="{'panel-active':prepareActive}">
-      <div class="row">
-        <div class="option">
-          <h2>Concept Mapping</h2>
-          <div>
-            <p>Guidelines</p>
-          </div>
-          <input type="checkbox" [checked]="conceptMappingCode" (change)="conceptMappingCode = !conceptMappingCode">
-          <label>Show as HTML</label>
-        </div>
-        <div>
-          <div class="preview" id="buttonOut">
-            <h4>Preview:</h4>
-            <app-prepare-concept-matching *ngIf="!conceptMappingCode" [courseClass]="courseClass"></app-prepare-concept-matching>
-            <pre *ngIf="conceptMappingCode">
-&lt;div class="byui {{courseClass}}">
-    &lt;div class="overview">
-        &lt;h2>Overview&lt;/h2>
-        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-        &lt;ul>
-            &lt;li>
-                &lt;strong>Task:&lt;/strong>
-                &lt;em> Create &lt;/em>a
-                &lt;em> concept map of&lt;/em> [describe and
-                &lt;em>highlight&lt;/em> topics/concepts/principles].&lt;/li>
-            &lt;li>
-                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-            &lt;li>
-                &lt;strong>Instructor:&lt;/strong> Your instructor will [Describe relevant instructor role in activity.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;div class="instructions">
-        &lt;h2>Instructions&lt;/h2>
-        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-        &lt;ol>
-            &lt;li>[Concept map should adhere to the prescribed method]
-                &lt;ol>
-                    &lt;li>[Ensure students understand what a concept map is and what it is not; example map be useful]&lt;/li>
-                    &lt;li>[Indicate required steps to complete&mdash;such as number of branches]&lt;/li>
-                    &lt;li>[Indicate any texts, resources, or documents needed to help complete concept map]&lt;/li>
-                &lt;/ol>
-            &lt;/li>
-            &lt;li>[Concept map should utilize the appropriate tool(s)]
-                &lt;ol>
-                    &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
-                &lt;/ol>
-            &lt;/li>
-            &lt;li>[Concept map should show clear understanding of topic(s)]
-                &lt;ol>
-                    &lt;li>[Indicate specific topics that should be represented].&lt;/li>
-                &lt;/ol>
-            &lt;/li>
-            &lt;li>[Concept map should adhere to submission requirements]
-                &lt;ol>
-                    &lt;li>[Include criteria for grading]&lt;/li>
-                    &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited,
-                        or if there are multiple deliverables]&lt;/li>
-                &lt;/ol>
-            &lt;/li>
-        &lt;/ol>
-    &lt;/div>
-    &lt;div class="custom">
-        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-        &lt;ul>
-            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-&lt;/div>
-            </pre>
-          </div>
-        </div>
-      </div>
-      <div class="buttonWrapper">
-        <a class="Button btn btn-primary">Insert</a>
-      </div>
+
+    
 
       <div class="row">
         <div class="option">
@@ -1583,7 +1226,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-jigsaw-teaching *ngIf="!jigsawTeachingCode"[courseClass]="courseClass"></app-toa-jigsaw-teaching>
+            <app-toa-jigsaw-teaching *ngIf="!jigsawTeachingCode" [courseClass]="courseClass"></app-toa-jigsaw-teaching>
             <pre *ngIf="jigsawTeachingCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
@@ -1660,7 +1303,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-peer-accountability *ngIf="!peerAccountabilityCode"[courseClass]="courseClass"></app-toa-peer-accountability>
+            <app-toa-peer-accountability *ngIf="!peerAccountabilityCode" [courseClass]="courseClass"></app-toa-peer-accountability>
             <pre *ngIf="!peerAccountabilityCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
@@ -1726,7 +1369,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-peer-feedback *ngIf="!peerFeedbackCode"[courseClass]="courseClass"></app-toa-peer-feedback>
+            <app-toa-peer-feedback *ngIf="!peerFeedbackCode" [courseClass]="courseClass"></app-toa-peer-feedback>
             <pre *ngIf="peerFeedbackCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
@@ -1798,7 +1441,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-presentation *ngIf="!presentationCode"[courseClass]="courseClass"></app-toa-presentation>
+            <app-toa-presentation *ngIf="!presentationCode" [courseClass]="courseClass"></app-toa-presentation>
             <pre *ngIf="presentationCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -1876,7 +1519,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-qna-support-forum *ngIf="!qnaSupportForumCode"[courseClass]="courseClass"></app-toa-qna-support-forum>
+            <app-toa-qna-support-forum *ngIf="!qnaSupportForumCode" [courseClass]="courseClass"></app-toa-qna-support-forum>
             <pre *ngIf="qnaSupportForumCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -1945,7 +1588,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-role-play-discussion *ngIf="!rolePlayCode"[courseClass]="courseClass"></app-toa-role-play-discussion>
+            <app-toa-role-play-discussion *ngIf="!rolePlayCode" [courseClass]="courseClass"></app-toa-role-play-discussion>
             <pre *ngIf="rolePlayCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2021,7 +1664,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-structured-debate *ngIf="!structuredDebateCode"[courseClass]="courseClass"></app-toa-structured-debate>
+            <app-toa-structured-debate *ngIf="!structuredDebateCode" [courseClass]="courseClass"></app-toa-structured-debate>
             <pre *ngIf="structuredDebateCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2090,7 +1733,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-study-group *ngIf="!studyGroupCode"[courseClass]="courseClass"></app-toa-study-group>
+            <app-toa-study-group *ngIf="!studyGroupCode" [courseClass]="courseClass"></app-toa-study-group>
             <pre *ngIf="studyGroupCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2163,7 +1806,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-teach-one-another *ngIf="!toaCode"[courseClass]="courseClass"></app-teach-one-another>
+            <app-teach-one-another *ngIf="!toaCode" [courseClass]="courseClass"></app-teach-one-another>
             <pre *ngIf="toaCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2237,7 +1880,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-toa-topic-discussion *ngIf="!topicDiscussionCode"[courseClass]="courseClass"></app-toa-topic-discussion>
+            <app-toa-topic-discussion *ngIf="!topicDiscussionCode" [courseClass]="courseClass"></app-toa-topic-discussion>
             <pre *ngIf="topicDiscussionCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2315,7 +1958,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-accountability-quiz *ngIf="!accountabilityQuizCode"[courseClass]="courseClass"></app-accountability-quiz>
+            <app-accountability-quiz *ngIf="!accountabilityQuizCode" [courseClass]="courseClass"></app-accountability-quiz>
             <pre *ngIf="accountabilityQuizCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="quizOverview">
@@ -2360,7 +2003,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-exam *ngIf="!examCode"[courseClass]="courseClass"></app-ponder-prove-exam>
+            <app-ponder-prove-exam *ngIf="!examCode" [courseClass]="courseClass"></app-ponder-prove-exam>
             <pre *ngIf="examCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="quizOverview">
@@ -2405,7 +2048,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-exercise *ngIf="!exerciseCode"[courseClass]="courseClass"></app-exercise>
+            <app-exercise *ngIf="!exerciseCode" [courseClass]="courseClass"></app-exercise>
             <pre *ngIf="exerciseCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2477,7 +2120,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-essay *ngIf="!paperEssayCode"[courseClass]="courseClass"></app-ponder-prove-essay>
+            <app-ponder-prove-essay *ngIf="!paperEssayCode" [courseClass]="courseClass"></app-ponder-prove-essay>
             <pre *ngIf="paperEssayCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
@@ -2557,7 +2200,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove *ngIf="!ponderProveCode"[courseClass]="courseClass"></app-ponder-prove>
+            <app-ponder-prove *ngIf="!ponderProveCode" [courseClass]="courseClass"></app-ponder-prove>
             <pre *ngIf="ponderProveCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2631,7 +2274,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-portfolio *ngIf="!portfolioCode"[courseClass]="courseClass"></app-ponder-prove-portfolio>
+            <app-ponder-prove-portfolio *ngIf="!portfolioCode" [courseClass]="courseClass"></app-ponder-prove-portfolio>
             <pre *ngIf="portfolioCode">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
@@ -2712,7 +2355,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-unanswered-questions *ngIf="!postTestCode"[courseClass]="courseClass"></app-ponder-prove-unanswered-questions>
+            <app-ponder-prove-unanswered-questions *ngIf="!postTestCode" [courseClass]="courseClass"></app-ponder-prove-unanswered-questions>
             <pre *ngIf="postTestCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="quizOverview">
@@ -2757,7 +2400,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-project *ngIf="!projectCode"[courseClass]="courseClass"></app-ponder-prove-project>
+            <app-ponder-prove-project *ngIf="!projectCode" [courseClass]="courseClass"></app-ponder-prove-project>
             <pre *ngIf="projectCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -2836,7 +2479,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-quiz *ngIf="!quizCode"[courseClass]="courseClass"></app-ponder-prove-quiz>
+            <app-ponder-prove-quiz *ngIf="!quizCode" [courseClass]="courseClass"></app-ponder-prove-quiz>
             <pre *ngIf="quizCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="quizOverview">
@@ -2957,7 +2600,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-report *ngIf="!reportCode"[courseClass]="courseClass"></app-ponder-prove-report>
+            <app-ponder-prove-report *ngIf="!reportCode" [courseClass]="courseClass"></app-ponder-prove-report>
             <pre *ngIf="reportCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
@@ -3029,7 +2672,7 @@
         <div>
           <div class="preview" id="buttonOut">
             <h4>Preview:</h4>
-            <app-ponder-prove-worksheet-workbook *ngIf="!worksheetCode"[courseClass]="courseClass"></app-ponder-prove-worksheet-workbook>
+            <app-ponder-prove-worksheet-workbook *ngIf="!worksheetCode" [courseClass]="courseClass"></app-ponder-prove-worksheet-workbook>
             <pre *ngIf="worksheetCode">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

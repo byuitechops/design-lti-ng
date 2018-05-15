@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="option">
+      <h2>Introduction</h2>
+      <div>
+        <p>Guidelines</p>
+      </div>
+      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+      <label>Show as HTML</label>
+    </div>
+    <div>
+      <div class="preview" id="buttonOut">
+        <h4>Preview:</h4>
+        <app-introduction *ngIf="!showAsHtml" [courseClass]="courseClass"></app-introduction>
+        <pre *ngIf="showAsHtml">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this week&rsquo;s activities.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Tasks: &lt;/strong>
+                &lt;em>Learn about&lt;/em> [emphasize
+                &lt;em>major&lt;/em>
+                &lt;em>topic&lt;/em>(s)], [emphasize
+                &lt;em>important&lt;/em>
+                &lt;em>activity&lt;/em> they shouldn&rsquo;t overlook], and [final activity of the week].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> [Explain overall purpose and value behind the week&rsquo;s activities.]&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> [Describe instructor&rsquo;s high-level role for this week.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="objectives">
+        &lt;h2>Objectives&lt;/h2>
+        &lt;p>Review the objectives below to better understand the goals for this week&rsquo;s activities.&lt;/p>
+        &lt;ul>
+            &lt;li>[Objective statement 1]&lt;/li>
+            &lt;li>[Objective statement 2]&lt;/li>
+            &lt;li>[Objective statement 3]&lt;/li>
+            &lt;li>[etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="activities">
+        &lt;h2>Activities&lt;/h2>
+        &lt;p>Review the full list of activities below to understand what will be expected of you this week.&lt;/p>
+        &lt;ol>
+            &lt;li>[Activity 1 title - brief description of activity]&lt;/li>
+            &lt;li>[Activity 2 title - brief description of activity]&lt;/li>
+            &lt;li>[Activity 3 title - brief description of activity]&lt;/li>
+            &lt;li>[etc.]&lt;/li>
+        &lt;/ol>
+    &lt;/div>
+&lt;/div>
+          </pre>
+      </div>
+    </div>
+  </div>
+  <div class="buttonWrapper">
+    <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+  </div>

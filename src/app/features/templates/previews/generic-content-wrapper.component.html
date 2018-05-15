@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="option">
+    <h2>Generic Content</h2>
+    <div>
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-generic-content *ngIf="!showAsHtml" [courseClass]="courseClass"></app-generic-content>
+      <pre *ngIf="showAsHtml">
+&lt;div class="byui {{courseClass}}">
+&lt;div class="content">
+  &lt;p>
+      &lt;em>[For Designers: Review these factors for determining if activity-specific content should be separated to
+          a single content page or remain on the activity page. Delete this text when finished.]&lt;/em>
+  &lt;/p>
+  &lt;ul>
+      &lt;li>
+          &lt;em>[Screen Real Estate - Does content take up a lot of screen real estate?]&lt;/em>
+      &lt;/li>
+      &lt;li>
+          &lt;em>[Time to Consume - Will content take a long time for students to consume?]&lt;/em>
+      &lt;/li>
+      &lt;li>
+          &lt;em>[Number of Items - Are there a significant number of content items?]&lt;/em>
+      &lt;/li>
+      &lt;li>
+          &lt;em>[Scope of Use - Will content be used in multiple activities across week/course?]&lt;/em>
+      &lt;/li>
+      &lt;li>
+          &lt;em>[Maintainability - Is it anticipated that ongoing maintenance of content will be high?]&lt;/em>
+      &lt;/li>
+  &lt;/ul>
+  &lt;p>
+      &lt;em>[Reminder: When creating a separate content page, the page can either be included in the module view or linked
+          to a Study activity page and hidden from the module view.]&lt;/em>
+  &lt;/p>
+  &lt;p>[Content goes here.]&lt;/p>
+&lt;/div>
+&lt;/div>
+        </pre>
+    </div>
+  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>

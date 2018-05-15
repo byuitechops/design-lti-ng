@@ -87,6 +87,12 @@ import { PrepareComponent } from './templates/previews/prepare/prepare.component
 import { TeachOneAnotherComponent } from './templates/previews/teach-one-another/teach-one-another.component';
 import { AccountabilityQuizComponent } from './templates/previews/ponder-prove/accountability-quiz.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { GenericActivityWrapperComponent } from './templates/previews/generic-activity-wrapper.component';
+import { GenericContentWrapperComponent } from './templates/previews/generic-content-wrapper.component';
+import { HomePageWrapperComponent } from './templates/previews/home-page-wrapper.component';
+import { TeachingNotesWrapperComponent } from './templates/previews/teaching-notes-wrapper.component';
+import { IntroductionWrapperComponent } from './templates/previews/introduction-wrapper.component';
+import { ConceptMappingWrapperComponent } from './templates/previews/concept-mapping-wrapper.component';
 
 
 @NgModule({
@@ -196,7 +202,13 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
     PonderProveComponent,
     PrepareComponent,
     TeachOneAnotherComponent,
-    AccountabilityQuizComponent
+    AccountabilityQuizComponent,
+    GenericActivityWrapperComponent,
+    GenericContentWrapperComponent,
+    HomePageWrapperComponent,
+    TeachingNotesWrapperComponent,
+    IntroductionWrapperComponent,
+    ConceptMappingWrapperComponent    
   ],
   providers: [
     LtiParamsService

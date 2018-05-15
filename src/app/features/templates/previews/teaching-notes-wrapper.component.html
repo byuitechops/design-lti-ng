@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="option">
+      <h2>Teaching Notes</h2>
+      <div>
+        <p>Guidelines</p>
+      </div>
+      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+      <label>Show as HTML</label>
+    </div>
+    <div>
+      <div class="preview" id="buttonOut">
+        <h4>Preview:</h4>
+        <app-teaching-notes *ngIf="!showAsHtml" [courseClass]="courseClass"></app-teaching-notes>
+        <pre *ngIf="showAsHtml">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="objectives">
+        &lt;h2>Week Objectives&lt;/h2>
+        &lt;ul>
+            &lt;li>[Objective statement 1]&lt;/li>
+            &lt;li>[Objective statement 2]&lt;/li>
+            &lt;li>[Objective statement 3]&lt;/li>
+            &lt;li>[etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="beforeTheWeekBegins">
+        &lt;h2>Before the Week Begins&lt;/h2>
+        &lt;ul>
+            &lt;li>Refer to the General Teaching Notes [link] or Course Map [link] as needed.&lt;/li>
+            &lt;li>Ensure your W[##] Announcement has been posted. (You may consider including a reminder that students can
+                utilize the Notes from Instructor discussion board to ask questions of you or others.)&lt;/li>
+            &lt;li>[Include any other relevant information for the instructor.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="duringTheWeek">
+        &lt;h2>During the Week&lt;/h2>
+        &lt;ul>
+            &lt;li>Monitor and answer any questions that may arise in the Notes from Instructor discussion board.&lt;/li>
+            &lt;li>Monitor and participate in [list any discussions taking place]. Help students focus on mastering the objectives
+                for this week. Ask guiding questions to extend and deepen student learning.&lt;/li>
+            &lt;li>[Include any other relevant monitoring/participation activities for the instructor.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="gradingFeedback">
+        &lt;h2>Grading/Feedback&lt;/h2>
+        &lt;ul>
+            &lt;li>[List all activities, indicate whether they are graded or auto-graded, and specify what level of feedback
+                is needed.]
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="lookingAhead">
+        &lt;h2>Looking Ahead&lt;/h2>
+        &lt;ul>
+            &lt;li>Please create and post your Announcement for W[##] by Friday of this week.&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+          </pre>
+      </div>
+    </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>
