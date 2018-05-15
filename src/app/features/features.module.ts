@@ -96,6 +96,8 @@ import { ConceptMappingWrapperComponent } from './templates/previews/concept-map
 import { InterviewWrapperComponent } from './templates/previews/interview-wrapper.component';
 import { LearningContractWrapperComponent } from './templates/previews/learning-contract-wrapper.component';
 import { NoteTakingWrapperComponent } from './templates/previews/note-taking-wrapper.component';
+import { PracticeWrapperComponent } from './templates/previews/practice-wrapper.component';
+import { PrepareWrapperComponent } from './templates/previews/prepare-wrapper.component';
 
 
 @NgModule({
@@ -214,7 +216,9 @@ import { NoteTakingWrapperComponent } from './templates/previews/note-taking-wra
     ConceptMappingWrapperComponent,
     InterviewWrapperComponent,
     LearningContractWrapperComponent,
-    NoteTakingWrapperComponent
+    NoteTakingWrapperComponent,
+    PracticeWrapperComponent,
+    PrepareWrapperComponent
   ],
   providers: [
     LtiParamsService
