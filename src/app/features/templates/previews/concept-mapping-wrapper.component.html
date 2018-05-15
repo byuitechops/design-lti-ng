@@ -1,18 +1,17 @@
-<div class="panel" [ngClass]="{'panel-active':prepareActive}">
-    <div class="row">
-      <div class="option">
-        <h2>Concept Mapping</h2>
-        <div>
-          <p>Guidelines</p>
-        </div>
-        <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
-        <label>Show as HTML</label>
-      </div>
-      <div>
-        <div class="preview" id="buttonOut">
-          <h4>Preview:</h4>
-          <app-prepare-concept-matching *ngIf="!showAsHtml" [courseClass]="courseClass"></app-prepare-concept-matching>
-          <pre *ngIf="showAsHtml">
+<div class="row">
+  <div class="option">
+    <h2>Concept Mapping</h2>
+    <div>
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-prepare-concept-matching *ngIf="!showAsHtml" [courseClass]="courseClass"></app-prepare-concept-matching>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
       &lt;h2>Overview&lt;/h2>
@@ -66,10 +65,10 @@
       &lt;/ul>
   &lt;/div>
 &lt;/div>
-          </pre>
-        </div>
-      </div>
+      </pre>
     </div>
-    <div class="buttonWrapper">
-      <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
-    </div>
+  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>

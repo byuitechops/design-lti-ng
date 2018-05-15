@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, ViewChild, EventEmitter, Input } from '@angular/core';
+import { PrepareConceptMatchingComponent } from './prepare/prepare-concept-matching.component';
 
 @Component({
   selector: 'app-concept-mapping-wrapper',
@@ -7,15 +8,16 @@ import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/cor
 })
 export class ConceptMappingWrapperComponent implements OnInit {
 
+  @Input() courseClass: string;
   @Output() select: EventEmitter<string> = new EventEmitter();
-  @ViewChild(PrepareConceptMappingComponent) preview: PrepareConceptMappingComponent;
+  @ViewChild(PrepareConceptMatchingComponent) preview: PrepareConceptMatchingComponent;
 
   showAsHtml = false;
 
   constructor() { }
 
   chooseFeature() {
-    let html = this.preview.getHtmlContent().trim();
+    const html = this.preview.getHtmlContent().trim();
     console.log(html);
     this.select.emit(html);
   }

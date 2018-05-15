@@ -88,12 +88,12 @@ export class PageTemplatesComponent implements OnInit {
   worksheetCode = false;
 
   @ViewChild(GenericContentComponent) genericContent: GenericContentComponent;
-  
+
   constructor(private _ltiParamsService: LtiParamsService) {
     PageScrollConfig.defaultScrollOffset = 80;
     PageScrollConfig.defaultDuration = 0;
   }
-  
+
   updateFeature(feature) {
     // insert the html string to the content items
     this.contentItems['@graph'][0].text = feature;

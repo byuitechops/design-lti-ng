@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, Input } from '@angular/core';
 import { IntroductionComponent } from './generic/introduction.component';
 
 @Component({
@@ -8,6 +8,7 @@ import { IntroductionComponent } from './generic/introduction.component';
 })
 export class IntroductionWrapperComponent implements OnInit {
 
+  @Input() courseClass: string;
   @Output() select: EventEmitter<string> = new EventEmitter();
   @ViewChild(IntroductionComponent) preview: IntroductionComponent;
 
@@ -16,7 +17,7 @@ export class IntroductionWrapperComponent implements OnInit {
   constructor() { }
 
   chooseFeature() {
-    let html = this.preview.getHtmlContent().trim();
+    const html = this.preview.getHtmlContent().trim();
     console.log(html);
     this.select.emit(html);
   }

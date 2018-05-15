@@ -17,19 +17,19 @@
     </button>
 
     <div class="panel" [ngClass]="{'panel-active':genericActive}">
-      <app-generic-activity-wrapper (select)="updateFeature($event)"></app-generic-activity-wrapper>
-      <app-generic-content-wrapper (select)="updateFeature($event)"></app-generic-content-wrapper>
-      <app-home-page-wrapper (select)="updateFeature($event)"></app-home-page-wrapper>
-      <app-teaching-notes-wrapper (select)="updateFeature($event)"></app-teaching-notes-wrapper>
-      <app-introduction-wrapper (select)="updateFeature($event)"></app-introduction-wrapper>
+      <app-generic-activity-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-generic-activity-wrapper>
+      <app-generic-content-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-generic-content-wrapper>
+      <app-home-page-wrapper (select)="updateFeature($event)" [courseClass]="courseClass" [courseId]="courseId" [courseName]="courseName"></app-home-page-wrapper>
+      <app-teaching-notes-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-teaching-notes-wrapper>
+      <app-introduction-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-introduction-wrapper>
     </div>
 
     <button id="prepare" class="accordion-header" [ngClass]="{'active':prepareActive}" (click)="togglePrepare()">
       Prepare
     </button>
 
-    
-
+      <div class="panel" [ngClass]="{'panel-active':prepareActive}">
+      <app-concept-mapping-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-concept-mapping-wrapper>
       <div class="row">
         <div class="option">
           <h2>Interview</h2>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter, Input } from '@angular/core';
 import { HomePagePreviewComponent } from './generic/home-page-preview.component';
 
 @Component({
@@ -8,6 +8,11 @@ import { HomePagePreviewComponent } from './generic/home-page-preview.component'
 })
 export class HomePageWrapperComponent implements OnInit {
 
+
+  @Input() courseClass: string;
+  @Input() courseId: string;
+  @Input() courseName: string;
+
   @Output() select: EventEmitter<string> = new EventEmitter();
   @ViewChild(HomePagePreviewComponent) preview: HomePagePreviewComponent;
 
@@ -16,7 +21,7 @@ export class HomePageWrapperComponent implements OnInit {
   constructor() { }
 
   chooseFeature() {
-    let html = this.preview.getHtmlContent().trim();
+    const html = this.preview.getHtmlContent().trim();
     console.log(html);
     this.select.emit(html);
   }

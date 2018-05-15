@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter, Input } from '@angular/core';
 import { GenericActivityComponent } from './generic/generic-activity.component';
 
 @Component({
@@ -8,6 +8,7 @@ import { GenericActivityComponent } from './generic/generic-activity.component';
 })
 export class GenericActivityWrapperComponent implements OnInit {
 
+  @Input() courseClass: string;
   @Output() select: EventEmitter<string> = new EventEmitter();
   @ViewChild(GenericActivityComponent) preview: GenericActivityComponent;
 
@@ -16,7 +17,7 @@ export class GenericActivityWrapperComponent implements OnInit {
   constructor() { }
 
   chooseFeature() {
-    let html = this.preview.getHtmlContent().trim();
+    const html = this.preview.getHtmlContent().trim();
     console.log(html);
     this.select.emit(html);
   }
