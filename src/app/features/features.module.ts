@@ -93,6 +93,9 @@ import { HomePageWrapperComponent } from './templates/previews/home-page-wrapper
 import { TeachingNotesWrapperComponent } from './templates/previews/teaching-notes-wrapper.component';
 import { IntroductionWrapperComponent } from './templates/previews/introduction-wrapper.component';
 import { ConceptMappingWrapperComponent } from './templates/previews/concept-mapping-wrapper.component';
+import { InterviewWrapperComponent } from './templates/previews/interview-wrapper.component';
+import { LearningContractWrapperComponent } from './templates/previews/learning-contract-wrapper.component';
+import { NoteTakingWrapperComponent } from './templates/previews/note-taking-wrapper.component';
 
 
 @NgModule({
@@ -208,7 +211,10 @@ import { ConceptMappingWrapperComponent } from './templates/previews/concept-map
     HomePageWrapperComponent,
     TeachingNotesWrapperComponent,
     IntroductionWrapperComponent,
-    ConceptMappingWrapperComponent    
+    ConceptMappingWrapperComponent,
+    InterviewWrapperComponent,
+    LearningContractWrapperComponent,
+    NoteTakingWrapperComponent
   ],
   providers: [
     LtiParamsService
