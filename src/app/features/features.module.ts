@@ -98,6 +98,12 @@ import { LearningContractWrapperComponent } from './templates/previews/learning-
 import { NoteTakingWrapperComponent } from './templates/previews/note-taking-wrapper.component';
 import { PracticeWrapperComponent } from './templates/previews/practice-wrapper.component';
 import { PrepareWrapperComponent } from './templates/previews/prepare-wrapper.component';
+import { PretestWrapperComponent } from './templates/previews/pretest-wrapper.component';
+import { ProjectPlanWrapperComponent } from './templates/previews/project-plan-wrapper.component';
+import { QuizWritingWrapperComponent } from './templates/previews/quiz-writing-wrapper.component';
+import { ResearchWrapperComponent } from './templates/previews/research-wrapper.component';
+import { SignUpWrapperComponent } from './templates/previews/sign-up-wrapper.component';
+import { StudyWrapperComponent } from './templates/previews/study-wrapper.component';
 
 
 @NgModule({
@@ -218,7 +224,13 @@ import { PrepareWrapperComponent } from './templates/previews/prepare-wrapper.co
     LearningContractWrapperComponent,
     NoteTakingWrapperComponent,
     PracticeWrapperComponent,
-    PrepareWrapperComponent
+    PrepareWrapperComponent,
+    PretestWrapperComponent,
+    ProjectPlanWrapperComponent,
+    QuizWritingWrapperComponent,
+    ResearchWrapperComponent,
+    SignUpWrapperComponent,
+    StudyWrapperComponent
   ],
   providers: [
     LtiParamsService

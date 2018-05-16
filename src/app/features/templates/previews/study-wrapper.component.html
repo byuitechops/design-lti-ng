@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="option">
+    <h2>Study</h2>
+    <div>
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-study *ngIf="!showAsHtml" [courseClass]="courseClass"></app-study>
+      <pre *ngIf="showAsHtml">
+&lt;div class="byui {{courseClass}}">
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> [Study/Review] [name of material(s)]&lt;/em>
+                &lt;strong>.&lt;/strong>
+            &lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Process Requirements? If any, indicate]
+                &lt;ol>
+                    &lt;li>[List of things to read/watch/listen to]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Tool Requirements? If any, indicate tutorials or other helpful resources]&lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>
