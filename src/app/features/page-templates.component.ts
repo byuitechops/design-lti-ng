@@ -39,54 +39,6 @@ export class PageTemplatesComponent implements OnInit {
   toaActive = false;
   proveActive = false;
 
-  genericContentCode = false;
-  homePageCode = false;
-  teachingNotesCode = false;
-  introductionCode = false;
-
-  conceptMappingCode = false;
-  interviewCode = false;
-  learningContractCode = false;
-  noteTakingCode = false;
-  practiceCode = false;
-  prepareCode = false;
-  pretestCode = false;
-  projectPlanCode = false;
-  quizWritingCode = false;
-  researchCode = false;
-  signUpCode = false;
-  studyCode = false;
-
-  caseStudyCode = false;
-  fieldExperienceCode = false;
-  groupProblemSolvingCode = false;
-  groupProjectCode = false;
-  iceBreakerCode = false;
-  insightSharingCode = false;
-  jigsawTeachingCode = false;
-  peerAccountabilityCode = false;
-  peerFeedbackCode = false;
-  presentationCode = false;
-  qnaSupportForumCode = false;
-  rolePlayCode = false;
-  structuredDebateCode = false;
-  studyGroupCode = false;
-  toaCode = false;
-  topicDiscussionCode = false;
-
-  accountabilityQuizCode = false;
-  examCode = false;
-  exerciseCode = false;
-  paperEssayCode = false;
-  ponderProveCode = false;
-  portfolioCode = false;
-  postTestCode = false;
-  projectCode = false;
-  quizCode = false;
-  reflectionCode = false;
-  reportCode = false;
-  worksheetCode = false;
-
   @ViewChild(GenericContentComponent) genericContent: GenericContentComponent;
 
   constructor(private _ltiParamsService: LtiParamsService) {
@@ -104,7 +56,7 @@ export class PageTemplatesComponent implements OnInit {
     console.log(this.contentItemsJson);
     // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
-    // form.submit();
+    form.submit();
   }
 
   toggleGeneric(): void {

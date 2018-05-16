@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="option">
+      <h2>Structured Debate</h2>
+      <div>
+        <p>Guidelines</p>
+      </div>
+      <input type="checkbox"
+          [checked]="structuredDebateCode"
+          (change)="structuredDebateCode = !structuredDebateCode">
+      <label>Show as HTML</label>
+    </div>
+    <div>
+      <div class="preview" id="buttonOut">
+        <h4>Preview:</h4>
+        <app-toa-structured-debate *ngIf="!structuredDebateCode" [courseClass]="courseClass"></app-toa-structured-debate>
+        <pre *ngIf="structuredDebateCode">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Discuss &lt;/em>and
+        &lt;em> present your position on&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> topic(s)] for [indicate the audience].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Students should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Indicate whether position is assigned or chosen]&lt;/li>
+          &lt;li>[Indicate any preparatory readings or resources to help students become better informed]&lt;/li>
+          &lt;li>[Specify any requirements when presenting a side of an argument]&lt;/li>
+          &lt;li>[Specify any requirements when responding to an opposing side of an argument, including showing respect and courtesy]&lt;/li>
+          &lt;li>[Specify style of debate; e.g., political debate over candidates, historical debate over historical topics, case
+            study debate over alternative decisions, etc.]&lt;/li>
+          &lt;li>[Indicate size and timeline of debates; e.g., groups are pre-assigned a position in which to research and collaborate
+            in a class-wide debate, or groups are divided into two teams that collaborate in group-wide debate]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Specify whether it is asynchronous or synchronous as well as what tools will be used]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Students should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[Indicate any other grading criteria not previously specified]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+&lt;/div>
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>

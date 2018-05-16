@@ -104,6 +104,34 @@ import { QuizWritingWrapperComponent } from './templates/previews/quiz-writing-w
 import { ResearchWrapperComponent } from './templates/previews/research-wrapper.component';
 import { SignUpWrapperComponent } from './templates/previews/sign-up-wrapper.component';
 import { StudyWrapperComponent } from './templates/previews/study-wrapper.component';
+import { CaseStudyWrapperComponent } from './templates/previews/case-study-wrapper.component';
+import { FieldExperienceWrapperComponent } from './templates/previews/field-experience-wrapper.component';
+import { GroupProblemSolvingWrapperComponent } from './templates/previews/group-problem-solving-wrapper.component';
+import { GroupProjectWrapperComponent } from './templates/previews/group-project-wrapper.component';
+import { IceBreakerWrapperComponent } from './templates/previews/ice-breaker-wrapper.component';
+import { InsightSharingWrapperComponent } from './templates/previews/insight-sharing-wrapper.component';
+import { JigsawTeachingWrapperComponent } from './templates/previews/jigsaw-teaching-wrapper.component';
+import { PeerAccountabilityWrapperComponent } from './templates/previews/peer-accountability-wrapper.component';
+import { PeerFeedbackWrapperComponent } from './templates/previews/peer-feedback-wrapper.component';
+import { PresentationWrapperComponent } from './templates/previews/presentation-wrapper.component';
+import { QnaSupportForumWrapperComponent } from './templates/previews/qna-support-forum-wrapper.component';
+import { RolePlayWrapperComponent } from './templates/previews/role-play-wrapper.component';
+import { StructuredDebateWrapperComponent } from './templates/previews/structured-debate-wrapper.component';
+import { StudyGroupWrapperComponent } from './templates/previews/study-group-wrapper.component';
+import { TeachOneAnotherWrapperComponent } from './templates/previews/teach-one-another-wrapper.component';
+import { TopicDiscussionWrapperComponent } from './templates/previews/topic-discussion-wrapper.component';
+import { AccountabilityQuizWrapperComponent } from './templates/previews/accountability-quiz-wrapper.component';
+import { ExamWrapperComponent } from './templates/previews/exam-wrapper.component';
+import { ExerciseWrapperComponent } from './templates/previews/exercise-wrapper.component';
+import { PaperEssayWrapperComponent } from './templates/previews/paper-essay-wrapper.component';
+import { PonderProveWrapperComponent } from './templates/previews/ponder-prove-wrapper.component';
+import { PortfolioWrapperComponent } from './templates/previews/portfolio-wrapper.component';
+import { PostTestWrapperComponent } from './templates/previews/post-test-wrapper.component';
+import { ProjectWrapperComponent } from './templates/previews/project-wrapper.component';
+import { QuizWrapperComponent } from './templates/previews/quiz-wrapper.component';
+import { ReflectionWrapperComponent } from './templates/previews/reflection-wrapper.component';
+import { ReportWrapperComponent } from './templates/previews/report-wrapper.component';
+import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrapper.component';
 
 
 @NgModule({
@@ -230,7 +258,35 @@ import { StudyWrapperComponent } from './templates/previews/study-wrapper.compon
     QuizWritingWrapperComponent,
     ResearchWrapperComponent,
     SignUpWrapperComponent,
-    StudyWrapperComponent
+    StudyWrapperComponent,
+    CaseStudyWrapperComponent,
+    FieldExperienceWrapperComponent,
+    GroupProblemSolvingWrapperComponent,
+    GroupProjectWrapperComponent,
+    IceBreakerWrapperComponent,
+    InsightSharingWrapperComponent,
+    JigsawTeachingWrapperComponent,
+    PeerAccountabilityWrapperComponent,
+    PeerFeedbackWrapperComponent,
+    PresentationWrapperComponent,
+    QnaSupportForumWrapperComponent,
+    RolePlayWrapperComponent,
+    StructuredDebateWrapperComponent,
+    StudyGroupWrapperComponent,
+    TeachOneAnotherWrapperComponent,
+    TopicDiscussionWrapperComponent,
+    AccountabilityQuizWrapperComponent,
+    ExamWrapperComponent,
+    ExerciseWrapperComponent,
+    PaperEssayWrapperComponent,
+    PonderProveWrapperComponent,
+    PortfolioWrapperComponent,
+    PostTestWrapperComponent,
+    ProjectWrapperComponent,
+    QuizWrapperComponent,
+    ReflectionWrapperComponent,
+    ReportWrapperComponent,
+    WorksheetWrapperComponent
   ],
   providers: [
     LtiParamsService

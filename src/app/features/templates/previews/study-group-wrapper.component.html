@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="option">
+      <h2>Study Group</h2>
+      <div>
+        <p>Guidelines</p>
+      </div>
+      <input type="checkbox"
+          [checked]="showAsHtml"
+          (change)="showAsHtml = !showAsHtml">
+      <label>Show as HTML</label>
+    </div>
+    <div>
+      <div class="preview" id="buttonOut">
+        <h4>Preview:</h4>
+        <app-toa-study-group *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-study-group>
+        <pre *ngIf="showAsHtml">
+&lt;div class="byui {{courseClass}}">
+  &lt;div class="overview">
+    &lt;h2>Overview&lt;/h2>
+    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+    &lt;ul>
+      &lt;li>
+        &lt;strong>Task:&lt;/strong>
+        &lt;em> Within your group, study &lt;/em>and
+        &lt;em> review&lt;/em> [indicate and
+        &lt;em>highlight&lt;/em> specific topic(s) to be studied].&lt;/li>
+      &lt;li>
+        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+      &lt;li>
+        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  &lt;div class="instructions">
+    &lt;h2>Instructions&lt;/h2>
+    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+    &lt;ol>
+      &lt;li>[Study groups should adhere to the prescribed method]
+        &lt;ol>
+          &lt;li>[Specify any assigned activities; e.g. complete group assignments, study for assessments, create topic definitions
+            document, etc.]&lt;/li>
+          &lt;li>[Specify any upfront expectations and instructions on how the group should function and what will be the outcome
+            of the group&rsquo;s efforts]&lt;/li>
+          &lt;li>[Indicate the timeline for this activity]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Study groups should utilize the appropriate tool(s)]
+        &lt;ol>
+          &lt;li>[Provide any needed resources or tools to help facilitate group study and collaboration; if possible, provide
+            several recommendations for both asynchronous and synchronous tools]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+      &lt;li>[Study groups should adhere to submission requirements]
+        &lt;ol>
+          &lt;li>[If graded, specify how individuals and/or groups will be assessed through a rubric]&lt;/li>
+        &lt;/ol>
+      &lt;/li>
+    &lt;/ol>
+  &lt;/div>
+  &lt;div class="custom">
+    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+    &lt;ul>
+      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div>
+      </pre>
+    </div>
+  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>
