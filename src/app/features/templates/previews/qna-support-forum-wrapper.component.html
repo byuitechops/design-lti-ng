@@ -12,7 +12,7 @@
     <div>
       <div class="preview" id="buttonOut">
         <h4>Preview:</h4>
-        <app-toa-qna-support-forum *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-qna-support-forum>
+        <app-toa-qna-support-forum [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-qna-support-forum>
         <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

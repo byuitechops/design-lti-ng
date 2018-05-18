@@ -11,7 +11,7 @@
     <div class="preview" id="buttonOut">
       <h4>Preview:
       </h4>
-      <app-generic-activity *ngIf="!showAsHtml" [courseClass]="courseClass"></app-generic-activity>
+      <app-generic-activity [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-generic-activity>
       <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">

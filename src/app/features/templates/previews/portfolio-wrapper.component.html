@@ -12,7 +12,7 @@
     <div>
       <div class="preview" id="buttonOut">
         <h4>Preview:</h4>
-        <app-ponder-prove-portfolio *ngIf="!showAsHtml" [courseClass]="courseClass"></app-ponder-prove-portfolio>
+        <app-ponder-prove-portfolio [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-ponder-prove-portfolio>
         <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

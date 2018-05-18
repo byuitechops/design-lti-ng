@@ -179,3 +179,7 @@ nav {
 .local-nav:link {
     text-decoration: none;
 }
+
+.hidden {
+    display: hidden;
+}

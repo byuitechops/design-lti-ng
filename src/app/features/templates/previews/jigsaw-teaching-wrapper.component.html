@@ -12,7 +12,7 @@
     <div>
       <div class="preview" id="buttonOut">
         <h4>Preview:</h4>
-        <app-toa-jigsaw-teaching *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-jigsaw-teaching>
+        <app-toa-jigsaw-teaching [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-jigsaw-teaching>
         <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

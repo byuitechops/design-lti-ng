@@ -12,7 +12,7 @@
     <div>
       <div class="preview" id="buttonOut">
         <h4>Preview:</h4>
-        <app-toa-peer-feedback *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-peer-feedback>
+        <app-toa-peer-feedback [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-peer-feedback>
         <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

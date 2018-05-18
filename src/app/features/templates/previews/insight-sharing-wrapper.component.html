@@ -10,7 +10,7 @@
     <div>
       <div class="preview" id="buttonOut">
         <h4>Preview:</h4>
-        <app-toa-insight-sharing *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-insight-sharing>
+        <app-toa-insight-sharing [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-insight-sharing>
         <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

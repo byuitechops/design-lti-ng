@@ -10,7 +10,7 @@
   <div>
     <div class="preview" id="buttonOut">
       <h4>Preview:</h4>
-      <app-prepare-project-plan *ngIf="!showAsHtml" [courseClass]="courseClass"></app-prepare-project-plan>
+      <app-prepare-project-plan [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-prepare-project-plan>
       <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">

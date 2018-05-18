@@ -10,7 +10,7 @@
     <div>
       <div class="preview" id="buttonOut">
         <h4>Preview:</h4>
-        <app-toa-icebreaker *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-icebreaker>
+        <app-toa-icebreaker [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-icebreaker>
         <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
   &lt;div class="overview">
