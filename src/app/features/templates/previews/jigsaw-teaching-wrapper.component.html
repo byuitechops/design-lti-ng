@@ -1,71 +1,69 @@
 <div class="row">
-    <div class="option">
-      <h2>Jigsaw Teaching</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-        [checked]="showAsHtml"
-        (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Jigsaw Teaching</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-jigsaw-teaching [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-jigsaw-teaching>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-jigsaw-teaching [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-jigsaw-teaching>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-      &lt;h2>Overview&lt;/h2>
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task: &lt;/strong>
-              &lt;em>Within your group, research&lt;/em> [indicate and
-              &lt;em>highlight&lt;/em> topic component
-              &lt;strong>]&lt;/strong> to create a clearer picture of [specify the topic].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-      &lt;h2>Instructions&lt;/h2>
-      &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-      &lt;ol>
-          &lt;li>[Group members should adhere to the prescribed method]
-              &lt;ol>
-                  &lt;li>[Specify any readings, key questions or principles, or other guidelines to direct research.]&lt;/li>
-                  &lt;li>[Specify timeline for each portion of activity]&lt;/li>
-                  &lt;li>[Indicate how groups are organized and size]&lt;/li>
-                  &lt;li>[Indicate whether topics can be chosen by groups, usually from a preset list, or are assigned from
-                      a preset list]&lt;/li>
-                  &lt;li>[Indicate that group &ldquo;experts&rdquo; have to meet with other group &ldquo;experts&rdquo; in
-                      the same topic to research and discuss about it]&lt;/li>
-                  &lt;li>[Specify process, readings, expectations, timeline, and deliverables for &ldquo;experts&rdquo; to
-                      take back to their respective groups]&lt;/li>
-                  &lt;li>[Specify process, readings, expectations, timeline, and deliverables within peer groups]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group members should utilize the appropriate tool(s) for collaboration and presenting]
-              &lt;ol>
-                  &lt;li>[Indicate tools for collaboration, sharing and future presenting]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group members should demonstrate clear understanding of topic(s)]
-              &lt;ol>
-                  &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group members should adhere to the submission requirements]
-              &lt;ol>
-                  &lt;li>[Include all grading criteria across the multiple steps as well as how individuals and/or groups
-                      will be assessed]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-      &lt;/ol>
-  &lt;/div>
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task: &lt;/strong>
+                &lt;em>Within your group, research&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> topic component
+                &lt;strong>]&lt;/strong> to create a clearer picture of [specify the topic].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Group members should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify any readings, key questions or principles, or other guidelines to direct research.]&lt;/li>
+                    &lt;li>[Specify timeline for each portion of activity]&lt;/li>
+                    &lt;li>[Indicate how groups are organized and size]&lt;/li>
+                    &lt;li>[Indicate whether topics can be chosen by groups, usually from a preset list, or are assigned from
+                        a preset list]&lt;/li>
+                    &lt;li>[Indicate that group &ldquo;experts&rdquo; have to meet with other group &ldquo;experts&rdquo; in
+                        the same topic to research and discuss about it]&lt;/li>
+                    &lt;li>[Specify process, readings, expectations, timeline, and deliverables for &ldquo;experts&rdquo; to
+                        take back to their respective groups]&lt;/li>
+                    &lt;li>[Specify process, readings, expectations, timeline, and deliverables within peer groups]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group members should utilize the appropriate tool(s) for collaboration and presenting]
+                &lt;ol>
+                    &lt;li>[Indicate tools for collaboration, sharing and future presenting]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group members should demonstrate clear understanding of topic(s)]
+                &lt;ol>
+                    &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group members should adhere to the submission requirements]
+                &lt;ol>
+                    &lt;li>[Include all grading criteria across the multiple steps as well as how individuals and/or groups
+                        will be assessed]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

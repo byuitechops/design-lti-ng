@@ -1,72 +1,70 @@
 <div class="row">
-    <div class="option">
-      <h2>Presentation</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-          [checked]="presentationCode"
-          (change)="presentationCode = !presentationCode">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Presentation</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-presentation *ngIf="!presentationCode" [courseClass]="courseClass"></app-toa-presentation>
-        <pre *ngIf="presentationCode">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="presentationCode" (change)="presentationCode = !presentationCode">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-presentation *ngIf="!presentationCode" [courseClass]="courseClass"></app-toa-presentation>
+      <pre *ngIf="presentationCode">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-    &lt;h2>Overview&lt;/h2>
-    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-    &lt;ul>
-      &lt;li>
-        &lt;strong>Task:&lt;/strong>
-        &lt;em> Create &lt;/em>a
-        &lt;em> presentation on&lt;/em> [describe and
-        &lt;em>highlight&lt;/em> what must be presented], for [indicate the audience] in [#] [minutes/slides] or less.&lt;/li>
-      &lt;li>
-        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-      &lt;li>
-        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-    &lt;h2>Instructions&lt;/h2>
-    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-    &lt;ol>
-      &lt;li>[Presentation should adhere to a prescribed method]
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Create &lt;/em>a
+                &lt;em> presentation on&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> what must be presented], for [indicate the audience] in [#] [minutes/slides] or less.&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
         &lt;ol>
-          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
-          &lt;li>[Indicate required documents to include]&lt;/li>
-          &lt;li>[Indicate any requirements for visuals; if so, provide resources to find free/open images]&lt;/li>
+            &lt;li>[Presentation should adhere to a prescribed method]
+                &lt;ol>
+                    &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+                    &lt;li>[Indicate required documents to include]&lt;/li>
+                    &lt;li>[Indicate any requirements for visuals; if so, provide resources to find free/open images]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Presentation should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate the tool that students will use and how they will present, with optional tutorials to utilize].&lt;/li>
+                    &lt;li>[If using a slide deck, specify if there is a required number of slides].&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Presentation should show clear understanding of topic(s)]
+                &lt;ol>
+                    &lt;li>[Indicate any high-level topics to cover].&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Presentation should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[If group presentation, then include expectations of members as well as criteria for grading individuals and
+                      groups]&lt;/li>
+                    &lt;li>[Specify timeline for submission, especially if revisions are allowed and/or peer feedback is solicited]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
         &lt;/ol>
-      &lt;/li>
-      &lt;li>[Presentation should utilize the appropriate tool(s)]
-        &lt;ol>
-          &lt;li>[Indicate the tool that students will use and how they will present, with optional tutorials to utilize].&lt;/li>
-          &lt;li>[If using a slide deck, specify if there is a required number of slides].&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-      &lt;li>[Presentation should show clear understanding of topic(s)]
-        &lt;ol>
-          &lt;li>[Indicate any high-level topics to cover].&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-      &lt;li>[Presentation should adhere to submission requirements]
-        &lt;ol>
-          &lt;li>[If group presentation, then include expectations of members as well as criteria for grading individuals and
-            groups]&lt;/li>
-          &lt;li>[Specify timeline for submission, especially if revisions are allowed and/or peer feedback is solicited]&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-    &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-    &lt;ul>
-      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-    &lt;/ul>
-  &lt;/div>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

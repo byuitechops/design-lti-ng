@@ -1,39 +1,37 @@
 <div class="row">
-    <div class="option">
-      <h2>Accountability Quiz</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-          [checked]="showAsHtml"
-          (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Accountability Quiz</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-accountability-quiz [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-accountability-quiz>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-accountability-quiz [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-accountability-quiz>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="quizOverview">
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task:&lt;/strong>
-              &lt;em> Account for your efforts on&lt;/em> [describe and
-              &lt;em>highlight&lt;/em> activities].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-      &lt;h3>[Conditions/Readings/Notes (Optional)]&lt;/h3>
-      &lt;ul>
-          &lt;li>[Indicate whether it is open-book/note OR closed-book/note]&lt;/li>
-          &lt;li>[Explain when students will see correct answers]&lt;/li>
-          &lt;li>[Include any required link(s) to prior readings]&lt;/li>
-      &lt;/ul>
-  &lt;/div>
+    &lt;div class="quizOverview">
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Account for your efforts on&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> activities].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+        &lt;h3>[Conditions/Readings/Notes (Optional)]&lt;/h3>
+        &lt;ul>
+            &lt;li>[Indicate whether it is open-book/note OR closed-book/note]&lt;/li>
+            &lt;li>[Explain when students will see correct answers]&lt;/li>
+            &lt;li>[Include any required link(s) to prior readings]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

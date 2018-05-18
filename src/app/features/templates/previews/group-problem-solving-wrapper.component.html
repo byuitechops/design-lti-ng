@@ -1,68 +1,68 @@
 <div class="row">
-    <div class="option">
-      <h2>Group Problem Solving</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Group Problem Solving</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-group-problem-solving [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-group-problem-solving>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-group-problem-solving [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-group-problem-solving>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-      &lt;h2>Overview&lt;/h2>
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task:&lt;/strong>
-              &lt;em> Within your group, &lt;/em>work together to
-              &lt;em> discover &lt;/em>and
-              &lt;em> organize&lt;/em> [indicate and
-              &lt;em>highlight&lt;/em> concepts].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-      &lt;h2>Instructions&lt;/h2>
-      &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-      &lt;ol>
-          &lt;li>[Group should adhere to the prescribed method]
-              &lt;ol>
-                  &lt;li>[Specify if groups need to be arranged by students]&lt;/li>
-                  &lt;li>[Specify any required tasks and roles in groups]&lt;/li>
-                  &lt;li>[Specify the timeline for the activity and how often it should occur]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group should utilize the appropriate tool(s) for collaboration and knowledge sharing]
-              &lt;ol>
-                  &lt;li>[Specify tool and/or resources to be used for group collaboration and knowledge sharing&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group should show clear understanding of topics]
-              &lt;ol>
-                  &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group should adhere to submission requirements]
-              &lt;ol>
-                  &lt;li>[Specify or include a rubric defining how students are to be graded both individually and collectively]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-      &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-      &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-      &lt;ul>
-          &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-      &lt;/ul>
-  &lt;/div>
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Within your group, &lt;/em>work together to
+                &lt;em> discover &lt;/em>and
+                &lt;em> organize&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> concepts].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Group should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify if groups need to be arranged by students]&lt;/li>
+                    &lt;li>[Specify any required tasks and roles in groups]&lt;/li>
+                    &lt;li>[Specify the timeline for the activity and how often it should occur]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group should utilize the appropriate tool(s) for collaboration and knowledge sharing]
+                &lt;ol>
+                    &lt;li>[Specify tool and/or resources to be used for group collaboration and knowledge sharing&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group should show clear understanding of topics]
+                &lt;ol>
+                    &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Specify or include a rubric defining how students are to be graded both individually and collectively]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

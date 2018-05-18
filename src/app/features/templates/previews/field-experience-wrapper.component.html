@@ -1,72 +1,72 @@
 <div class="row">
-    <div class="option">
-      <h2>Field Experience</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Field Experience</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-field-experience [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-field-experience>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-field-experience [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-field-experience>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-      &lt;h2>Overview&lt;/h2>
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task:&lt;/strong>
-              &lt;em> Conduct &lt;/em>a
-              &lt;em> field experience &lt;/em>outside of class
-              &lt;em> to&lt;/em> [indicate and
-              &lt;em>highlight&lt;/em> type of Field Experience&mdash;e.g., Interview or shadow a professional, conduct an experiment,
-              teach or present to someone, etc].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-      &lt;h2>Instructions&lt;/h2>
-      &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-      &lt;ol>
-          &lt;li>[Team or Individual should adhere to the prescribed method]
-              &lt;ol>
-                  &lt;li>[Specify any unique requirements; e.g., sharing experiences with others in discussion forums or on
-                      social media]
-                  &lt;/li>
-                  &lt;li>[Specify what activities should be completed; e.g. take notes, analyze processes, gather work samples,
-                      record videos, etc.]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Team or Individual [specify] should utilize the appropriate tool(s)]
-              &lt;ol>
-                  &lt;li>[Specify tools to be used for knowledge sharing, collaborating and sharing report]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Team or Individual [specify] should demonstrate clear understanding of topics]
-              &lt;ol>
-                  &lt;li>[Specify any intended topics or abilities needing to be captured in report]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Team or Individual [specify] should adhere to submission requirements]
-              &lt;ol>
-                  &lt;li>[Specify format of report; e.g., written, presentation (asynchronous or synchronous), or video]&lt;/li>
-                  &lt;li>[Specify audience for report; e.g., small group, instructor, or class]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-      &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-      &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-      &lt;ul>
-          &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-      &lt;/ul>
-  &lt;/div>
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Conduct &lt;/em>a
+                &lt;em> field experience &lt;/em>outside of class
+                &lt;em> to&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> type of Field Experience&mdash;e.g., Interview or shadow a professional, conduct an experiment,
+                teach or present to someone, etc].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Team or Individual should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify any unique requirements; e.g., sharing experiences with others in discussion forums or on
+                        social media]
+                    &lt;/li>
+                    &lt;li>[Specify what activities should be completed; e.g. take notes, analyze processes, gather work samples,
+                        record videos, etc.]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Team or Individual [specify] should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Specify tools to be used for knowledge sharing, collaborating and sharing report]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Team or Individual [specify] should demonstrate clear understanding of topics]
+                &lt;ol>
+                    &lt;li>[Specify any intended topics or abilities needing to be captured in report]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Team or Individual [specify] should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Specify format of report; e.g., written, presentation (asynchronous or synchronous), or video]&lt;/li>
+                    &lt;li>[Specify audience for report; e.g., small group, instructor, or class]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

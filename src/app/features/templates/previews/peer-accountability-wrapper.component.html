@@ -1,60 +1,58 @@
 <div class="row">
-    <div class="option">
-      <h2>Peer Accountability</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-        [checked]="showAsHtml"
-        (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Peer Accountability</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-peer-accountability [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-peer-accountability>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-peer-accountability [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-peer-accountability>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-      &lt;h2>Overview&lt;/h2>
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task:&lt;/strong>
-              &lt;em> Work with your accountability partner on&lt;/em> [indicate and
-              &lt;em>highlight&lt;/em> topic/assignment/expectations].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-      &lt;h2>Instructions&lt;/h2>
-      &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-      &lt;ol>
-          &lt;li>[Student pairs should report to one another using the prescribed method]
-              &lt;ol>
-                  &lt;li>[Specify format and scope of reporting; e.g., learning contracts, peer reading checks, milestone
-                      reports, peer tutoring, performance feedback, etc.]&lt;/li>
-                  &lt;li>[Specify time frame and/or specific assignments to include for peer accountability]&lt;/li>
-                  &lt;li>[Specify if instructor should be included in accountability checks]&lt;/li>
-                  &lt;li>[Specify if there are any summative reports or peer evaluations due to instructor]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Student pairs should utilize the appropriate tool(s)]
-              &lt;ol>
-                  &lt;li>[Specify if any tools are required, especially if outside I-Learn]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-      &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-      &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-      &lt;ul>
-          &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-      &lt;/ul>
-  &lt;/div>
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Work with your accountability partner on&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> topic/assignment/expectations].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Student pairs should report to one another using the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify format and scope of reporting; e.g., learning contracts, peer reading checks, milestone
+                        reports, peer tutoring, performance feedback, etc.]&lt;/li>
+                    &lt;li>[Specify time frame and/or specific assignments to include for peer accountability]&lt;/li>
+                    &lt;li>[Specify if instructor should be included in accountability checks]&lt;/li>
+                    &lt;li>[Specify if there are any summative reports or peer evaluations due to instructor]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Student pairs should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Specify if any tools are required, especially if outside I-Learn]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

@@ -1,65 +1,65 @@
 <div class="row">
-    <div class="option">
-      <h2>Group Project</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Group Project</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-group-project [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-group-project>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-group-project [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-group-project>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-      &lt;h2>Overview&lt;/h2>
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task:&lt;/strong>
-              &lt;em> Within your group, &lt;/em>work together to
-              &lt;em> create&lt;/em>
-              &lt;em>a&lt;/em> [indicate and
-              &lt;em>highlight&lt;/em> deliverable; e.g., paper, report, presentation, video, etc.] for [indicate the audience].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose: &lt;/strong>This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-      &lt;h2>Instructions&lt;/h2>
-      &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-      &lt;ol>
-          &lt;li>[Group should adhere to the prescribed method]
-              &lt;ol>
-                  &lt;li>[Specify the relevant topic(s) or skill(s) tied to project]&lt;/li>
-                  &lt;li>[Specify how students are grouped, if not done already]&lt;/li>
-                  &lt;li>[Specify timeline&mdash;particularly if multiple deliverables are required]&lt;/li>
-                  &lt;li>[Specify the format of the product and how students will be graded for the product and the process]&lt;/li>
-                  &lt;li>[Specify expectations for dividing up and assigning tasks among group members]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group should utilize the appropriate resources and tools]
-              &lt;ol>
-                  &lt;li>[Explain what resources are acceptable for research, if needed; e.g., scholarly, popular, expert
-                      interview, etc.]
-                  &lt;/li>
-                  &lt;li>[Specify what tool(s) should be used for collaborating and presenting artifact]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Group should adhere to submission requirements]
-              &lt;ol>
-                  &lt;li>[Specify any formatting requirements or time/length restrictions]&lt;/li>
-                  &lt;li>[Reiterate the intended audience of the submitted project and their role]&lt;/li>
-                  &lt;li>[Specify how groups and individuals will be graded for their role in group project]&lt;/li>
-                  &lt;li>[Specify any other submission requirements]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-      &lt;/ol>
-  &lt;/div>
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Within your group, &lt;/em>work together to
+                &lt;em> create&lt;/em>
+                &lt;em>a&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> deliverable; e.g., paper, report, presentation, video, etc.] for [indicate the audience].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose: &lt;/strong>This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Group should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Specify the relevant topic(s) or skill(s) tied to project]&lt;/li>
+                    &lt;li>[Specify how students are grouped, if not done already]&lt;/li>
+                    &lt;li>[Specify timeline&mdash;particularly if multiple deliverables are required]&lt;/li>
+                    &lt;li>[Specify the format of the product and how students will be graded for the product and the process]&lt;/li>
+                    &lt;li>[Specify expectations for dividing up and assigning tasks among group members]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group should utilize the appropriate resources and tools]
+                &lt;ol>
+                    &lt;li>[Explain what resources are acceptable for research, if needed; e.g., scholarly, popular, expert
+                        interview, etc.]
+                    &lt;/li>
+                    &lt;li>[Specify what tool(s) should be used for collaborating and presenting artifact]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Group should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Specify any formatting requirements or time/length restrictions]&lt;/li>
+                    &lt;li>[Reiterate the intended audience of the submitted project and their role]&lt;/li>
+                    &lt;li>[Specify how groups and individuals will be graded for their role in group project]&lt;/li>
+                    &lt;li>[Specify any other submission requirements]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

@@ -1,68 +1,66 @@
 <div class="row">
-    <div class="option">
-      <h2>Topic Discussion</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-          [checked]="showAsHtml"
-          (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Topic Discussion</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-topic-discussion [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-topic-discussion>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-topic-discussion [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-topic-discussion>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-    &lt;h2>Overview&lt;/h2>
-    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-    &lt;ul>
-      &lt;li>
-        &lt;strong>Task:&lt;/strong>
-        &lt;em> Contribute to a discussion on&lt;/em> [indicate and
-        &lt;em>highlight&lt;/em> topic(s)].&lt;/li>
-      &lt;li>
-        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-      &lt;li>
-        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-    &lt;h2>Instructions&lt;/h2>
-    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-    &lt;ol>
-      &lt;li>[Topic Discussion should follow the prescribed method]
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Contribute to a discussion on&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> topic(s)].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
         &lt;ol>
-          &lt;li>[Indicate who will moderate discussion]&lt;/li>
-          &lt;li>[Indicate posting guidelines; e.g. frequency, quantity, quality, and nature of interactions&mdash;included in
-            a rubric, if needed]&lt;/li>
-          &lt;li>[Indicate if students need to generate a topic to post and respond to in class or groups]&lt;/li>
+            &lt;li>[Topic Discussion should follow the prescribed method]
+                &lt;ol>
+                    &lt;li>[Indicate who will moderate discussion]&lt;/li>
+                    &lt;li>[Indicate posting guidelines; e.g. frequency, quantity, quality, and nature of interactions&mdash;included in
+                        a rubric, if needed]&lt;/li>
+                    &lt;li>[Indicate if students need to generate a topic to post and respond to in class or groups]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Topic Discussion should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate if conducted asynchronously or synchronously; specify if done through I-Learn or using an external
+                        tool]
+                    &lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Topic Discussion should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Indicate timeline for posting and responding to posts, if both are required]&lt;/li>
+                    &lt;li>[Indicate whether students need to submit anything to the instructor in addition to their participation in the
+                        discussions]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
         &lt;/ol>
-      &lt;/li>
-      &lt;li>[Topic Discussion should utilize the appropriate tool(s)]
-        &lt;ol>
-          &lt;li>[Indicate if conducted asynchronously or synchronously; specify if done through I-Learn or using an external
-            tool]
-          &lt;/li>
-        &lt;/ol>
-      &lt;/li>
-      &lt;li>[Topic Discussion should adhere to submission requirements]
-        &lt;ol>
-          &lt;li>[Indicate timeline for posting and responding to posts, if both are required]&lt;/li>
-          &lt;li>[Indicate whether students need to submit anything to the instructor in addition to their participation in the
-            discussions]&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-    &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-    &lt;ul>
-      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-    &lt;/ul>
-  &lt;/div>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

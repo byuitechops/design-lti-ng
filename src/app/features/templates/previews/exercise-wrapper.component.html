@@ -1,66 +1,64 @@
 <div class="row">
-    <div class="option">
-      <h2>Exercise</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-          [checked]="exerciseCode"
-          (change)="exerciseCode = !exerciseCode">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Exercise</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-exercise *ngIf="!exerciseCode" [courseClass]="courseClass"></app-exercise>
-        <pre *ngIf="exerciseCode">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="exerciseCode" (change)="exerciseCode = !exerciseCode">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-exercise *ngIf="!exerciseCode" [courseClass]="courseClass"></app-exercise>
+      <pre *ngIf="exerciseCode">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-    &lt;h2>Overview&lt;/h2>
-    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-    &lt;ul>
-      &lt;li>
-        &lt;strong>Task:&lt;/strong>
-        &lt;em> Complete an exercise on&lt;/em> [describe and
-        &lt;em>highlight&lt;/em> topic(s) or skill(s)].&lt;/li>
-      &lt;li>
-        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-      &lt;li>
-        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-    &lt;h2>Instructions&lt;/h2>
-    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-    &lt;ol>
-      &lt;li>[Exercise should adhere to the prescribed method]
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Complete an exercise on&lt;/em> [describe and
+                &lt;em>highlight&lt;/em> topic(s) or skill(s)].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
         &lt;ol>
-          &lt;li>[Indicate specific topic(s) or skill(s) are being covered]&lt;/li>
-          &lt;li>[Indicate required steps to complete&mdash;particularly what deliverables are expected]&lt;/li>
-          &lt;li>[Indicate any textbooks, documents, or other resources needed to help complete]&lt;/li>
-          &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+            &lt;li>[Exercise should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Indicate specific topic(s) or skill(s) are being covered]&lt;/li>
+                    &lt;li>[Indicate required steps to complete&mdash;particularly what deliverables are expected]&lt;/li>
+                    &lt;li>[Indicate any textbooks, documents, or other resources needed to help complete]&lt;/li>
+                    &lt;li>[Indicate whether it will be completed individually or by group]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Exercise should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Exercise should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
+                      are multiple deliverables]&lt;/li>
+                    &lt;li>[If group exercise, then include expectations of members as well as criteria for grading individuals and groups]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
         &lt;/ol>
-      &lt;/li>
-      &lt;li>[Exercise should utilize the appropriate tool(s)]
-        &lt;ol>
-          &lt;li>[Indicate the tool, if any, that students will use and how they will use it].&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-      &lt;li>[Exercise should adhere to submission requirements]
-        &lt;ol>
-          &lt;li>[Specify timeline for submission, especially if revisions are allowed, peer feedback is solicited, or if there
-            are multiple deliverables]&lt;/li>
-          &lt;li>[If group exercise, then include expectations of members as well as criteria for grading individuals and groups]&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-    &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-    &lt;ul>
-      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-    &lt;/ul>
-  &lt;/div>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

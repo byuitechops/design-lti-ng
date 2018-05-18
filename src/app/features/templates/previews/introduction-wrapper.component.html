@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="option">
-      <h2>Introduction</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Introduction</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-introduction [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-introduction>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-introduction [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-introduction>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
         &lt;h2>Overview&lt;/h2>
@@ -51,10 +51,10 @@
         &lt;/ol>
     &lt;/div>
 &lt;/div>
-          </pre>
-      </div>
+            </pre>
     </div>
   </div>
-  <div class="buttonWrapper">
-    <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
-  </div>
+</div>
+<div class="buttonWrapper">
+  <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>
+</div>

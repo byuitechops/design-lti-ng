@@ -1,66 +1,64 @@
 <div class="row">
-    <div class="option">
-      <h2>Peer Feedback</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-          [checked]="showAsHtml"
-          (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Peer Feedback</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-peer-feedback [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-peer-feedback>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-peer-feedback [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-toa-peer-feedback>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-      &lt;h2>Overview&lt;/h2>
-      &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-      &lt;ul>
-          &lt;li>
-              &lt;strong>Task:&lt;/strong>
-              &lt;em> Provide &lt;/em>and
-              &lt;em> receive feedback on&lt;/em> [indicate and
-              &lt;em>highlight&lt;/em> artifact].&lt;/li>
-          &lt;li>
-              &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-          &lt;li>
-              &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-      &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-      &lt;h2>Instructions&lt;/h2>
-      &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-      &lt;ol>
-          &lt;li>[Feedback offered to peers should adhere to the prescribed method]
-              &lt;ol>
-                  &lt;li>[Include rubric specifying what meaningful feedback should address and include]&lt;/li>
-                  &lt;li>[Indicate timeline for feedback, especially if requiring multiple reviews and revisions; e.g. in
-                      preparing a final product]&lt;/li>
-                  &lt;li>[Indicate peer group organization]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Feedback offered to peers should utilize the appropriate tool(s)]
-              &lt;ol>
-                  &lt;li>[Indicate any tool being used, especially if outside I-Learn]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-          &lt;li>[Feedback offered to peers should adhere to submission requirements]
-              &lt;ol>
-                  &lt;li>[Indicate if projects are to be reviewed individually or by groups]&lt;/li>
-                  &lt;li>[Indicate if there is a requirement for reporting feedback; e.g., in a subsequent quiz or email]&lt;/li>
-              &lt;/ol>
-          &lt;/li>
-      &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-      &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-      &lt;ul>
-          &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-      &lt;/ul>
-  &lt;/div>
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Provide &lt;/em>and
+                &lt;em> receive feedback on&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> artifact].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
+        &lt;ol>
+            &lt;li>[Feedback offered to peers should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Include rubric specifying what meaningful feedback should address and include]&lt;/li>
+                    &lt;li>[Indicate timeline for feedback, especially if requiring multiple reviews and revisions; e.g. in
+                        preparing a final product]&lt;/li>
+                    &lt;li>[Indicate peer group organization]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Feedback offered to peers should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate any tool being used, especially if outside I-Learn]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Feedback offered to peers should adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Indicate if projects are to be reviewed individually or by groups]&lt;/li>
+                    &lt;li>[Indicate if there is a requirement for reporting feedback; e.g., in a subsequent quiz or email]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+        &lt;/ol>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>

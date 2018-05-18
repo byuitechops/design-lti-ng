@@ -1,17 +1,17 @@
 <div class="row">
-    <div class="option">
-      <h2>Teaching Notes</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Teaching Notes</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-teaching-notes [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-teaching-notes>
-        <pre *ngIf="showAsHtml">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-teaching-notes [ngClass]="{'hidden':showAsHtml}" [courseClass]="courseClass"></app-teaching-notes>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="objectives">
         &lt;h2>Week Objectives&lt;/h2>
@@ -56,8 +56,8 @@
     &lt;/div>
 &lt;/div>
           </pre>
-      </div>
     </div>
+  </div>
 </div>
 <div class="buttonWrapper">
   <a class="Button btn btn-primary" (click)="chooseFeature()">Insert</a>

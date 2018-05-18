@@ -1,70 +1,68 @@
 <div class="row">
-    <div class="option">
-      <h2>Role Play</h2>
-      <div>
-        <p>Guidelines</p>
-      </div>
-      <input type="checkbox"
-          [checked]="rolePlayCode"
-          (change)="rolePlayCode = !rolePlayCode">
-      <label>Show as HTML</label>
-    </div>
+  <div class="option">
+    <h2>Role Play</h2>
     <div>
-      <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-        <app-toa-role-play-discussion *ngIf="!rolePlayCode" [courseClass]="courseClass"></app-toa-role-play-discussion>
-        <pre *ngIf="rolePlayCode">
+      <p>Guidelines</p>
+    </div>
+    <input type="checkbox" [checked]="rolePlayCode" (change)="rolePlayCode = !rolePlayCode">
+    <label>Show as HTML</label>
+  </div>
+  <div>
+    <div class="preview" id="buttonOut">
+      <h4>Preview:</h4>
+      <app-toa-role-play-discussion *ngIf="!rolePlayCode" [courseClass]="courseClass"></app-toa-role-play-discussion>
+      <pre *ngIf="rolePlayCode">
 &lt;div class="byui {{courseClass}}">
-  &lt;div class="overview">
-    &lt;h2>Overview&lt;/h2>
-    &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
-    &lt;ul>
-      &lt;li>
-        &lt;strong>Task:&lt;/strong>
-        &lt;em> Role play&lt;/em> [indicate and
-        &lt;em>highlight&lt;/em> role(s) to perform] so that [indicate what skill(s) or topic(s) will be applied].&lt;/li>
-      &lt;li>
-        &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
-      &lt;li>
-        &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-  &lt;div class="instructions">
-    &lt;h2>Instructions&lt;/h2>
-    &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
-    &lt;ol>
-      &lt;li>[Students should adhere to the prescribed method]
+    &lt;div class="overview">
+        &lt;h2>Overview&lt;/h2>
+        &lt;p>Review the description below for a quick overview of this activity.&lt;/p>
+        &lt;ul>
+            &lt;li>
+                &lt;strong>Task:&lt;/strong>
+                &lt;em> Role play&lt;/em> [indicate and
+                &lt;em>highlight&lt;/em> role(s) to perform] so that [indicate what skill(s) or topic(s) will be applied].&lt;/li>
+            &lt;li>
+                &lt;strong>Purpose:&lt;/strong> This will [explain purpose and value].&lt;/li>
+            &lt;li>
+                &lt;strong>Instructor:&lt;/strong> Your instructor will [describe relevant instructor role in activity].&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;div class="instructions">
+        &lt;h2>Instructions&lt;/h2>
+        &lt;p>To successfully complete this activity, carefully follow these steps:&lt;/p>
         &lt;ol>
-          &lt;li>[Indicate to students what about their roles they need to understand]&lt;/li>
-          &lt;li>[Indicate any resources or readings to help them research their roles]&lt;/li>
-          &lt;li>[Indicate the format and timeframe; e.g. role-based discussion, debate, group debate, simulation, negotiations,
-            variation of a jigsaw activity, etc.]&lt;/li>
+            &lt;li>[Students should adhere to the prescribed method]
+                &lt;ol>
+                    &lt;li>[Indicate to students what about their roles they need to understand]&lt;/li>
+                    &lt;li>[Indicate any resources or readings to help them research their roles]&lt;/li>
+                    &lt;li>[Indicate the format and timeframe; e.g. role-based discussion, debate, group debate, simulation, negotiations,
+                        variation of a jigsaw activity, etc.]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Students should utilize the appropriate tool(s)]
+                &lt;ol>
+                    &lt;li>[Indicate any tools used for discussion, especially if outside of I-Learn and synchronous]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Students should demonstrate clear understanding of the topic(s)]
+                &lt;ol>
+                    &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
+            &lt;li>[Students must adhere to submission requirements]
+                &lt;ol>
+                    &lt;li>[Indicate any unique submission requirements]&lt;/li>
+                    &lt;li>[Indicate any other grading criteria not previously specified]&lt;/li>
+                &lt;/ol>
+            &lt;/li>
         &lt;/ol>
-      &lt;/li>
-      &lt;li>[Students should utilize the appropriate tool(s)]
-        &lt;ol>
-          &lt;li>[Indicate any tools used for discussion, especially if outside of I-Learn and synchronous]&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-      &lt;li>[Students should demonstrate clear understanding of the topic(s)]
-        &lt;ol>
-          &lt;li>[Specify any intended topics or competencies that will be assessed]&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-      &lt;li>[Students must adhere to submission requirements]
-        &lt;ol>
-          &lt;li>[Indicate any unique submission requirements]&lt;/li>
-          &lt;li>[Indicate any other grading criteria not previously specified]&lt;/li>
-        &lt;/ol>
-      &lt;/li>
-    &lt;/ol>
-  &lt;/div>
-  &lt;div class="custom">
-    &lt;h2>[Custom H2 (Optional)]&lt;/h2>
-    &lt;ul>
-      &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
-    &lt;/ul>
-  &lt;/div>
+    &lt;/div>
+    &lt;div class="custom">
+        &lt;h2>[Custom H2 (Optional)]&lt;/h2>
+        &lt;ul>
+            &lt;li>[Include any additional information such as notes, reminders, next steps, etc.]&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div>
       </pre>
     </div>
