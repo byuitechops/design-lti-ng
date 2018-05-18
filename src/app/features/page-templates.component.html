@@ -12,7 +12,7 @@
   <br />
 
   <div class="templates">
-    <button id="generic" class="accordion-header" [ngClass]="{'active':genericActive}" (click)="toggleGeneric()">
+    <button id="generic" class="accordion-header" [ngClass]="{'active':genericActive}" (click)="genericActive = !genericActive">
       Generic
     </button>
 
@@ -24,7 +24,7 @@
       <app-introduction-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-introduction-wrapper>
     </div>
 
-    <button id="prepare" class="accordion-header" [ngClass]="{'active':prepareActive}" (click)="togglePrepare()">
+    <button id="prepare" class="accordion-header" [ngClass]="{'active':prepareActive}" (click)="prepareActive = !prepareActive">
       Prepare
     </button>
 
@@ -43,7 +43,7 @@
       <app-study-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-study-wrapper>
     </div>
 
-    <button id="toa" class="accordion-header" [ngClass]="{'active':toaActive}" (click)="toggleToa()">
+    <button id="toa" class="accordion-header" [ngClass]="{'active':toaActive}" (click)="toaActive = !toaActive">
       Teach One Another
     </button>
 
@@ -66,7 +66,7 @@
       <app-topic-discussion-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-topic-discussion-wrapper>
     </div>
 
-    <button id="ponderProve" class="accordion-header" [ngClass]="{'active':proveActive}" (click)="toggleProve()">
+    <button id="ponderProve" class="accordion-header" [ngClass]="{'active':proveActive}" (click)="proveActive = !proveActive">
       Ponder/Prove
     </button>
 

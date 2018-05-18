@@ -59,19 +59,6 @@ export class PageTemplatesComponent implements OnInit {
     form.submit();
   }
 
-  toggleGeneric(): void {
-    this.genericActive = !this.genericActive;
-  }
-  togglePrepare(): void {
-    this.prepareActive = !this.prepareActive;
-  }
-  toggleToa(): void {
-    this.toaActive = !this.toaActive;
-  }
-  toggleProve(): void {
-    this.proveActive = !this.proveActive;
-  }
-
   ngOnInit(): void {
     this.courseName = this._ltiParamsService.getCourseName();
     this.courseId = this._ltiParamsService.getCourseId();
