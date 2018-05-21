@@ -4,6 +4,9 @@
 
 This is an implementation of the byui-design-lti in Angular. It is a tool that provides course designers quick and easy access to frequenly used html elements. Express and lti-middleware are used to handle lti requests.
 
+## Features
+
+Currently the features are being compiled in [Google Docs](https://docs.google.com/document/d/1Um7kamhOtewq1ktpXyxMF7zdqrfKc02xr_DD389R85w/edit)
 
 ## How to Install
 
