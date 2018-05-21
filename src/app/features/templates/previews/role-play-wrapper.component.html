@@ -4,14 +4,14 @@
     <div>
       <p>Guidelines</p>
     </div>
-    <input type="checkbox" [checked]="rolePlayCode" (change)="rolePlayCode = !rolePlayCode">
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
     <label>Show as HTML</label>
   </div>
   <div>
     <div class="preview" id="buttonOut">
       <h4>Preview:</h4>
-      <app-toa-role-play-discussion *ngIf="!rolePlayCode" [courseClass]="courseClass"></app-toa-role-play-discussion>
-      <pre *ngIf="rolePlayCode">
+      <app-toa-role-play-discussion *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-role-play-discussion>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
         &lt;h2>Overview&lt;/h2>

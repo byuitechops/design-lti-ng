@@ -4,14 +4,14 @@
     <div>
       <p>Guidelines</p>
     </div>
-    <input type="checkbox" [checked]="structuredDebateCode" (change)="structuredDebateCode = !structuredDebateCode">
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
     <label>Show as HTML</label>
   </div>
   <div>
     <div class="preview" id="buttonOut">
       <h4>Preview:</h4>
-      <app-toa-structured-debate *ngIf="!structuredDebateCode" [courseClass]="courseClass"></app-toa-structured-debate>
-      <pre *ngIf="structuredDebateCode">
+      <app-toa-structured-debate *ngIf="!showAsHtml" [courseClass]="courseClass"></app-toa-structured-debate>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
         &lt;h2>Overview&lt;/h2>

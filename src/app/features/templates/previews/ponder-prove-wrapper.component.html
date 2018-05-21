@@ -4,14 +4,14 @@
     <div>
       <p>Guidelines</p>
     </div>
-    <input type="checkbox" [checked]="ponderProveCode" (change)="ponderProveCode = !ponderProveCode">
+    <input type="checkbox" [checked]="showAsHtml" (change)="showAsHtml = !showAsHtml">
     <label>Show as HTML</label>
   </div>
   <div>
     <div class="preview" id="buttonOut">
       <h4>Preview:</h4>
-      <app-ponder-prove *ngIf="!ponderProveCode" [courseClass]="courseClass"></app-ponder-prove>
-      <pre *ngIf="ponderProveCode">
+      <app-ponder-prove *ngIf="!showAsHtml" [courseClass]="courseClass"></app-ponder-prove>
+      <pre *ngIf="showAsHtml">
 &lt;div class="byui {{courseClass}}">
     &lt;div class="overview">
         &lt;h2>Overview&lt;/h2>
