@@ -14,6 +14,7 @@ import { ImageComponent } from './web-features/image.component';
 import { ImageCarouselComponent } from './web-features/image-carousel.component';
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
+import { VideoComponent } from './web-features/video.component';
 
 @Component({
   selector: 'app-web-features',
@@ -27,11 +28,11 @@ export class WebFeaturesComponent implements AfterViewInit {
   // add new feature components to this array
   featureTypes = [AccordionComponent, ButtonComponent, CalloutComponent,
     ColumnsComponent, DefinitionComponent, DialogComponent, ImageComponent,
-    PopoverComponent, TableComponent];
+    PopoverComponent, TableComponent, VideoComponent];
 
   // and the name of the component here as a string. Make sure it's in the same order as above
   features: string[] = ['accordion', 'button', 'callout',
-  'columns', 'definition', 'dialog', 'image', 'popover', 'table'];
+  'columns', 'definition', 'dialog', 'image', 'popover', 'table', 'video'];
 
   returnUrl: string;
   /* This uses the Content Item service which is documented here:

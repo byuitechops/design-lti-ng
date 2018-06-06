@@ -5,31 +5,67 @@
 <div class="row">
     <div class="option">
         <h4>Select options:</h4>
-        <div class="position">
-            <input type="radio" name="VidPosition" value="left" onchange="updateVideo()" id="videoPosLeft">
-            <label for="videoPosLeft">Left</label>
-            <input type="radio" name="VidPosition" value="center" onchange="updateVideo()" id="videoPosCenter">
-            <label for="videoPosCenter">Center</label>
-            <input type="radio" name="VidPosition" value="right" onchange="updateVideo()" id="videoPosRight" checked>
-            <label for="videoPosRight">Right</label>
+        <input placeholder="Video URL" type="text" [(ngModel)]="url">
+        <input placeholder="Video Title" type="text" [(ngModel)]="title">
+        <input placeholder="Start Time" type="text" [(ngModel)]="startTime">
+        <input placeholder="End Time" type="text" [(ngModel)]="endTime">
+        <div>
+            <input type="checkbox" (change)="noAudio = !noAudio" id="noaudio">
+            <label>No Audio</label>
         </div>
-        <div class="size">
-            <input type="radio" name="VidSize" value="full" id="videoSizeFull" onchange="updateVideo()">
-            <label for="videoSizeFull">Full</label>
-            <input type="radio" name="VidSize" value="half" id="videoSizeHalf" onchange="updateVideo()">
-            <label for="videoSizeHalf">Half</label>
-            <input type="radio" name="VidSize" value="quarter" id="videoSizeQuarter" onchange="updateVideo()" checked>
-            <label for="videoSizeQuarter">Quarter</label>
+        <input type="text"
+            placeholder="HTML Transcript URL" 
+            [attr.disabled]="noAudio ? 'disabled' : null" value="{{noAudio ? 'N/A' : ''}}">
+        <input type="text"
+            placeholder="RTF Transcript URL" 
+            [attr.disabled]="noAudio ? 'disabled' : null" value="{{noAudio ? 'N/A' : ''}}">
+        <div>
+            <label>Platform</label>
+            <select (change)="updateType($event.target.value)">
+                <option value="kaltura">Kaltura</option>
+                <option value="youtube">Youtube</option>
+            </select>
         </div>
-        <input type="checkbox" id="clearfix" onchange="updateVideo()">
-        <label for="videoClearfix">Clearfix</label>
-        <input type="text" placeholder="Source URL" oninput="updateVideo()">
-        <input type="text" placeholder="Alt Text" oninput="updateVideo()">
-        <input type="text" placeholder="Caption Text" oninput="updateVideo()">
+        <div>
+            <label>Size</label>
+            <select (change)="updateSize($event.target.value)">
+                <option value="small">Small</option>
+                <option selected="selected" value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+        <div>
+            <label>Aspect Ratio</label>
+            <select (change)="updateAspectRatio($event.target.value)">
+                <option selected="selected" value="16-9">16:9</option>
+                <option value="4-3">4:3</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" (change)="link = !link">
+            <label>Render as Link</label>
+        </div>
+        <div>
+            <input type="checkbox" (change)="download = !download">
+            <label>Enable Download</label>
+        </div>
+        <button onclick="convert()" id="getcode">
+            <p>Get Code</p>
+        </button>
     </div>
+
     <div class="preview" id="videoOut">
         <h4>Preview:</h4>
-        <span class="caption">Insert Caption Text Here</span>
+        <div id="outwrap">
+            <textarea id="output"></textarea>
+            <div id="copied">Output Copied</div>
+        </div>
+        <button (click)="test()" id="copybutton">
+            <p>Test</p>
+        </button>
+        <button onclick="reverse_parse('#output')" id="reversebutton">
+            <p>Reverse Code Into Inputs</p>
+        </button>
     </div>
 </div>
 <div>
