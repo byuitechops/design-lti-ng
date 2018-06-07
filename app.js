@@ -10,11 +10,7 @@ const https = require('https');
 const fs = require('fs');
 const index = require('./routes/index');
 const cors = require('cors');
-const webpack = require('webpack');
-const config = require('./webpack.config.dev');
-
 const app = express();
-const compiler = webpack(config);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
