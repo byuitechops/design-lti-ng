@@ -57,11 +57,11 @@
     <div class="preview" id="videoOut">
         <h4>Preview:</h4>
         <div id="outwrap">
-            <textarea id="output"></textarea>
+            <textarea [(ngModel)]="output"></textarea>
             <div id="copied">Output Copied</div>
         </div>
-        <button (click)="test()" id="copybutton">
-            <p>Test</p>
+        <button (click)="convert()" id="copybutton">
+            <p>Convert</p>
         </button>
         <button onclick="reverse_parse('#output')" id="reversebutton">
             <p>Reverse Code Into Inputs</p>
