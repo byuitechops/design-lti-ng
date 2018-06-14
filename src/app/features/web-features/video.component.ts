@@ -79,19 +79,19 @@ export class VideoComponent implements OnInit {
     this.videoid = this.url.split('v=').pop();
     this.makeEmbedCode();
     if (this.link) {
-      this.iframeCode = "<a href='https://www.youtube.com/watch?v=" 
-                      + this.videoid + "' >" 
-                      + this.title + "</a> (<a href='" 
-                      + this.htmlTranscript + "'>HTML Transcript</a>, <a href='" 
-                      + this.rtfTranscript + "'>RTF Transcript</a>)";
+      this.iframeCode = '<a href=\'https://www.youtube.com/watch?v='
+                      + this.videoid + '\' >'
+                      + this.title + '</a> (<a href=\''
+                      + this.htmlTranscript + '\'>HTML Transcript</a>, <a href=\''
+                      + this.rtfTranscript + '\'>RTF Transcript</a>)';
     } else {
       this.getHeightWidth();
-      this.iframeCode = "<iframe width=" 
-                      + this.width + " height=" 
-                      + this.height + " src='https://www.youtube.com/embed/" 
-                      + this.videoid + "' frameborder='0 ' allowfullscreen></iframe><p>(<a href='" 
-                      + this.htmlTranscript + "'>HTML Transcript</a>, <a href='" 
-                      + this.rtfTranscript + "'>RTF Transcript</a>)</p>";
+      this.iframeCode = '<iframe width='
+                      + this.width + ' height='
+                      + this.height + ' src=\'https://www.youtube.com/embed/'
+                      + this.videoid + '\' frameborder=\'0 \' allowfullscreen></iframe><p>(<a href=\''
+                      + this.htmlTranscript + '\'>HTML Transcript</a>, <a href=\''
+                      + this.rtfTranscript + '\'>RTF Transcript</a>)</p>';
     }
   }
 
@@ -99,35 +99,36 @@ export class VideoComponent implements OnInit {
     this.videoid = this.url.split('/').pop();
     this.makeEmbedCode();
     if (this.link) {
-      this.iframeCode = "<a href='https://video.byui.edu/media/" 
-                      + this.videoid + "' >" 
-                      + this.title + "</a> (<a href='" 
-                      + this.htmlTranscript + "'>HTML Transcript</a>, <a href='" 
-                      + this.rtfTranscript + "'>RTF Transcript</a>)";
+      this.iframeCode = '<a href=\'https://video.byui.edu/media/'
+                      + this.videoid + '\' >'
+                      + this.title + '</a> (<a href=\''
+                      + this.htmlTranscript + '\'>HTML Transcript</a>, <a href=\''
+                      + this.rtfTranscript + '\'>RTF Transcript</a>)';
     } else {
       this.getHeightWidth();
-      this.iframeCode = "<iframe width=" 
-                      + this.width + " height=" 
-                      + this.height + " src='https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/29018071/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1485805514&amp;entry_id=" 
-                      + this.videoid + "&amp;flashvars[streamerType]=auto' frameborder='0 ' allowfullscreen=''></iframe><p>(<a href='" 
-                      + this.htmlTranscript + "'>HTML Transcript</a>, <a href='" 
-                      + this.rtfTranscript + "'>RTF Transcript</a>)</p>";
+      this.iframeCode = '<iframe width='
+                      + this.width + ' height='
+                      // tslint:disable-next-line:max-line-length
+                      + this.height + ' src=\'https://cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/29018071/partner_id/1157612?iframeembed=true&amp;playerId=kaltura_player_1485805514&amp;entry_id='
+                      + this.videoid + '&amp;flashvars[streamerType]=auto\' frameborder=\'0 \' allowfullscreen=\'\'></iframe><p>(<a href=\''
+                      + this.htmlTranscript + '\'>HTML Transcript</a>, <a href=\''
+                      + this.rtfTranscript + '\'>RTF Transcript</a>)</p>';
     }
   }
 
   getHeightWidth() {
     switch (this.aspect) {
-      case "16-9":
+      case '16-9':
           switch (this.size) {
-              case "sm":
+              case 'sm':
                   this.height = 180;
                   this.width = 320;
                   break;
-              case "med":
+              case 'med':
                   this.height = 270;
                   this.width = 480;
                   break;
-              case "lg":
+              case 'lg':
                   this.height = 360;
                   this.width = 640;
                   break;
@@ -135,17 +136,17 @@ export class VideoComponent implements OnInit {
                   break;
           }
           break;
-      case "4-3":
+      case '4-3':
           switch (this.size) {
-              case "sm":
+              case 'sm':
                   this.height = 240;
                   this.width = 320;
                   break;
-              case "med":
+              case 'med':
                   this.height = 360;
                   this.width = 480;
                   break;
-              case "lg":
+              case 'lg':
                   this.height = 480;
                   this.width = 640;
                   break;
@@ -168,6 +169,10 @@ export class VideoComponent implements OnInit {
                    + this.title + '" data-starttime="'
                    + this.startTime + '" data-endtime="'
                    + this.endTime + '">"';
+  }
+
+  reverseParse() {
+
   }
 
   test() {
