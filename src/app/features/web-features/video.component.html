@@ -49,23 +49,19 @@
             <input type="checkbox" (change)="download = !download">
             <label>Enable Download</label>
         </div>
-        <button onclick="convert()" id="getcode">
-            <p>Get Code</p>
-        </button>
+        <a (click)="convert()" class="Button">
+            Convert
+        </a>
+        <a (click)="reverseParse()" class="Button">
+            Reverse
+        </a>
     </div>
 
     <div class="preview" id="videoOut">
         <h4>Preview:</h4>
         <div id="outwrap">
-            <textarea [(ngModel)]="output"></textarea>
-            <div id="copied">Output Copied</div>
+            <textarea [(ngModel)]="output" class="video-textbox"></textarea>
         </div>
-        <button (click)="convert()" id="copybutton">
-            <p>Convert</p>
-        </button>
-        <button onclick="reverse_parse('#output')" id="reversebutton">
-            <p>Reverse Code Into Inputs</p>
-        </button>
     </div>
 </div>
 <div>

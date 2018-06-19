@@ -183,3 +183,12 @@ nav {
 .hidden {
     display: hidden;
 }
+
+.video-textbox {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.video-button {
+    padding-top: 10px;
+}
