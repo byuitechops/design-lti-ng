@@ -183,3 +183,99 @@ nav {
 .hidden {
     display: hidden;
 }
+
+.callout {
+    border: solid 1px #F2F2F2;
+    padding-left: 5px;
+    position: relative;
+  }
+  
+  .callout::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+  
+  .callout-header {
+    padding: 5px 10px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .callout p {
+    padding: 10px;
+    margin: 0;
+    font-style: italic;
+  }
+  
+  /* Blue Callout */
+  .callout.blue::before {
+    background-color: #3A929D;
+  }
+  
+  .callout.blue .callout-header {
+    background-color: #A7CDD4;
+  }
+  
+  .callout.blue p {
+    background-color: #E2EEF1;
+  }
+  
+  /* Green Callout */
+  .callout.green::before {
+    background-color: #8B9531;
+  }
+  
+  .callout.green .callout-header {
+    background-color: #D9E69E;
+  }
+  
+  .callout.green p {
+    background-color: #EFF5D6;
+  }
+  
+  /* Orange Callout */
+  .callout.orange::before {
+    background-color: #CB4A27;
+  }
+  
+  .callout.orange .callout-header {
+    background-color: #F9BA90;
+  }
+  
+  .callout.orange p {
+    background-color: #FEF0E7;
+  }
+  
+  /* Grey Callout */
+  .callout.grey::before {
+    background-color: #065577;
+  }
+  
+  .callout.grey .callout-header {
+    background-color: #F1F2F2;
+  }
+  
+  .callout.grey p {
+    background-color: #FFFFFF;
+  }
+  
+  /* Simple Callout */
+  .callout.simple {
+    padding: 0;
+  }
+  
+  .callout.simple::before {
+    display: none;
+    background-color: #065577;
+  }
+  
+  .callout.simple .callout-header {
+    background-color: #F1F2F2;
+  }
+  
+  .callout.simple p {
+    background-color: #FFFFFF;
+  }
