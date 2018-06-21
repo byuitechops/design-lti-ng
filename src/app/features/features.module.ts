@@ -7,6 +7,7 @@ import { PageTemplatesComponent } from './page-templates.component';
 import { WebFeaturesComponent } from './web-features.component';
 import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { RangePipe } from '../shared/range.pipe';
+import { SafePipe } from '../shared/safe.pipe';
 import { GenericActivityComponent } from './templates/previews/generic/generic-activity.component';
 import { GenericContentComponent } from './templates/previews/generic/generic-content.component';
 import { LtiParamsService } from '../lti-params.service';
@@ -166,6 +167,7 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     WebFeaturesComponent,
     CapitalizePipe,
     RangePipe,
+    SafePipe,
     GenericActivityComponent,
     GenericContentComponent,
     AccordionComponent,

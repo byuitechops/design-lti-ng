@@ -1,3 +1,9 @@
-<p>
-  video-preview works!
-</p>
+<div class="byui-video" data-id="videoid" [attr.data-platform]="type" [attr.data-size]="size" [attr.data-ratio]="aspect" [attr.data-transcriptHTML]="htmlTranscript"
+  [attr.data-transcriptRTF]="rtfTranscript" [attr.data-link]="link"
+  [attr.data-download]="download" [attr.data-title]="title" [attr.data-starttime]="startTime" [attr.data-endtime]="endTime">
+  <iframe width="{{width}}" height="{{height}}" [src]="videoUrl | safe" frameborder='0' allowfullscreen></iframe>
+  <p>(
+    <a href='htmlTranscript'>HTML Transcript</a>,
+    <a href='rtfTranscript'>RTF Transcript</a>)
+  </p>
+</div> 
