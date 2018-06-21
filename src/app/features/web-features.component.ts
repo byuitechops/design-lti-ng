@@ -66,7 +66,7 @@ export class WebFeaturesComponent implements AfterViewInit {
     input.value = this.contentItemsJson;
     // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
-    form.submit();
+    // form.submit();
   }
 
   ngAfterViewInit() {

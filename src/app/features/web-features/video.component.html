@@ -14,10 +14,10 @@
             <label>No Audio</label>
         </div>
         <input type="text"
-            placeholder="HTML Transcript URL" 
+            placeholder="HTML Transcript URL"
             [attr.disabled]="noAudio ? 'disabled' : null" value="{{noAudio ? 'N/A' : ''}}">
         <input type="text"
-            placeholder="RTF Transcript URL" 
+            placeholder="RTF Transcript URL"
             [attr.disabled]="noAudio ? 'disabled' : null" value="{{noAudio ? 'N/A' : ''}}">
         <div>
             <label>Platform</label>
@@ -59,8 +59,9 @@
 
     <div class="preview" id="videoOut">
         <h4>Preview:</h4>
-        <div id="outwrap">
-            <textarea [(ngModel)]="output" class="video-textbox"></textarea>
+        <app-video-preview></app-video-preview>
+        <div class="textOut">
+            <textarea [(ngModel)]="output"></textarea>
         </div>
     </div>
 </div>

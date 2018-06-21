@@ -33,6 +33,7 @@ import { ImagePreviewComponent } from './web-features/previews/image-preview.com
 import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
 import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
 import { TablePreviewComponent } from './web-features/previews/table-preview.component';
+import { VideoPreviewComponent } from './web-features/previews/video-preview.component';
 import { ContentBoxComponent } from './web-features/content-box.component';
 import { BannerImageComponent } from './web-features/banner-image.component';
 import { FeatureWrapperComponent } from './feature-wrapper.component';
@@ -190,6 +191,7 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     ImageCarouselPreviewComponent,
     PopoverPreviewComponent,
     TablePreviewComponent,
+    VideoPreviewComponent,
     ContentBoxComponent,
     BannerImageComponent,
     FeatureWrapperComponent,
