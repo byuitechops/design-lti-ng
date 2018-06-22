@@ -1,9 +1,11 @@
-<div class="byui-video" data-id="videoid" [attr.data-platform]="type" [attr.data-size]="size" [attr.data-ratio]="aspect" [attr.data-transcriptHTML]="htmlTranscript"
+<div class="byui-video" data-id="{{videoid}}" [attr.data-platform]="type" [attr.data-size]="size" [attr.data-ratio]="aspect" [attr.data-transcriptHTML]="htmlTranscript"
   [attr.data-transcriptRTF]="rtfTranscript" [attr.data-link]="link"
-  [attr.data-download]="download" [attr.data-title]="title" [attr.data-starttime]="startTime" [attr.data-endtime]="endTime">
+  [attr.data-download]="download" [attr.data-title]="title" [attr.data-starttime]="startTime" [attr.data-endtime]="endTime" [attr.data-url]="title">
   <iframe width="{{width}}" height="{{height}}" [src]="videoUrl | safe" frameborder='0' allowfullscreen></iframe>
   <p>(
     <a href='htmlTranscript'>HTML Transcript</a>,
     <a href='rtfTranscript'>RTF Transcript</a>)
   </p>
+  <iframe width="{{width}}" height="{{height}}" [src]="kalturaTest | safe" frameborder='0' allowfullscreen></iframe>
+  <button (click)="test()">Test Me</button>
 </div> 

@@ -5,7 +5,7 @@
 <div class="row">
     <div class="option">
         <h4>Select options:</h4>
-        <input placeholder="Video URL" type="text" [(ngModel)]="url">
+        <input placeholder="Video URL" type="text" (input)="makeEmbedUrl($event.target.value)">
         <input placeholder="Video Title" type="text" [(ngModel)]="title">
         <input placeholder="Start Time" type="text" [(ngModel)]="startTime">
         <input placeholder="End Time" type="text" [(ngModel)]="endTime">
@@ -59,7 +59,20 @@
 
     <div class="preview" id="videoOut">
         <h4>Preview:</h4>
-        <app-video-preview></app-video-preview>
+        <app-video-preview [videoid]="videoid"
+            [type]="type"
+            [size]="size"
+            [aspect]="aspect"
+            [htmlTranscript]="htmlTranscript"
+            [rtfTranscript]="rtfTranscript"
+            [link]="link"
+            [download]="download"
+            [title]="title"
+            [startTime]="startTime"
+            [endTime]="endTime"
+            [height]="height"
+            [width]="width"
+            [videoUrl]="url"></app-video-preview>
         <div class="textOut">
             <textarea [(ngModel)]="output"></textarea>
         </div>
