@@ -3,11 +3,11 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-dialog-preview',
   template: `
-<div id="dialog_for_link_1" title="dialogTitle ? dialogTitle : Title" class="enhanceable_content dialog">
+<div id="dialog_for_link_{{date}}" title="{{dialogTitle ? dialogTitle : 'Title'}}" class="enhanceable_content dialog">
   {{dialogContent ? dialogContent : "dialog"}}
 </div>
 <p>
-    <a id="link_1" class="Button">
+    <a class="Button" href="#dialog_for_link_{{date}}" id="{{date}}">
       {{dialogPrompt ? dialogPrompt : "prompt"}}
     </a>
 </p>
@@ -18,6 +18,9 @@ export class DialogPreviewComponent implements OnInit {
 
   @Input() dialogContent: string;
   @Input() dialogPrompt: string;
+  @Input() dialogTitle: string;
+
+  date: number;
 
   elementRef: ElementRef;
 
@@ -30,6 +33,7 @@ export class DialogPreviewComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.date = new Date().getTime();
   }
 
 }
