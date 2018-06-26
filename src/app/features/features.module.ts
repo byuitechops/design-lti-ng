@@ -46,7 +46,6 @@ import { PreparePreAssesmentComponent } from './templates/previews/prepare/prepa
 import { PrepareInterviewComponent } from './templates/previews/prepare/prepare-interview.component';
 import { PrepareConceptMatchingComponent } from './templates/previews/prepare/prepare-concept-matching.component';
 import { PrepareNoteTakingComponent } from './templates/previews/prepare/prepare-note-taking.component';
-import { PrepareInfoGatheringComponent } from './templates/previews/prepare/prepare-info-gathering.component';
 import { PrepareScholarlyResearchComponent } from './templates/previews/prepare/prepare-scholarly-research.component';
 import { PrepareLearningContractComponent } from './templates/previews/prepare/prepare-learning-contract.component';
 import { PrepareProjectPlanComponent } from './templates/previews/prepare/prepare-project-plan.component';
@@ -202,7 +201,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     PrepareInterviewComponent,
     PrepareConceptMatchingComponent,
     PrepareNoteTakingComponent,
-    PrepareInfoGatheringComponent,
     PrepareScholarlyResearchComponent,
     PrepareLearningContractComponent,
     PrepareProjectPlanComponent,

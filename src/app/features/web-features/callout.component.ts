@@ -4,7 +4,7 @@ import { CalloutPreviewComponent } from './previews/callout-preview.component';
 @Component({
   selector: 'app-callout',
   templateUrl: './callout.component.html',
-  styles: []
+  styles: ['./callout.component.css']
 })
 export class CalloutComponent implements OnInit {
 
@@ -13,17 +13,13 @@ export class CalloutComponent implements OnInit {
 
   positions: string[] = ['left', 'center', 'right'];
   sizes: string[] = ['full', 'half', 'quarter'];
+  colors: string[] = ['simple', 'grey', 'green', 'blue', 'orange'];
   calloutPosition = 'right';
   calloutSize = 'quarter';
-  calloutChecked = false;
+  color = 'simple';
 
-  _calloutText: string;
-  get calloutText(): string {
-    return this._calloutText;
-  }
-  set calloutText(value: string) {
-    this._calloutText = value;
-  }
+  calloutHeader: string;
+  calloutText: string;
 
   constructor() { }
 
@@ -33,6 +29,10 @@ export class CalloutComponent implements OnInit {
 
   changeCalloutSize(value: string): void {
     this.calloutSize = value;
+  }
+
+  changeColor(value: string): void {
+    this.color = value;
   }
 
   chooseFeature() {

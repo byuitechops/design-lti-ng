@@ -23,20 +23,33 @@
                 <label class="radio-label">{{size | capitalize}}</label>
             </div>
         </div>
+        <div *ngFor="let color of colors">
+            <input type="radio" name="calloutColor"
+                [value]="color"
+                [checked]="color==='simple'"
+                (change)="changeColor(color)">
+            <label class="radio-label">{{color | capitalize}}</label>
+        </div>
+        <textarea placeholder="Header Text" [(ngModel)]='calloutHeader'></textarea>
         <textarea placeholder="Content Text" [(ngModel)]='calloutText'></textarea>
-        <input type="checkbox"
-                [checked]="calloutChecked"
-                (change)="calloutChecked = !calloutChecked">
-        <label for="shaded">Shaded</label>
     </div>
     <div class="preview">
         <h4>Preview:</h4>
+        <p>At vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
+            augue duis dolore te feugait nulla
         <app-callout-preview
-          [calloutChecked]="calloutChecked"
+          [color]="color"
           [calloutPosition]="calloutPosition"
           [calloutSize]="calloutSize"
+          [calloutHeader]="calloutHeader"
           [calloutText]="calloutText">
         </app-callout-preview>
+        facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+        consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+        consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+        odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+        facilisi.
+        </p>
     </div>
 </div>
 <div>
