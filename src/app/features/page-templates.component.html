@@ -1,7 +1,8 @@
 <div id="pageTwo" class="page visible">
-  <nav>
+  <!-- What is this here for? -->
+  <!-- <nav>
     <a [routerLink]="['.']" *ngFor="let nav of templates" fragment="app-{{nav}}">{{nav | capitalize}}</a>
-  </nav>
+  </nav> -->
   <nav>
     <a pageScroll href="#generic">Generic</a>
     <a pageScroll href="#prepare">Prepare</a>
@@ -9,14 +10,11 @@
     <a pageScroll href="#ponderProve">Ponder/Prove</a>
   </nav>
 
-  <br />
-
   <div class="templates">
-    <button id="generic" class="accordion-header" [ngClass]="{'active':genericActive}" (click)="genericActive = !genericActive">
-      Generic
-    </button>
-
-    <div class="panel" [ngClass]="{'panel-active':genericActive}">
+    <div id="generic" class="section-header">
+      <h1>Generic</h1>
+    </div>
+    <div class="featureWrapper">
       <app-generic-activity-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-generic-activity-wrapper>
       <app-generic-content-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-generic-content-wrapper>
       <app-home-page-wrapper (select)="updateFeature($event)" [courseClass]="courseClass" [courseId]="courseId" [courseName]="courseName"></app-home-page-wrapper>
@@ -24,11 +22,10 @@
       <app-introduction-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-introduction-wrapper>
     </div>
 
-    <button id="prepare" class="accordion-header" [ngClass]="{'active':prepareActive}" (click)="prepareActive = !prepareActive">
-      Prepare
-    </button>
-
-    <div class="panel" [ngClass]="{'panel-active':prepareActive}">
+    <div id="prepare" class="section-header">
+      <h1>Prepare</h1>
+    </div>
+    <div class="featureWrapper">
       <app-concept-mapping-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-concept-mapping-wrapper>
       <app-interview-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-interview-wrapper>
       <app-learning-contract-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-learning-contract-wrapper>
@@ -43,11 +40,10 @@
       <app-study-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-study-wrapper>
     </div>
 
-    <button id="toa" class="accordion-header" [ngClass]="{'active':toaActive}" (click)="toaActive = !toaActive">
-      Teach One Another
-    </button>
-
-    <div class="panel" [ngClass]="{'panel-active':toaActive}">
+    <div id="toa" class="section-header">
+      <h1>Teach One Another</h1>
+    </div>
+    <div class="featureWrapper">
       <app-case-study-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-case-study-wrapper>
       <app-field-experience-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-field-experience-wrapper>
       <app-group-problem-solving-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-group-problem-solving-wrapper>
@@ -66,11 +62,10 @@
       <app-topic-discussion-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-topic-discussion-wrapper>
     </div>
 
-    <button id="ponderProve" class="accordion-header" [ngClass]="{'active':proveActive}" (click)="proveActive = !proveActive">
-      Ponder/Prove
-    </button>
-
-    <div class="panel" [ngClass]="{'panel-active':proveActive}">
+    <div id="ponderProve" class="section-header">
+      <h1>Ponder/Prove</h1>
+    </div>
+    <div class="featureWrapper">
       <app-accountability-quiz-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-accountability-quiz-wrapper>
       <app-exam-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-exam-wrapper>
       <app-exercise-wrapper (select)="updateFeature($event)" [courseClass]="courseClass"></app-exercise-wrapper>
@@ -86,7 +81,7 @@
     </div>
 
   </div>
-  
+
   <!-- uncomment this for drop down version of activity template page -->
   <!-- <app-org-template [courseClass]="courseClass"
                       (select)=updateFeature($event)

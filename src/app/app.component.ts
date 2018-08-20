@@ -30,7 +30,7 @@ export class AppComponent {
     });
   }
 
-  update(value: string) {
+  setTab(value: string) {
     this.selected = value;
   }
 }

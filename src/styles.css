@@ -24,7 +24,7 @@
 }
 
 #article {
-    padding: 20px;
+    margin-top: 74px;
 }
 
 input[type="text"],
@@ -107,11 +107,6 @@ nav {
     margin-top: 15px;
 }
 
-#pageTwo {
-    margin-top: 30px;
-    margin-left:10px;
-}
-
 .features>[id^="app"]>:last-child {
     border-bottom: #ccc solid 1px;
     padding-bottom: 10px;
@@ -119,12 +114,6 @@ nav {
 
 .features>div>:last-child {
     border-bottom: #ccc solid 1px;
-}
-
-.features>[id^="app"]>:last-child>h2,
-#pageTwo>div {
-    padding-top: 77px;
-    margin-top: -77px;
 }
 
 .features>[id^="app"]>:last-child>div:last-child,

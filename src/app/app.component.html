@@ -1,11 +1,11 @@
 <div>
   <nav>
-    <a class="tab local-nav" [routerLink]="['/page-templates']"
-       (click)="update('pageTemplates')">
+    <a class="tab local-nav" [routerLink]="['/page-templates']" [class.activeTab]="this.selected === 'pageTemplates'"
+       (click)="setTab('pageTemplates')">
         <h4>Activity Templates</h4>
     </a>
-    <a class="tab local-nav" [routerLink]="['/web-features']"
-       (click)="update('webFeatures')">
+    <a class="tab local-nav" [routerLink]="['/web-features']" [class.activeTab]="this.selected === 'webFeatures'"
+       (click)="setTab('webFeatures')">
         <h4>Web Features</h4>
     </a>
   </nav>
