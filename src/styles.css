@@ -87,6 +87,12 @@ nav {
 
 /* Not Ben's CSS */
 
+h2 {
+    /* to fix anchor links on web features page */
+    margin-top: -75px;
+    padding-top: 75px;
+}
+
 .page nav {
     background-color: #004d82;
     position: fixed;
