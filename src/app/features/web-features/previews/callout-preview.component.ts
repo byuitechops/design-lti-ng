@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-callout-preview',
   template: `
-  <span class="callout"
+  <div class="callout"
         [ngClass]="{'left':calloutPosition==='left',
                     'center':calloutPosition==='center',
                     'right':calloutPosition==='right',
@@ -21,7 +21,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
       <p>{{ calloutText ? calloutText :
         "This is a callout box which can be used to emphasize text." }}
       </p>
-  </span>
+  </div>
   `,
   styles: []
 })
