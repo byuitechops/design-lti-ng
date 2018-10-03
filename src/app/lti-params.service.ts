@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { LtiParams } from './lti-params';
+import { WindowRef } from './getWindowObj';
 // const server = require('../../bin/www');
 
 @Injectable()
@@ -11,19 +12,27 @@ export class LtiParamsService {
   ltiParams: LtiParams;
 
   constructor(private http: HttpClient) {
-    if (isDevMode()) {
+    if (/* true ||  */isDevMode()) {
       this.address = 'https://localhost:1820';
     } else {
       this.address = 'https://byui-design-lti.herokuapp.com';
     }
 
-    this.http.get<LtiParams>(this.address + '/api')
-    .subscribe(params => {
-      this.ltiParams = params;
-    });
+    // this.http.get<LtiParams>(this.address + '/api')
+    // .subscribe(params => {
+    //   console.log(params);
+    //   this.ltiParams = params;
+    // });
+    var hi = new WindowRef(); 
+    var window = hi.nativeWindow; 
+    //     console.log(window.THE_BEST_EVER);
+    this.ltiParams = window.LTI_PARAMS;
+    
   }
-
+  
   getCourseName(): string {
+    // console.log(Window.THE_BEST_EVER);
+    
     return this.ltiParams.context_title;
   }
 
