@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "restart": "nodemon -e html,css,js,ts ./bin/www",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build --prod",
+    "readable": "ng build --build-optimizer=false"
   },
   "engines": {
     "node": "~9.7.1",
