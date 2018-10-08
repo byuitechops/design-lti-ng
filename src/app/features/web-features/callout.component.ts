@@ -8,7 +8,7 @@ import { CalloutPreviewComponent } from './previews/callout-preview.component';
 })
 export class CalloutComponent implements OnInit {
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(CalloutPreviewComponent) preview: CalloutPreviewComponent;
 
   positions: string[] = ['left', 'center', 'right'];
@@ -38,7 +38,7 @@ export class CalloutComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   ngOnInit() {

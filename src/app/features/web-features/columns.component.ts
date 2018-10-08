@@ -8,7 +8,7 @@ import { ColumnsPreviewComponent } from './previews/columns-preview.component';
 })
 export class ColumnsComponent implements OnInit {
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(ColumnsPreviewComponent) preview: ColumnsPreviewComponent;
 
   columnNumbers: number[] = [1, 2, 3];
@@ -28,7 +28,7 @@ export class ColumnsComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   ngOnInit() {

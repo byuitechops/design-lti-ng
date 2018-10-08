@@ -8,7 +8,7 @@ import { DefinitionPreviewComponent } from './previews/definition-preview.compon
 })
 export class DefinitionComponent implements OnInit {
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(DefinitionPreviewComponent) preview: DefinitionPreviewComponent;
 
   constructor() { }
@@ -16,7 +16,7 @@ export class DefinitionComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   ngOnInit() {

@@ -8,7 +8,7 @@ import { BannerPreviewComponent } from './previews/banner-preview.component';
 })
 export class BannerImageComponent implements OnInit {
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(BannerPreviewComponent) preview: BannerPreviewComponent;
 
   constructor() { }
@@ -16,7 +16,7 @@ export class BannerImageComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   ngOnInit() {

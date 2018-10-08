@@ -57,15 +57,16 @@ export class WebFeaturesComponent implements AfterViewInit {
   }
 
   insertFeature(feature) {
+    console.log('add da dumb feature');
     // insert the html string to the content items
-    this.contentItems['@graph'][0].text = feature;
+    /* this.contentItems['@graph'][0].text = feature;
     this.contentItemsJson = JSON.stringify(this.contentItems);
     // make sure that the value updates before you submit
     const input = <HTMLInputElement>document.getElementById('contentItems');
     input.value = this.contentItemsJson;
     // submit the form
     const form = <HTMLFormElement>document.getElementById('submit');
-    form.submit();
+    form.submit(); */
   }
 
   ngAfterViewInit() {

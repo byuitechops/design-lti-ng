@@ -12,7 +12,7 @@ export class ImageCarouselComponent implements OnInit {
   slideSource: string[] = [];
   slideAlt: string[] = [];
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(ImageCarouselPreviewComponent) preview: ImageCarouselPreviewComponent;
 
   constructor() { }
@@ -20,7 +20,7 @@ export class ImageCarouselComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   updateSlideCount(value: number): void {

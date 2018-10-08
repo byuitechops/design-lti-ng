@@ -9,7 +9,7 @@ import { PopoverPreviewComponent } from './previews/popover-preview.component';
 export class PopoverComponent implements OnInit {
 
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(PopoverPreviewComponent) preview: PopoverPreviewComponent;
 
   _popoverBaseText: string;
@@ -33,7 +33,7 @@ export class PopoverComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   ngOnInit() {
