@@ -56,7 +56,7 @@ export class WebFeaturesComponent implements AfterViewInit {
     return Array.from(Array(num).keys());
   }
 
-  updateFeature(feature) {
+  insertFeature(feature) {
     // insert the html string to the content items
     this.contentItems['@graph'][0].text = feature;
     this.contentItemsJson = JSON.stringify(this.contentItems);
@@ -69,8 +69,13 @@ export class WebFeaturesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.returnUrl = this._ltiParamsService.getReturnUrl();
-    }, 1000);
+    try {
+      setTimeout(() => {
+        this.returnUrl = this._ltiParamsService.getReturnUrl();
+      }, 1000);
+    } catch(returnUrlErr) {
+      console.warn(returnUrlErr);
+      this.returnUrl = 'derp';
+    }
   }
 }

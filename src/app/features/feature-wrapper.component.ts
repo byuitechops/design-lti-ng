@@ -14,17 +14,17 @@ import { DynamicModule } from 'ng-dynamic-component';
 })
 export class FeatureWrapperComponent {
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected = new EventEmitter<string>();
   @Input() type;
 
   outputs = {
-    select: (feature) => this.pass(feature)
+    featureSelected: (feature) => this.pass(feature)
   };
 
-  constructor() { }
+  constructor() {}
 
   pass(feature) {
     console.log(feature);
-    this.select.emit(feature);
+    this.featureSelected.emit(feature);
   }
 }

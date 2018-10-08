@@ -10,7 +10,7 @@
       <app-feature-wrapper *ngFor="let feature of featureTypes; let i=index"
         [type]="feature"
         id="app-{{features[i]}}"
-        (select)="updateFeature($event)">
+        (featureSelected)="insertFeature($event)">
       </app-feature-wrapper>
 
   </div>

@@ -9,7 +9,7 @@ import { AccordionPreviewComponent } from './previews/accordion-preview.componen
 })
 export class AccordionComponent implements OnInit {
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected = new EventEmitter<string>();
   @ViewChild(AccordionPreviewComponent) preview: AccordionPreviewComponent;
 
   _accordionHeading: string;
@@ -33,7 +33,7 @@ export class AccordionComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   ngOnInit() {

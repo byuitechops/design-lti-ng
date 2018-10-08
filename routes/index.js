@@ -6,13 +6,14 @@ var fs = require('fs');
 
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('*', function (req, res, next) {
     res.sendFile(path.join(__dirname, '../dist/index.html'), {
         title: 'Express'
     });
 });
 
-router.route('/api/course-name').get((req, res) => {
+// TODO these don't do anything...
+/* router.route('/api/course-name').get((req, res) => {
     var ltiParams = req.session.lti.params;
     var courseName = ltiParams.context_title;
 });
@@ -40,7 +41,7 @@ router.route('/api').get((req, res) => {
     var ltiParams = req.session.lti.params;
     console.log(ltiParams);
     res.send(JSON.stringify(ltiParams));
-});
+}); */
 
 /* Handle LTI launch */
 router.post('/', function (req, res, next) {
