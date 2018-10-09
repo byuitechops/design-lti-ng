@@ -4,7 +4,6 @@ import { CapitalizePipe } from '../shared/capitalize.pipe';
 import { LtiParamsService } from '../lti-params.service';
 import { NgModel } from '@angular/forms';
 import { AccordionComponent } from './web-features/accordion.component';
-import { BannerComponent } from './web-features/banner.component';
 import { ButtonComponent } from './web-features/button.component';
 import { CalloutComponent } from './web-features/callout.component';
 import { ColumnsComponent } from './web-features/columns.component';
@@ -31,7 +30,7 @@ export class WebFeaturesComponent implements AfterViewInit {
 
   // and the name of the component here as a string. Make sure it's in the same order as above
   features: string[] = ['accordion', 'button', 'callout',
-  'columns', 'definition', 'dialog', 'image', 'popover', 'table'];
+    'columns', 'definition', 'dialog', 'image', 'popover', 'table'];
 
   returnUrl: string;
   /* This uses the Content Item service which is documented here:
@@ -44,8 +43,8 @@ export class WebFeaturesComponent implements AfterViewInit {
       'mediaType': 'text/html',
       'placementAdvice': {
         'presentationDocumentTarget': 'embed'
-        }
-      }]
+      }
+    }]
   };
   contentItemsJson: string;
 
@@ -74,7 +73,7 @@ export class WebFeaturesComponent implements AfterViewInit {
       setTimeout(() => {
         this.returnUrl = this._ltiParamsService.getReturnUrl();
       }, 1000);
-    } catch(returnUrlErr) {
+    } catch (returnUrlErr) {
       console.warn(returnUrlErr);
       this.returnUrl = 'derp';
     }

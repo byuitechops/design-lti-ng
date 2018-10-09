@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
-import { ButtonPreviewComponent } from './previews/button-preview.component';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,10 +7,10 @@ import { ButtonPreviewComponent } from './previews/button-preview.component';
 })
 export class ButtonComponent implements OnInit {
 
-  makePrimary = false;
+  isPrimary = false;
 
   @Output() featureSelected: EventEmitter<string> = new EventEmitter();
-  @ViewChild(ButtonPreviewComponent) preview: ButtonPreviewComponent;
+  @ViewChild('Preview') preview: ElementRef;
 
   _buttonText: string;
   get buttonText(): string {
@@ -24,7 +23,7 @@ export class ButtonComponent implements OnInit {
   constructor() { }
 
   chooseFeature() {
-    const html = this.preview.getHtmlContent().trim();
+    const html = this.preview.nativeElement.outerHTML.trim();
     console.log(html);
     this.featureSelected.emit(html);
   }

@@ -11,8 +11,6 @@ import { GenericActivityComponent } from './templates/previews/generic/generic-a
 import { GenericContentComponent } from './templates/previews/generic/generic-content.component';
 import { LtiParamsService } from '../lti-params.service';
 import { AccordionComponent } from './web-features/accordion.component';
-import { AccordionPreviewComponent } from './web-features/previews/accordion-preview.component';
-import { BannerComponent } from './web-features/banner.component';
 import { ButtonComponent } from './web-features/button.component';
 import { CalloutComponent } from './web-features/callout.component';
 import { ColumnsComponent } from './web-features/columns.component';
@@ -23,8 +21,6 @@ import { VideoComponent } from './web-features/video.component';
 import { ImageCarouselComponent } from './web-features/image-carousel.component';
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
-import { BannerPreviewComponent } from './web-features/previews/banner-preview.component';
-import { ButtonPreviewComponent } from './web-features/previews/button-preview.component';
 import { CalloutPreviewComponent } from './web-features/previews/callout-preview.component';
 import { ColumnsPreviewComponent } from './web-features/previews/columns-preview.component';
 import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
@@ -34,7 +30,6 @@ import { ImageCarouselPreviewComponent } from './web-features/previews/image-car
 import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
 import { TablePreviewComponent } from './web-features/previews/table-preview.component';
 import { ContentBoxComponent } from './web-features/content-box.component';
-import { BannerImageComponent } from './web-features/banner-image.component';
 import { FeatureWrapperComponent } from './feature-wrapper.component';
 import { DynamicModule } from 'ng-dynamic-component';
 import { OrgTemplateComponent } from './templates/org-template.component';
@@ -143,7 +138,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     ]),
     DynamicModule.withComponents([
       AccordionComponent,
-      BannerComponent,
       ButtonComponent,
       CalloutComponent,
       ColumnsComponent,
@@ -167,8 +161,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     GenericActivityComponent,
     GenericContentComponent,
     AccordionComponent,
-    AccordionPreviewComponent,
-    BannerComponent,
     ButtonComponent,
     CalloutComponent,
     ColumnsComponent,
@@ -179,8 +171,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     ImageCarouselComponent,
     PopoverComponent,
     TableComponent,
-    BannerPreviewComponent,
-    ButtonPreviewComponent,
     CalloutPreviewComponent,
     ColumnsPreviewComponent,
     DefinitionPreviewComponent,
@@ -190,7 +180,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     PopoverPreviewComponent,
     TablePreviewComponent,
     ContentBoxComponent,
-    BannerImageComponent,
     FeatureWrapperComponent,
     OrgTemplateComponent,
     HomePageComponent,
@@ -291,7 +280,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
   ],
   entryComponents: [
     AccordionComponent,
-    BannerComponent,
     ButtonComponent,
     CalloutComponent,
     ColumnsComponent,

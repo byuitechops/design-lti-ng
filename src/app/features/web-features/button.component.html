@@ -7,19 +7,18 @@
     <div class="option">
         <h4>Select options:</h4>
         <input type="text" placeholder="Button Text" [(ngModel)]='buttonText'>
-        <input type="text" placeholder="Button HTML" oninput="updateButton()">
+        <input type="text" placeholder="Button HTML">
         <input type="checkbox"
-                [checked]="makePrimary"
-                (change)="makePrimary = !makePrimary">
+                [checked]="isPrimary"
+                (change)="isPrimary = !isPrimary">
         <label>Primary</label>
     </div>
     <div>
         <div class="preview" id="buttonOut">
-        <h4>Preview:</h4>
-            <app-button-preview
-                [makePrimary]="makePrimary"
-                [buttonText]="buttonText">
-            </app-button-preview>
+            <h4>Preview:</h4>
+            <a class="Button" [class.Button--primary]="isPrimary" #Preview>
+                    {{ buttonText ? buttonText : "Button" }}
+            </a>
         </div>
     </div>
 </div>
