@@ -35,16 +35,24 @@
     </div>
     <div class="preview">
         <h4>Preview:</h4>
-        <p>At vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-            augue duis dolore te feugait nulla
-        <app-callout-preview
-          [color]="color"
-          [calloutPosition]="calloutPosition"
-          [calloutSize]="calloutSize"
-          [calloutHeader]="calloutHeader"
-          [calloutText]="calloutText">
-        </app-callout-preview>
-        facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+        <p>At vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla<p>
+            <div class="callout" #Preview
+            [ngClass]="{'left':calloutPosition==='left',
+            'center':calloutPosition==='center',
+            'right':calloutPosition==='right',
+            'quarter':calloutSize==='quarter',
+            'half':calloutSize==='half',
+            'full':calloutSize==='full',
+            'blue':color==='blue',
+            'grey':color==='grey',
+            'green':color==='green',
+            'orange':color==='orange',
+            'simple':color==='simple'}">
+                <h4 class="callout-header">{{ calloutHeader ? calloutHeader : "Callout Header" }}
+                </h4>
+                <p>{{ calloutText ? calloutText : "This is a callout box which can be used to emphasize text." }}</p>
+            </div>
+        <p>facilisi. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
         consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
         consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
         odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla

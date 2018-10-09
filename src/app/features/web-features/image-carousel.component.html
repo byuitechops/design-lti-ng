@@ -6,13 +6,11 @@
     <div class="option">
         <h4>Select options:</h4>
         <input #slides type="string" id="numSlides" placeholder="Number of slides?"
-                (keyup.enter)="updateSlideCount(slides.value)"
-                (blur)="updateSlideCount(slides.value)">
+                (keyup)="updateSlideCount(slides.value)">
             <div *ngFor="let slide of array(slideCount)">
-                <input #slideSrc type="string" placeholder="Img {{slide + 1}} URL"
+                <input style="margin-top:15px;" #slideSrc type="string" placeholder="Img {{slide + 1}} URL"
                 id="{{slide}}"
-                (keyup.enter)="updateSlide(slideSrc.value, slide)"
-                (blur)="updateSlide(slideSrc.value, slide)">
+                (keyup)="updateSlide(slideSrc.value, slide)">
                 <input #slideAlt type="string" placeholder="Img {{slide + 1}} Alt text"
                 id="{{slide}}"
                 (keyup)="updateSlideAlt(slideAlt.value, slide)">
@@ -20,11 +18,13 @@
     </div>
     <div class="preview" id="imgCarouselOut">
         <h4>Preview:</h4>
-            <app-image-carousel-preview
-                [slideAlt]="slideAlt"
-                [slideCount]="slideCount"
-                [slideSource]="slideSource">
-            </app-image-carousel-preview>
+        <div class="carousel" #Preview>
+            <div class="slide" *ngFor="let slide of array(slideCount)">
+                <img alt="{{slideAlt[slide] ? slideAlt[slide] : '...'}}"
+                    src="{{slideSource[slide] ? slideSource[slide] :
+                      'http://1.bp.blogspot.com/-66D9avcPfZo/UO2VxdfheOI/AAAAAAAAAHw/4yf3mXCbzO4/s1600/050524TaylorBldg_6743.jpg'}}">
+            </div>
+        </div>
     </div>
 </div>
 <div>

@@ -24,7 +24,7 @@ export class FeatureWrapperComponent {
   constructor() {}
 
   pass(feature) {
-    console.log(feature);
+    // console.log(feature);
     this.featureSelected.emit(feature);
   }
 }

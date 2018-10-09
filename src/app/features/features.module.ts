@@ -21,12 +21,9 @@ import { VideoComponent } from './web-features/video.component';
 import { ImageCarouselComponent } from './web-features/image-carousel.component';
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
-import { CalloutPreviewComponent } from './web-features/previews/callout-preview.component';
-import { ColumnsPreviewComponent } from './web-features/previews/columns-preview.component';
 import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
 import { DialogPreviewComponent } from './web-features/previews/dialog-preview.component';
 import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
-import { ImageCarouselPreviewComponent } from './web-features/previews/image-carousel-preview.component';
 import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
 import { TablePreviewComponent } from './web-features/previews/table-preview.component';
 import { ContentBoxComponent } from './web-features/content-box.component';
@@ -171,12 +168,9 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     ImageCarouselComponent,
     PopoverComponent,
     TableComponent,
-    CalloutPreviewComponent,
-    ColumnsPreviewComponent,
     DefinitionPreviewComponent,
     DialogPreviewComponent,
     ImagePreviewComponent,
-    ImageCarouselPreviewComponent,
     PopoverPreviewComponent,
     TablePreviewComponent,
     ContentBoxComponent,
