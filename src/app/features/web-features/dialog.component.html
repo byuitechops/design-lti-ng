@@ -11,10 +11,16 @@
     </div>
     <div class="preview" id="dialogOut">
         <h4>Preview:</h4>
-            <app-dialog-preview
-                [dialogContent]="dialogContent"
-                [dialogPrompt]="dialogPrompt">
-            </app-dialog-preview>
+        <div #Preview>
+            <div id="dialog_for_link_1" title="{{dialogTitle ? dialogTitle : Title}}" class="enhanceable_content dialog">
+                {{dialogContent ? dialogContent : "dialog"}}
+            </div>
+            <p>
+                <a id="link_1" class="Button">
+                    {{dialogPrompt ? dialogPrompt : "prompt"}}
+                </a>
+            </p>
+        </div>
     </div>
 </div>
 <div>

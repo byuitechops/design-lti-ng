@@ -22,7 +22,6 @@ import { ImageCarouselComponent } from './web-features/image-carousel.component'
 import { PopoverComponent } from './web-features/popover.component';
 import { TableComponent } from './web-features/table.component';
 import { DefinitionPreviewComponent } from './web-features/previews/definition-preview.component';
-import { DialogPreviewComponent } from './web-features/previews/dialog-preview.component';
 import { ImagePreviewComponent } from './web-features/previews/image-preview.component';
 import { PopoverPreviewComponent } from './web-features/previews/popover-preview.component';
 import { TablePreviewComponent } from './web-features/previews/table-preview.component';
@@ -169,7 +168,6 @@ import { WorksheetWrapperComponent } from './templates/previews/worksheet-wrappe
     PopoverComponent,
     TableComponent,
     DefinitionPreviewComponent,
-    DialogPreviewComponent,
     ImagePreviewComponent,
     PopoverPreviewComponent,
     TablePreviewComponent,
