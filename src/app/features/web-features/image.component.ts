@@ -15,7 +15,7 @@ export class ImageComponent implements OnInit {
   imageClearfix = false;
   imageSource: string;
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
   @ViewChild(ImagePreviewComponent) preview: ImagePreviewComponent;
 
   _imageCaption: string;
@@ -39,7 +39,7 @@ export class ImageComponent implements OnInit {
   chooseFeature() {
     const html = this.preview.getHtmlContent().trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   changeImagePosition(value: string): void {

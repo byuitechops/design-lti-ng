@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
-import { ImageCarouselPreviewComponent } from './previews/image-carousel-preview.component';
+import { Component, OnInit, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-image-carousel',
@@ -12,15 +11,15 @@ export class ImageCarouselComponent implements OnInit {
   slideSource: string[] = [];
   slideAlt: string[] = [];
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
-  @ViewChild(ImageCarouselPreviewComponent) preview: ImageCarouselPreviewComponent;
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
+  @ViewChild('Preview') preview: ElementRef;
 
   constructor() { }
 
   chooseFeature() {
-    const html = this.preview.getHtmlContent().trim();
+    const html = this.preview.nativeElement.outerHTML.trim();
     console.log(html);
-    this.select.emit(html);
+    this.featureSelected.emit(html);
   }
 
   updateSlideCount(value: number): void {

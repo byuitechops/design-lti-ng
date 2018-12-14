@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
-import { DialogPreviewComponent } from './previews/dialog-preview.component';
+import { Component, OnInit, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
@@ -8,22 +7,42 @@ import { DialogPreviewComponent } from './previews/dialog-preview.component';
 })
 export class DialogComponent implements OnInit {
 
-  dialogPrompt: string;
-  dialogTitle: string;
-  dialogContent: string;
+  @Output() featureSelected: EventEmitter<string> = new EventEmitter();
+  @ViewChild('Preview') preview: ElementRef;
+
+  _dialogPrompt: string;
+  get dialogPrompt(): string {
+    return this._dialogPrompt;
+  }
+  set dialogPrompt(value: string) {
+    this._dialogPrompt = value;
+  }
+
+  _dialogTitle: string;
+  get dialogTitle(): string {
+    return this._dialogTitle;
+  }
+  set dialogTitle(value: string) {
+    this._dialogTitle = value;
+  }
+
+  _dialogContent: string;
+  get dialogContent(): string {
+    return this._dialogContent;
+  }
+  set dialogContent(value: string) {
+    this._dialogContent = value;
+  }
 
   constructor() { }
 
-  @Output() select: EventEmitter<string> = new EventEmitter();
-  @ViewChild(DialogPreviewComponent) preview: DialogPreviewComponent;
-
-  ngOnInit() {
+  chooseFeature() {
+    const html = this.preview.nativeElement.innerHTML.trim();
+    console.log(html);
+    this.featureSelected.emit(html);
   }
 
-  chooseFeature() {
-    const html = this.preview.getHtmlContent().trim();
-    console.log(html);
-    this.select.emit(html);
+  ngOnInit() {
   }
 
 }

@@ -17,9 +17,16 @@
     </div>
     <div class="preview" id="columnsOut">
         <h4>Preview:</h4>
-        <app-columns-preview
-          [numberOfColumns]="numberOfColumns">
-        </app-columns-preview>
+        <div class="content-box" #Preview>
+            <div class="grid-row">
+                <div class="col-xs-6" *ngFor="let item of array(numberOfColumns)">
+                    <ul>
+                        <li>Lorem ipsum dolor</li>
+                        <li>Lorem ipsum dolor</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
     </div>
 </div>
 <div>

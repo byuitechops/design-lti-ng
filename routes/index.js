@@ -12,10 +12,18 @@ router.get('*', function (req, res, next) {
     });
 });
 
+<<<<<<< HEAD
 // router.route('/api/course-name').get((req, res) => {
 //     var ltiParams = req.session.lti.params;
 //     var courseName = ltiParams.context_title;
 // });
+=======
+// TODO these don't do anything...
+/* router.route('/api/course-name').get((req, res) => {
+    var ltiParams = req.session.lti.params;
+    var courseName = ltiParams.context_title;
+});
+>>>>>>> 03bd8f4a18bf745cd4297cd0ddbe8c008878afe7
 
 // router.route('/api/course-class').get((req, res) => {
 //     var ltiParams = req.session.lti.params;
@@ -36,11 +44,19 @@ router.get('*', function (req, res, next) {
 //     res.send(JSON.stringify(returnUrl));
 // });
 
+<<<<<<< HEAD
 // router.route('/api').get((req, res) => {
 //     var ltiParams = req.session.lti.params;
 //     console.log(ltiParams);
 //     res.send(JSON.stringify(ltiParams));
 // });
+=======
+router.route('/api').get((req, res) => {
+    var ltiParams = req.session.lti.params;
+    console.log(ltiParams);
+    res.send(JSON.stringify(ltiParams));
+}); */
+>>>>>>> 03bd8f4a18bf745cd4297cd0ddbe8c008878afe7
 
 /* Handle LTI launch */
 router.post('/', function (req, res, next) {
